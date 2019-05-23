@@ -189,6 +189,12 @@ a:active{
   padding: 60px 250px;
 }
 
+@media (max-width: 767px) {
+    .body-2 {
+        padding: 20px 20px;
+}
+}
+
 .bold-text {
   color: #a6a6a6;
 }
