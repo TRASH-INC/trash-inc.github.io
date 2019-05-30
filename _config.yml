@@ -22,3 +22,5 @@ sass:
 include: ['_pages']
 kramdown:
   input: GFM
+plugins:
+  - jekyll-redirect-from
