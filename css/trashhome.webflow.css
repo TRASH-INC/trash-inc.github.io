@@ -1,7 +1,21 @@
 .body {
-  padding: 60px 251px 60px 250px;
   background-color: #000;
   color: #fff;
+  margin: 20px 160px 20px 160px;
+}
+
+@media (max-width: 760px) {
+    .body {
+        margin: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .body {
+        position: relative;
+        max-width: 800px;
+        margin:0 auto;
+    }
 }
 
 a:link{
@@ -86,7 +100,6 @@ a:active{
 }
 
 .image-3 {
-  position: absolute;
   font-size: 24px;
   text-align: center;
 }
@@ -98,11 +111,8 @@ a:active{
 
 .image-4 {
   display: block;
-  margin-top: 120px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0;
-  width: 70%;
+  margin: 0 auto;
+  width: 90%;
 }
 
 .text-field {
@@ -116,20 +126,10 @@ a:active{
 
 .div-block {
   position: relative;
-  padding-bottom: 45px;
-  opacity: 1;
-  -webkit-transition: opacity 200ms ease;
-  transition: opacity 200ms ease;
   color: #fff0f0;
-  text-align: left;
-}
-
-.div-block-2 {
-  padding-bottom: 120px;
-}
-
-.div-block-3 {
-  padding-bottom: 13px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 8px 20px 8px;
 }
 
 .image-5 {
