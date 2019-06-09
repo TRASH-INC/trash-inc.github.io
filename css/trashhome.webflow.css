@@ -1,19 +1,25 @@
 .body {
   background-color: #000;
   color: #fff;
-  margin: 20px 160px 20px 160px;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 480px) {
     .body {
-        margin: 20px;
+         margin: 10px 20px 10px 20px;
+    }
+}
+
+@media (max-width: 769px) {
+    .body {
+        margin: 8px;
+         margin: 20px 80px 20px 80px;
     }
 }
 
 @media (min-width: 1200px) {
     .body {
         position: relative;
-        max-width: 800px;
+        max-width: 860px;
         margin:0 auto;
     }
 }
@@ -58,14 +64,14 @@ a:active{
   font-family: 'Plaid-S', sans-serif;
   font-size: 16px;
   line-height: 1.5em;
-  color: #45F9DE;
+  color: #fff;
   font-style: normal;
   max-width: 750px;
 }
 
 /* Nav, linked pages*/
 .text-block-4 {
-  margin-right: 0px;
+  margin-right: 20px;
   margin-left: 0px;
   padding-bottom: 0px;
   font-family: 'Plaid-S', sans-serif;
@@ -109,10 +115,18 @@ a:active{
   text-align: left;
 }
 
+@media (max-width: 770px) {
+    .image-4 {
+          width: 80%;
+          margin-bottom: 40px;
+          margin-top: 40px;
+    }
+}
+
 .image-4 {
   display: block;
   margin: 0 auto;
-  width: 90%;
+  width: 50%;
 }
 
 .text-field {
@@ -130,6 +144,30 @@ a:active{
   display: flex;
   flex-direction: column;
   margin: 20px 8px 20px 8px;
+}
+
+.div_block--column {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 770px) {
+    .div_block--column {
+        flex-direction: column-reverse;
+    }
+}
+
+.div_block--container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+}
+
+@media (max-width: 770px) {
+    .div_block--container {
+        flex-direction: column;
+        margin-top: 20px;
+    }
 }
 
 .image-5 {
@@ -234,9 +272,10 @@ a:active{
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 770px) {
   .body {
     background-color: #000;
+    padding: 15px 15px 1px;
   }
 }
 
@@ -244,7 +283,7 @@ a:active{
   .body {
     margin-right: 10px;
     margin-left: 10px;
-    padding: 15px 15px 1px;
+    padding: 6px 6px 1px;
     background-color: #000;
     font-family: 'Plaid xs', sans-serif;
     color: #fff;
@@ -309,9 +348,6 @@ a:active{
   }
   .text-field {
     max-width: 120px;
-  }
-  .div-block {
-    padding-bottom: 40px;
   }
   .div-block-3 {
     padding-bottom: 60px;

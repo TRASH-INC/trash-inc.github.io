@@ -196,7 +196,7 @@ html[data-w-dynpage] [data-w-cloak] {
   opacity: 1 !important;
   vertical-align: middle !important;
 }
-h1,
+
 h2,
 h3,
 h4,
@@ -206,9 +206,26 @@ h6 {
   margin-bottom: 10px;
 }
 h1 {
-  font-size: 38px;
-  line-height: 44px;
+  font-size: 26px;
+  line-height: 32px;
   margin-top: 20px;
+  margin-right: 20px;
+  font-weight: 500;
+}
+
+@media (max-width: 770px) {
+    h1 {
+        margin-right: 0px;
+        font-size: 28px;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        margin-right: 0px;
+        font-size: 24px;
+    }
 }
 h2 {
   font-size: 32px;
