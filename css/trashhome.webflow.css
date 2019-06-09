@@ -170,6 +170,21 @@ a:active{
     }
 }
 
+.social_icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.social_icons img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 20px;
+}
+
+.social_icons a {
+    background: none;
+}
+
 .image-5 {
   padding-bottom: 20px;
 }
