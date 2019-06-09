@@ -25,12 +25,12 @@
 }
 
 a:link{
-  color:#000;
-  background: #45F9DE;
-  text-decoration: none;
+  color: #45F9DE;
+  text-decoration: underline;
+  font-weight: 500;
 }
 a:visited{
-  color: #000;
+   color: #45F9DE;
 }
 a:hover{
   color: #fff;
@@ -71,15 +71,13 @@ a:active{
 
 /* Nav, linked pages*/
 .text-block-4 {
-  margin-right: 20px;
+  margin-right: 16px;
   margin-left: 0px;
   padding-bottom: 0px;
   font-family: 'Plaid-S', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5em;
-  color: #000;
-  font-style: normal;
-  max-width: 750px;
+  font-weight: 500;
 }
 
 /* small text */
@@ -126,7 +124,7 @@ a:active{
 .image-4 {
   display: block;
   margin: 0 auto;
-  width: 50%;
+  width: 40%;
 }
 
 .text-field {

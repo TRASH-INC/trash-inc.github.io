@@ -207,10 +207,11 @@ h6 {
 }
 h1 {
   font-size: 26px;
-  line-height: 32px;
+  line-height: 30px;
   margin-top: 20px;
-  margin-right: 20px;
-  font-weight: 500;
+  margin-right: 30px;
+  font-weight: 400;
+  font-family: 'Prompt', sans-serif;
 }
 
 @media (max-width: 770px) {
