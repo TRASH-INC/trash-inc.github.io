@@ -185,6 +185,10 @@ a:active{
     background: none;
 }
 
+.social_icons a:hover {
+    opacity: .4;
+}
+
 .image-5 {
   padding-bottom: 20px;
 }
