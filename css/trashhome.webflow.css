@@ -167,6 +167,10 @@ a:active{
   }
 }
 
+.div_footer a:hover {
+    opacity: .4;
+}
+
 .div_block--column {
     display: flex;
     flex-direction: row;
