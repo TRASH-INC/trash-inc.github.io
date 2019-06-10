@@ -64,11 +64,11 @@ a:active{
   padding: 8px 0px 20px 16px;
   font-family: 'Plaid-S', sans-serif;
   line-height: 1.5em;
-  color: #121212;
+  color: #fff;
   font-style: normal;
   max-width: 750px;
-  background-color: #ededed;
-  box-shadow: 3px 3px 3px inset #767676;
+  background-color: #121212;
+  box-shadow: 1px 1px 6px  #767676;
   margin-top: 10px;
 }
 
@@ -132,7 +132,9 @@ a:active{
 
 .image-4 {
   display: block;
-  margin: 0 auto;
+  margin-top: 60px;
+   margin-bottom: 60px;
+   margin-left: 20px;
   width: 40%;
 }
 
