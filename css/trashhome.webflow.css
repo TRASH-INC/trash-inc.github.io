@@ -179,6 +179,13 @@ a:active{
     }
 }
 
+
+@media (max-width: 480px) {
+    .div_block--column {
+         margin: 40px 8px 40px 8px;
+    }
+}
+
 .div_block--container {
     display: flex;
     flex-direction: row;
@@ -341,6 +348,7 @@ a:active{
           background-color: #121212;
           color: #fff;
           padding: 0px;
+          margin-right: 0px;
   }
   .text-block-4 {
     font-family: 'Plaid xl mono', sans-serif;
@@ -394,6 +402,9 @@ a:active{
   }
   .image-4 {
     margin-bottom: 29px;
+    width:100%;
+    margin-left: 0px;
+    margin-top: 0px;
   }
   .text-field {
     max-width: 120px;
