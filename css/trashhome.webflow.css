@@ -65,11 +65,10 @@ a:active{
   padding: 8px 0px 20px 16px;
   font-family: 'Plaid-S', sans-serif;
   line-height: 1.5em;
-  color: #fff;
+  color: #8484FC;
   font-style: normal;
-  max-width: 750px;
+  max-width: 780px;
   background-color: #121212;
-  box-shadow: 0px 0px 3px  #767676;
   margin-top: 10px;
 }
 
