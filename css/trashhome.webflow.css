@@ -31,10 +31,11 @@ a:link{
   background-color: #45F9DE;
   color: #000;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 700;
+  padding: 1px;
 }
 a:visited{
-   color: #45F9DE;
+   color: #121212;
 }
 a:hover{
   color: #fff;
@@ -68,7 +69,6 @@ a:active{
   color: #8484FC;
   font-style: normal;
   max-width: 780px;
-  background-color: #121212;
   margin-top: 10px;
 }
 
@@ -78,7 +78,7 @@ a:active{
   margin-left: 0px;
   padding-bottom: 0px;
   font-family: 'Plaid-S', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5em;
   font-weight: 500;
 }
@@ -132,8 +132,14 @@ a:active{
 
 .image-4 {
   margin: 0 auto;
-  margin-bottom: 60px;
-  width: 70%;
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+@media (max-width: 489px) {
+    .image-4 {
+        display: none;
+    }
 }
 
 .text-field {
@@ -172,7 +178,7 @@ a:active{
 .div_block--column {
     display: flex;
     flex-direction: column-reverse;
-     margin: 80px 8px 80px 8px;
+     margin: 70px 8px 70px 8px;
 }
 
 @media (max-width: 770px) {
@@ -184,7 +190,7 @@ a:active{
 
 @media (max-width: 480px) {
     .div_block--column {
-         margin: 20px 8px 60px 8px;
+         margin: 20px 4px 60px 20px;
     }
 }
 
@@ -192,12 +198,25 @@ a:active{
     display: flex;
     flex-direction: column;
     margin-top: 80px;
-    margin-left: 40px;
+    margin-left: 60px;
 }
 
 @media (max-width: 770px) {
     .div_block--container {
         margin-top: 20px;
+        margin-left: 20px;
+    }
+}
+
+.div-image {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+@media (max-width: 489px) {
+    .div-image  {
+        margin-top: 0px;
     }
 }
 
@@ -206,10 +225,23 @@ a:active{
     flex-direction: row;
 }
 
+@media (max-width: 489px) {
+  .social_icons {
+    margin-top: 60px;
+  }
+}
+
 .social_icons img {
     max-width: 50px;
     max-height: 50px;
     margin-right: 20px;
+}
+
+@media (max-width: 489px) {
+  .social_icons img {
+      max-width: 44px;
+      max-height: 44px;
+  }
 }
 
 .social_icons a {
@@ -310,9 +342,6 @@ a:active{
   .text-block {
     font-family: 'Plaid xl mono', sans-serif;
   }
-  .text-block-4 {
-    font-family: 'Plaid xl mono', sans-serif;
-  }
   .text-block-5 {
     font-family: 'Plaid xs', sans-serif;
   }
@@ -347,13 +376,8 @@ a:active{
   .text-block-3 {
           border: 0px;
           box-shadow: none;
-          background-color: #121212;
-          color: #fff;
           padding: 0px;
           margin-right: 0px;
-  }
-  .text-block-4 {
-    font-family: 'Plaid xl mono', sans-serif;
   }
   .text-block-5 {
     padding-top: 10px;
