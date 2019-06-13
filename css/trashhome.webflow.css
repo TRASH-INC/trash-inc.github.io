@@ -83,6 +83,10 @@ a:active{
   font-weight: 500;
 }
 
+.text-block-4 a {
+    background-color: #45F9DE;
+}
+
 /* small text */
 .text-block-5 {
   color: #bdbdbd;
@@ -160,9 +164,8 @@ a:active{
 }
 
 .div_footer {
-    background-color: #121212;
     width: 100%;
-    padding: 60px;
+    padding: 20px;
 }
 
 @media (max-width: 770px) {
@@ -173,6 +176,14 @@ a:active{
 
 .div_footer a:hover {
     opacity: .4;
+}
+
+.div_footer a {
+    background: transparent;
+}
+
+.text-block-4 a {
+    background-color: #45F9DE;
 }
 
 .div_block--column {
@@ -406,9 +417,10 @@ a:active{
     max-width: 200%;
   }
   .heading {
-    padding-left: 0px;
-    font-weight: 40px;
+    padding-left: 20px;
+    font-weight: 700;
     font-family: 'Plaid xs', sans-serif;
+    font-size: 40px;
   }
   .sub_heading {
       font-size: 28px;
