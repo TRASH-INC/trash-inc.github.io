@@ -74,8 +74,9 @@ a:active{
 
 /* Nav, linked pages*/
 .text-block-4 {
-  margin-right: 16px;
-  margin-left: 0px;
+  margin: 6px;
+  margin-top: 0px;
+   margin-bottom: 0px;
   padding-bottom: 0px;
   font-family: 'Plaid-S', sans-serif;
   font-size: 16px;
@@ -85,6 +86,19 @@ a:active{
 
 .text-block-4 a {
     background-color: #45F9DE;
+}
+
+.menu_top {
+    flex-direction: row !important;
+    width: 80% !important;
+    margin: 0 auto !important;
+}
+
+@media (max-width: 489px) {
+    .menu_top {
+          flex-direction: column !important;
+          margin: 0;
+    }
 }
 
 /* small text */
