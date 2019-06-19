@@ -1817,34 +1817,3 @@ textarea.w-select {
 .w-condition-invisible {
   display: none !important;
 }
-.fa {
-  padding: 20px;
-  font-size: 50px;
-  width: 10%;
-  text-align: center;
-  text-decoration: none;
-  margin: 10px 10px;
-  border-radius: 0%;
-  align-content: center;
-}
-.fa-twitter {
-  background: #8483fc;
-  color: black;
-}
-.fa-medium {
-  background: #8483fc;
-  color: black;
-}
-.fa-snapchat-ghost {
-  background: #8483fc;
-  color: black;
-}
-.fa-instagram {
-  background: #8483fc;
-  color: black;
-}
-div.socialWrapper{
-margin:auto;
-width:100%;
-text-align:center;
-}
