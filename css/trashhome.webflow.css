@@ -513,7 +513,11 @@ a.external:active{
     padding-bottom: 60px;
   }
 }
-
+video {
+   width:100%;
+   max-width:500px;
+   height:auto;
+}
 @font-face {
   font-family: 'Plaid xs';
   src: url('../fonts/Plaid-XS.otf') format('opentype');
