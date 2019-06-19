@@ -27,6 +27,7 @@
     }
 }
 
+
 #logo a:link{
   /* color: #000; */
   text-decoration: none;
@@ -269,9 +270,9 @@ a.external:active{
 .div_block--container {
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
-    margin-bottom: 60px;
-    margin-left: 60px;
+    margin-top: 80%;
+    margin-bottom: 60%;
+    margin-left: 60%;
 }
 
 @media (max-width: 770px) {
