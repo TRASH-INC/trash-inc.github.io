@@ -150,8 +150,8 @@ a:active{
 
 .image-4 {
   margin: 0 auto;
-  margin-bottom: 20px;
-  width: 80%;
+  margin-bottom: 15px;
+  width: 70%;
 }
 
 @media (max-width: 489px) {
@@ -340,7 +340,7 @@ a:active{
     background-color: white;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 770px) {
     .body-2 {
 }
 }
@@ -458,12 +458,12 @@ a:active{
     background-color: hsla(208.00000000000003, 0.00%, 100.00%, 1.00);
     color: #0a0a0a;
   }
-  .image-4 {
+  /* .image-4 {
     margin-bottom: 29px;
     width:100%;
     margin-left: 0px;
     margin-top: 0px;
-  }
+  } */
   .text-field {
     max-width: 120px;
   }
