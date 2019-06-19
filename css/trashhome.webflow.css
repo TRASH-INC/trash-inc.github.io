@@ -28,7 +28,7 @@
 }
 
 a:link{
-  background-color: #45F9DE;
+  /* background-color: #45F9DE; */
   color: #000;
   text-decoration: none;
   font-weight: 700;
@@ -40,13 +40,35 @@ a:visited{
 a:hover{
   color: #fff;
   text-decoration: none;
-  background:#8484FF;
+  /* background:#8484FF; */
 }
 a:active{
   color: #fff;
   text-decoration: none;
   background:#8484FF;
 }
+
+a.external:link{
+  background-color: #45F9DE;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 1px;
+}
+a.external:visited{
+   color: #121212;
+}
+a.external:hover{
+  color: #fff;
+  text-decoration: none;
+  background:#8484FF;
+}
+a.external:active{
+  color: #fff;
+  text-decoration: none;
+  background:#8484FF;
+}
+
 
 /* main text stuff */
 .text-block-2 {
@@ -340,10 +362,10 @@ a:active{
     background-color: white;
 }
 
-@media (max-width: 770px) {
+/* @media (max-width: 770px) {
     .body-2 {
 }
-}
+} */
 
 .bold-text {
   color: #a6a6a6;
