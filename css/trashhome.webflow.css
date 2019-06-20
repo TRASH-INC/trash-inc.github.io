@@ -531,3 +531,11 @@ video {
   font-weight: 400;
   font-style: normal;
 }
+h1 {
+  font-size: 38px;
+  line-height: 44px;
+  margin-top: 20px;
+  margin-right: 30px;
+  font-weight: 700;
+   font-family: 'Plaid-S', sans-serif;
+}

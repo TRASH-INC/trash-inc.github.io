@@ -211,6 +211,7 @@ h1 {
   margin-top: 20px;
   margin-right: 30px;
   font-weight: 700;
+   font-family: 'Plaid-S', sans-serif;
 }
 
 @media (max-width: 770px) {
