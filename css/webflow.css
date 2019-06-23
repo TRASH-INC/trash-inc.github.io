@@ -197,8 +197,6 @@ html[data-w-dynpage] [data-w-cloak] {
   vertical-align: middle !important;
 }
 
-h2,
-h3,
 h4,
 h5,
 h6 {
@@ -230,13 +228,15 @@ h1 {
 }
 h2 {
   font-size: 32px;
-  line-height: 36px;
-  margin-top: 20px;
+  font-family: 'Plaid-XS';
+  line-height: 38px;
+  color: #FFFFFF;
 }
 h3 {
-  font-size: 18px;
-  line-height: 24px;
-  margin-top: 20px;
+  font-size: 32px;
+  font-family: 'Plaid xs';
+  line-height: 38px;
+  color: #8570FF;
 }
 h4 {
   font-size: 18px;

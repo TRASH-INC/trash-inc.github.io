@@ -1,9 +1,43 @@
+html {
+zoom:75%;
+  }
+.parent{
+position: relative;
+margin-left: 120px;
+margin-right: 120px;
+}
+.div-appstore{
+  position: absolute;
+  width: 424px;
+  height: 246.54px;
+  left: 120px;
+  top: 273px;
+}
+.div-mag{
+  position: absolute;
+  width: 524px;
+  height: 173px;
+  left: 898px;
+  top: 470px;
+}
+.div-social{
+  position: absolute;
+  width: 611.5px;
+  height: 218px;
+  left: 252.5px;
+  top: 656px;
+
+}
 .body {
   color: #fff;
+  margin-left: 120px;
+ margin-right: 120px;
 }
 
 .body_container--home {
     background-color: #000;
+    margin-left: 120px;
+    margin-right: 120px;
 }
 
 @media (max-width: 480px) {
@@ -170,6 +204,7 @@ a.external:active{
 .image-3 {
   font-size: 24px;
   text-align: center;
+  z-index: -1;
 }
 
 .heading {
@@ -217,7 +252,7 @@ a.external:active{
   color: #fff0f0;
   display: flex;
   flex-direction: column;
-  margin: 20px 8px 20px 8px;
+  /* margin: 20px 8px 20px 8px; */
 }
 
 .div_footer {
@@ -515,13 +550,24 @@ a.external:active{
   }
 }
 video {
-   width:100%;
-   max-width:500px;
+  /* width: 628.88px;
+height: 223.01px;
+left: 408.56px;
+top: 40.99px; */
+
+   width:50%;
+   max-width:600px;
    height:auto;
 }
 @font-face {
   font-family: 'Plaid xs';
   src: url('../fonts/Plaid-XS.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Plaid xs mono';
+  src: url('../fonts/Plaid-XS-Mono.eot') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
@@ -538,4 +584,48 @@ h1 {
   margin-right: 30px;
   font-weight: 700;
    font-family: 'Plaid-S', sans-serif;
+}
+h3 {
+  font-size: 32px;
+  font-family: 'Plaid xs mono';
+  line-height: 38px;
+  color: #8570FF;
+
+}
+h2
+{
+font-size: 32px;
+font-family: 'Plaid xs';
+line-height: 38px;
+color: #FFFFFF;
+}
+a svg:hover #mag1{
+  stroke: white;
+}
+a svg:hover #mag2{
+  fill: white;
+}
+a svg:hover #appstore {
+  fill: #FE01FE;
+}
+body {
+  background-color: black;
+}
+a svg #mag1 {
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
+}
+a svg #mag2 {
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
+}
+a svg #appstore {
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
