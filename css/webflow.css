@@ -197,20 +197,14 @@ html[data-w-dynpage] [data-w-cloak] {
   vertical-align: middle !important;
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
+
 h1 {
   font-size: 38px;
   line-height: 44px;
   margin-top: 20px;
   margin-right: 30px;
   font-weight: 700;
+   font-family: 'Plaid-S', sans-serif;
 }
 
 @media (max-width: 770px) {
@@ -229,18 +223,22 @@ h1 {
 }
 h2 {
   font-size: 32px;
-  line-height: 36px;
-  margin-top: 20px;
+  font-family: 'Plaid-XS';
+  line-height: 38px;
+  color: #FFFFFF;
 }
 h3 {
-  font-size: 18px;
-  line-height: 24px;
-  margin-top: 20px;
+  font-size: 32px;
+  font-family: 'Plaid xs';
+  line-height: 38px;
+  color: #8570FF;
 }
 h4 {
-  font-size: 18px;
-  line-height: 24px;
-  margin-top: 10px;
+  font-size: 32px;
+  font-family: 'Plaid xl mono';
+  line-height: 45px;
+  color: #828282;
+  margin: 0 0;
 }
 h5 {
   font-size: 14px;
