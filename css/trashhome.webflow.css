@@ -1,3 +1,13 @@
+img2 {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  left:0px;
+  right: 0px;
+}
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
 .parent{
 position: relative;
 margin-left: 120px;
@@ -10,13 +20,14 @@ height: 289px;
 left: 120px;
 top: 989px;
 }
-.div-foot{
 
-  position: absolute;
-  width: 2071px;
-  height: 137px;
-  left: -395.5px;
-  top: 1365px;
+.div-mainfooter{
+position:absolute;
+bottom:0;
+width: 1441px;
+height: 137px;
+left: -1px;
+top: 1365px;
 }
 .div-appstore{
   position: absolute;
@@ -109,6 +120,21 @@ top: 989px;
   color: white;
   text-decoration: none;
 }
+#second a:link{
+  background-color: #E5E5E5;
+  color: #8484FF;
+  text-decoration: none;
+}
+#second a:visited{
+  background-color: #E5E5E5;
+  color: #8484FF;
+  text-decoration: none;
+}
+#second a:hover{
+  color: black;
+    background-color: white;
+  text-decoration: none;
+}
 
 #social a:hover{
   color: #fff;
@@ -145,7 +171,7 @@ a.external:active{
   font-size: 19px;
   line-height: 1.4em;
   color: #121212;
-  max-width: 700px;
+  max-width: 825px;
 }
 
 /* Nav, current page */
@@ -594,12 +620,13 @@ video {
   font-style: normal;
 }
 h1 {
+     font-family: 'Plaid-S', sans-serif;
   font-size: 38px;
   line-height: 44px;
   margin-top: 20px;
   margin-right: 30px;
   font-weight: 700;
-   font-family: 'Plaid-S', sans-serif;
+
 }
 h2
 {
@@ -819,7 +846,12 @@ and (max-device-width : 667px) {
   text-align: center;
   }
 }
-
+p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'Plaid xs mono';
+ font-size: 20px;
+}
 @media only screen
 and (min-device-width : 414px)
 and (max-device-width : 736px) {
