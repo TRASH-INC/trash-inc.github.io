@@ -475,10 +475,6 @@ a.external:active{
     background-color: white;
 }
 
-@media (max-width: 770px) {
-    .body-2 {
-}
-}
 
 .bold-text {
   color: #a6a6a6;
@@ -796,6 +792,15 @@ a svg #appstore {
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 667px) {
+  a svg:hover #mag1{
+    stroke: #FE01FE;
+  }
+  a svg:hover #mag2{
+    fill: #FE01FE;
+  }
+  a svg:hover #appstore {
+    fill: #01FEFE;
+  }
   .div-appstore{
     position: static;
     width: 100%;
@@ -879,9 +884,32 @@ p {
     font-family: 'Plaid xs mono';
  font-size: 20px;
 }
+li {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: 'Plaid xs mono';
+font-size: 20px;
+}
+
+ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: 'Plaid xs mono';
+font-size: 20px;
+
+}
 @media only screen
 and (min-device-width : 414px)
 and (max-device-width : 736px) {
+  a svg:hover #mag1{
+    stroke: #FE01FE;
+  }
+  a svg:hover #mag2{
+    fill: #FE01FE;
+  }
+  a svg:hover #appstore {
+    fill: #01FEFE;
+  }
   .div-appstore{
     position: static;
     width: 100%;
