@@ -1,6 +1,3 @@
-html {
-zoom:75%;
-  }
 .parent{
 position: relative;
 margin-left: 120px;
@@ -12,7 +9,14 @@ width: 754px;
 height: 289px;
 left: 120px;
 top: 989px;
+}
+.div-foot{
 
+  position: absolute;
+  width: 2071px;
+  height: 137px;
+  left: -395.5px;
+  top: 1365px;
 }
 .div-appstore{
   position: absolute;
@@ -34,12 +38,13 @@ top: 989px;
   height: 218px;
   left: 252.5px;
   top: 656px;
-
 }
 .body {
   color: #fff;
   margin-left: 120px;
  margin-right: 120px;
+ width: 1440px;
+ height: 1502px;
 }
 
 .body_container--home {
@@ -52,6 +57,7 @@ top: 989px;
     .body {
          margin: 10px 20px 10px 20px;
     }
+
 }
 
 @media (max-width: 769px) {
@@ -92,19 +98,16 @@ top: 989px;
 }
 
 #menu a:link{
-  background-color: #45F9DE;
-  color: #000;
+  background-color: black;
+  color: #828282;
   text-decoration: none;
-  font-weight: 700;
-  padding: 1px;
 }
 #menu a:visited{
-   color: #121212;
+   color: #828282;
 }
 #menu a:hover{
-  color: #fff;
+  color: white;
   text-decoration: none;
-  /* background:#8484FF; */
 }
 
 #social a:hover{
@@ -224,6 +227,7 @@ a.external:active{
     font-family: 'Plaid xl mono', sans-serif;
     font-size: 38px;
     margin-top: 80px;
+    color: black;
 }
 
 @media (max-width: 770px) {
@@ -334,6 +338,7 @@ a.external:active{
 @media (max-width: 489px) {
     .div-image  {
         margin-top: 0px;
+        width: 100%;
     }
 }
 
@@ -477,7 +482,6 @@ a.external:active{
   .body {
     margin-right: 10px;
     margin-left: 10px;
-    padding: 6px 6px 1px;
     font-family: 'Plaid xs', sans-serif;
     color: #fff;
   }
@@ -558,14 +562,12 @@ a.external:active{
   }
 }
 video {
-  /* width: 628.88px;
-height: 223.01px;
-left: 408.56px;
-top: 40.99px; */
-
    width:50%;
    max-width:600px;
    height:auto;
+   display: block;
+   margin: 0px auto;
+   outline: 0px;
 }
 @font-face {
   font-family: 'Plaid xs';
@@ -599,6 +601,13 @@ h1 {
   font-weight: 700;
    font-family: 'Plaid-S', sans-serif;
 }
+h2
+{
+font-size: 32px;
+font-family: 'Plaid xs';
+line-height: 38px;
+color: #FFFFFF;
+}
 h3 {
   font-size: 32px;
   font-family: 'Plaid xs mono';
@@ -607,17 +616,14 @@ h3 {
 }
 h4 {
   font-size: 32px;
-  font-family: 'Plaid xl mono';
-  line-height: 38px;
-  color: #8570FF;
+  font-family: 'Plaid xl';
+  line-height: 45px;
+  color: #828282;
+  margin: 0 0;
+  display: inline;
 }
-h2
-{
-font-size: 32px;
-font-family: 'Plaid xs';
-line-height: 38px;
-color: #FFFFFF;
-}
+
+
 a svg:hover #mag1{
   stroke: white;
 }
@@ -647,4 +653,252 @@ a svg #appstore {
   transition-timing-function: ease-in-out;
   -webkit-transition: 200ms;
   -webkit-transition-timing-function: ease-in-out;
+}
+@media all
+    and (max-device-width: 375px)
+    and (max-device-height: 812px)
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: portrait){
+
+      .div-appstore{
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 30px;
+                       margin-bottom: 30px;
+      }
+      .div-mag{
+        position:static;
+        width: 100%;
+        height: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+                margin-bottom: 30px;
+      }
+      .div-social{
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 30px;
+      }
+      .div-newmenu{
+      position: static;
+      width: 100%;
+      height: auto;
+      padding-top: 30px;
+      margin-left: 20px;
+      margin-right: 20px;
+
+      }
+      .body {
+        color: #fff;
+       margin-left: 20px;
+       margin-right: 20px;
+       height: 200px;
+      }
+      .parent{
+      position: relative;
+      margin-left: 20px;
+      margin-right: 20px;
+      }
+    h2{
+      font-size: 20px;
+      line-height: 24px;
+    }
+    h4{
+      font-size: 20px;
+      line-height: 28px;
+    }
+    #social a:hover{
+      color: #745CFF;
+    }
+    video {
+       width:50%;
+       height:auto;
+       display: block;
+       position: static;
+       outline: 0px;
+    }
+    .div-block {
+      position: static;
+      width: 100%;
+      height: auto;
+    }
+    .image3 {
+        width: 90%;
+    }
+    .top{
+      margin-top: 25px;
+            margin-bottom: 25px;
+      text-align: center;
+    }
+
+}
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+  .div-appstore{
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+                   margin-bottom: 30px;
+  }
+  .div-mag{
+    position:static;
+    width: 100%;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+            margin-bottom: 30px;
+  }
+  .div-social{
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
+  .div-newmenu{
+  position: static;
+  width: 100%;
+  height: auto;
+  padding-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  }
+  .body {
+    color: #fff;
+   margin-left: 20px;
+   margin-right: 20px;
+   height: 200px;
+  }
+  .parent{
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+  }
+  h2{
+  font-size: 20px;
+  line-height: 24px;
+  }
+  h4{
+  font-size: 20px;
+  line-height: 28px;
+  }
+  #social a:hover{
+  color: #745CFF;
+  }
+  video {
+   width:50%;
+   height:auto;
+   display: block;
+   position: static;
+   outline: 0px;
+  }
+  .div-block {
+  position: static;
+  width: 100%;
+  height: auto;
+  }
+  .image3 {
+    width: 90%;
+  }
+  .top{
+  margin-top: 25px;
+        margin-bottom: 25px;
+  text-align: center;
+  }
+}
+
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px) {
+  .div-appstore{
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-right: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .div-mag{
+    position:static;
+    width: 100%;
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
+  .div-social{
+    position: static;
+    width: 100%;
+    height: auto; */
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
+  .div-newmenu{
+  position: static;
+  width: 100%;
+  height: auto;
+  padding-top: 30px;
+  margin-right: 20px;
+
+  }
+  .body {
+    color: #fff;
+   margin-left: 20px;
+   margin-right: 20px;
+   height: 200px;
+  }
+  .parent{
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+  }
+  h2{
+  font-size: 20px;
+  line-height: 24px;
+  }
+  h4{
+  font-size: 20px;
+  line-height: 28px;
+  }
+  #social a:hover{
+  color: #745CFF;
+  }
+  video {
+   width:50%;
+   height:auto;
+   display: block;
+   position: static;
+   outline: 0px;
+  }
+  .div-block {
+  position: static;
+  width: 100%;
+  height: auto;
+  }
+  .image3 {
+    width: 90%;
+  }
+  .top{
+  margin-top: 25px;
+        margin-bottom: 25px;
+  text-align: center;
+  }
+
+
+
+
+
+
 }
