@@ -28,6 +28,9 @@ img2 {
   display: none!important;
   -webkit-appearance: none;
 }
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
 .parent{
 position: relative;
 margin-left: 120px;
