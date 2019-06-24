@@ -5,28 +5,23 @@ img2 {
   left:0px;
   right: 0px;
 }
-/* This used to work for the parent element of button divs */
-/* But it does not work with newer browsers, the below doesn't hide the play button parent div */
 
-*::-webkit-media-controls-panel {
+video::-webkit-media-controls-panel {
   display: none!important;
   -webkit-appearance: none;
 }
 
-/* Old shadow dom for play button */
-
-*::-webkit-media-controls-play-button {
+video::-webkit-media-controls-play-button {
   display: none!important;
   -webkit-appearance: none;
 }
 
-/* New shadow dom for play button */
-
-/* This one works! */
-
-*::-webkit-media-controls-start-playback-button {
+video::-webkit-media-controls-start-playback-button {
   display: none!important;
   -webkit-appearance: none;
+}
+.custom-video-controls {
+  z-index: 2147483647;
 }
 video::-webkit-media-controls-start-playback-button {
   display: none !important;
@@ -709,6 +704,15 @@ a svg #appstore {
     and (max-device-height: 812px)
     and (-webkit-device-pixel-ratio: 3)
     and (orientation: portrait){
+      a svg:hover #mag1{
+        stroke: #FE01FE;
+      }
+      a svg:hover #mag2{
+        fill: #FE01FE;
+      }
+      a svg:hover #appstore {
+        fill: #01FEFE;
+      }
 
       .div-appstore{
         position: static;
@@ -950,10 +954,5 @@ and (max-device-width : 736px) {
         margin-bottom: 25px;
   text-align: center;
   }
-
-
-
-
-
 
 }
