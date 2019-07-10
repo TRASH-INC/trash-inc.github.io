@@ -2,8 +2,8 @@
 <html data-wf-page="5cd9aa0dd85017dd0436226f" data-wf-site="5cab6bbbf8e0120f68e872b7">
 <head>
   <meta charset="utf-8">
-  <title>TRASH: DMCA</title>
-  <meta content="DMCA" property="og:title">
+  <title>TRASH STATS</title>
+  <meta content="STATS" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -31,17 +31,92 @@
   <meta name="msapplication-TileImage" content="/favicons/favicon-144.png">
   <meta name="msapplication-config" content="/favicons/browserconfig.xml">
   <meta name="viewport" content= "width=device-width, user-scalable=no">
-<style>
-.div_stats{
-  margin-left: 120px;
- margin-right: 120px;
- margin-top: 50px;
-}
-</style>
+  <style type='text/css'>
+            span {
+                color:white;
+                cursor:pointer;
+            }
+            span:hover{
+              color:#8484FF;
+              background-color: #E5E5E5;
+            }
+            .div_stats{
+              margin-left: 120px;
+             margin-right: 120px;
+             margin-top: 20px;
+            }
+            a{
+              color:#8484FF;
+              text-decoration: none;
+            }
+            a:link{
+              color:#8484FF;
+              text-decoration: none;
+            }
+            a:active{
+              color:#8484FF;
+              text-decoration: none;
+            }
+            a:hover{
+             background-color: #E5E5E5;
+            }
+        </style>
+        <script>
+            // show the given page, hide the rest
+            function show(elementID) {
+                // try to find the requested page and alert if it's not found
+                var ele = document.getElementById(elementID);
+                if (!ele) {
+                    alert("no such element");
+                    return;
+                }
+
+                // get all pages, loop through them and hide them
+                var pages = document.getElementsByClassName('page');
+                for(var i = 0; i < pages.length; i++) {
+                    pages[i].style.display = 'none';
+                }
+
+                // then show the requested page
+                ele.style.display = 'block';
+            }
+        </script>
+
 </head>
 
 <body class="div_stats" >
-  <h4> TRASH STATS </h4>
+  <h4 style="font-size:40px;"> TRASH STATS </h4>
+  <br><br>
+  <p style="font-size:30px;">click to view:
+              <span onclick="show('Page1');">USERS</span> |
+              <span onclick="show('Page2');">ENGAGEMENT</span> |
+              <span onclick="show('Page3');">APP DOWNLOADS</span> |
+              <span onclick="show('Page4');">TRASH MAG</span>
+          </p>
+
+      <div id="Page1" class="page" style="">
+        <br>
+          <p style="font-size: 25px;">see: <a href="https://analytics.amplitude.com/thetrashapp/chart/new/rkzpbjr" target="_blank">RETENTION</a> | <a href="https://analytics.amplitude.com/thetrashapp/chart/zhlv66w" target="_blank">GROWTH</a></p>
+          <br>
+          <p style="color:#8484FF; font-size:25px;">CODES</p>
+
+<center><iframe width="800" height="306" src="https://datastudio.google.com/embed/reporting/1qkEOytWfrCT2eIS2wIafOMTaxw8jpoW5/page/1M" frameborder="0" style="border:0" allowfullscreen></iframe></center>
+          <p style="color:#8484FF; font-size:25px;">ACCOUNTS</p>
+        <center><iframe width="800" height="306" src="https://datastudio.google.com/embed/reporting/1fDuDX6qUK1AtxLmxrEnsr_HL_4olcNi0/page/1M" frameborder="0" style="border:0" allowfullscreen></iframe>  </center>
+</div>
+
+      <div id="Page2" class="page" style="display:none">
+        <br>
+        <p style="font-size: 25px;">see: <a href="https://analytics.amplitude.com/thetrashapp/chart/emjbj09" target="_blank">TIME IN APP</a> | <a href="https://analytics.amplitude.com/thetrashapp/chart/5hw2679" target="_blank">ENGAGEMENT TYPE</a> | <a href="https://analytics.amplitude.com/thetrashapp/chart/xegp2pw" target="_blank">FEATURE USAGE</a></p>
+        <br>
+      </div>
+      <div id="Page3" class="page" style="display:none">
+          Content of page 3
+      </div>
+      <div id="Page4" class="page" style="display:none">
+        <br><br>
+<center><iframe width="800" height="450" src="https://datastudio.google.com/embed/reporting/1BTbBhVDsyPqClHif9hipVQTA3RhZ2hRG/page/1M" frameborder="0" style="border:0" allowfullscreen></iframe></center>
+      </div>
   <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
 </body>
