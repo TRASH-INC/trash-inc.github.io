@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+<script>
+function DetectAndServe(){
+        window.location.href = "https://www.figma.com/files/project/3153491/Website-%26-Mag";
+}
+</script>
+</head>
+<body onload="DetectAndServe()">
+</body>
+</html>
