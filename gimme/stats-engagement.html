@@ -45,42 +45,57 @@
        margin-right: 120px;
        margin-top: 20px;
           }
-            a{
-              color:#8484FF;
-              text-decoration: none;
-            }
-            a:link{
-              color:#8484FF;
-              text-decoration: none;
-            }
-            a:active{
-              color:#8484FF;
-              text-decoration: none;
-            }
-            a:hover{
-             background-color: #E5E5E5;
-            }
-        </style>
-        <script>
-            // show the given page, hide the rest
-            function show(elementID) {
-                // try to find the requested page and alert if it's not found
-                var ele = document.getElementById(elementID);
-                if (!ele) {
-                    alert("no such element");
-                    return;
-                }
+    a{
+      color:#8484FF;
+      text-decoration: none;
+    }
+    a:link{
+      color:#8484FF;
+      text-decoration: none;
+    }
+    a:active{
+      color:#8484FF;
+      text-decoration: none;
+    }
+    a:hover{
+     background-color: #E5E5E5;
+    }
+  .responsive-inline-frame-inner {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%;
+      height: 0;
+    }
 
-                // get all pages, loop through them and hide them
-                var pages = document.getElementsByClassName('page');
-                for(var i = 0; i < pages.length; i++) {
-                    pages[i].style.display = 'none';
-                }
+  .responsive-inline-frame-inner iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  </style>
+  <script>
+      // show the given page, hide the rest
+      function show(elementID) {
+          // try to find the requested page and alert if it's not found
+          var ele = document.getElementById(elementID);
+          if (!ele) {
+              alert("no such element");
+              return;
+          }
 
-                // then show the requested page
-                ele.style.display = 'block';
-            }
-        </script>
+          // get all pages, loop through them and hide them
+          var pages = document.getElementsByClassName('page');
+          for(var i = 0; i < pages.length; i++) {
+              pages[i].style.display = 'none';
+          }
+
+          // then show the requested page
+          ele.style.display = 'block';
+      }
+  </script>
 
 </head>
 

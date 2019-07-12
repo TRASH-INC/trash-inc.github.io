@@ -45,62 +45,81 @@
        margin-right: 120px;
        margin-top: 20px;
           }
-            a{
-              color:#8484FF;
-              text-decoration: none;
-            }
-            a:link{
-              color:#8484FF;
-              text-decoration: none;
-            }
-            a:active{
-              color:#8484FF;
-              text-decoration: none;
-            }
-            a:hover{
-             background-color: #E5E5E5;
-            }
-        </style>
-        <script>
-            // show the given page, hide the rest
-            function show(elementID) {
-                // try to find the requested page and alert if it's not found
-                var ele = document.getElementById(elementID);
-                if (!ele) {
-                    alert("no such element");
-                    return;
-                }
+    a{
+      color:#8484FF;
+      text-decoration: none;
+    }
+    a:link{
+      color:#8484FF;
+      text-decoration: none;
+    }
+    a:active{
+      color:#8484FF;
+      text-decoration: none;
+    }
+    a:hover{
+     background-color: #E5E5E5;
+    }
+  .responsive-inline-frame-inner {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%;
+      height: 0;
+    }
 
-                // get all pages, loop through them and hide them
-                var pages = document.getElementsByClassName('page');
-                for(var i = 0; i < pages.length; i++) {
-                    pages[i].style.display = 'none';
-                }
+  .responsive-inline-frame-inner iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  </style>
+  <script>
+      // show the given page, hide the rest
+      function show(elementID) {
+          // try to find the requested page and alert if it's not found
+          var ele = document.getElementById(elementID);
+          if (!ele) {
+              alert("no such element");
+              return;
+          }
 
-                // then show the requested page
-                ele.style.display = 'block';
-            }
-        </script>
+          // get all pages, loop through them and hide them
+          var pages = document.getElementsByClassName('page');
+          for(var i = 0; i < pages.length; i++) {
+              pages[i].style.display = 'none';
+          }
+
+          // then show the requested page
+          ele.style.display = 'block';
+      }
+  </script>
 
 </head>
 
-<body class="div_stats" >
-  <h4 style="font-size:40px;"> TRASH STATS </h4>
-  <br><br>
-  <p style="font-size:30px;">click to view:
-    <span onclick="window.location.href ='/gimme/stats';">USERS</span> |
-    <span onclick="window.location.href ='/gimme/stats-engagement';" >ENGAGEMENT</span> |
-    <span onclick="window.location.href ='/gimme/stats-appdl';" >APP DOWNLOADS</span> |
-    <span onclick="window.location.href ='/gimme/stats-mag';">TRASH MAG</span>
-          </p>
-        <br>
-          <p style="font-size: 25px;">see: <a href="https://analytics.amplitude.com/thetrashapp/chart/new/rkzpbjr" target="_blank">RETENTION</a> | <a href="https://analytics.amplitude.com/thetrashapp/chart/zhlv66w" target="_blank">GROWTH</a></p>
-          <br>
-          <p style="color:white; font-size:25px;">CODES</p>
+<body class="div_stats">
+    <h4 style="font-size:40px;"> TRASH STATS </h4>
+    <br><br>
+    <p style="font-size:30px;">click to view:
+      <span onclick="window.location.href ='/gimme/stats';">USERS</span> |
+      <span onclick="window.location.href ='/gimme/stats-engagement';" >ENGAGEMENT</span> |
+      <span onclick="window.location.href ='/gimme/stats-appdl';" >APP DOWNLOADS</span> |
+      <span onclick="window.location.href ='/gimme/stats-mag';">TRASH MAG</span>
+            </p>
+            <br>
+    <p style="font-size: 25px;">see: <a href="https://analytics.amplitude.com/thetrashapp/chart/new/rkzpbjr" target="_blank">RETENTION</a> | <a href="https://analytics.amplitude.com/thetrashapp/chart/zhlv66w" target="_blank">GROWTH</a></p>
+            <br>
+     <!-- <p style="color:white; font-size:25px;">CODES</p> -->
+  <div class="responsive-inline-frame-inner">
 <center><iframe width="800" height="306" src="https://datastudio.google.com/embed/reporting/1qkEOytWfrCT2eIS2wIafOMTaxw8jpoW5/page/1M" frameborder="0" style="border:0" allowfullscreen></iframe></center>
-<br><br>
-          <p style="color:white; font-size:25px;">USERS</p>
+      </div>
+      <br><br>
+     <!-- <p style="color:white; font-size:25px;">USERS</p> -->
+        <div class="responsive-inline-frame-inner">
         <center><iframe width="800" height="306" src="https://datastudio.google.com/embed/reporting/1fDuDX6qUK1AtxLmxrEnsr_HL_4olcNi0/page/1M" frameborder="0" style="border:0" allowfullscreen></iframe>  </center>
+      </div>
   <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
 </body>

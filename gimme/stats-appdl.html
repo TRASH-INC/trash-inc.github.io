@@ -45,42 +45,57 @@
        margin-right: 120px;
        margin-top: 20px;
           }
-            a{
-              color:#8484FF;
-              text-decoration: none;
-            }
-            a:link{
-              color:#8484FF;
-              text-decoration: none;
-            }
-            a:active{
-              color:#8484FF;
-              text-decoration: none;
-            }
-            a:hover{
-             background-color: #E5E5E5;
-            }
-        </style>
-        <script>
-            // show the given page, hide the rest
-            function show(elementID) {
-                // try to find the requested page and alert if it's not found
-                var ele = document.getElementById(elementID);
-                if (!ele) {
-                    alert("no such element");
-                    return;
-                }
+    a{
+      color:#8484FF;
+      text-decoration: none;
+    }
+    a:link{
+      color:#8484FF;
+      text-decoration: none;
+    }
+    a:active{
+      color:#8484FF;
+      text-decoration: none;
+    }
+    a:hover{
+     background-color: #E5E5E5;
+    }
+  .responsive-inline-frame-inner {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%;
+      height: 0;
+    }
 
-                // get all pages, loop through them and hide them
-                var pages = document.getElementsByClassName('page');
-                for(var i = 0; i < pages.length; i++) {
-                    pages[i].style.display = 'none';
-                }
+  .responsive-inline-frame-inner iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  </style>
+  <script>
+      // show the given page, hide the rest
+      function show(elementID) {
+          // try to find the requested page and alert if it's not found
+          var ele = document.getElementById(elementID);
+          if (!ele) {
+              alert("no such element");
+              return;
+          }
 
-                // then show the requested page
-                ele.style.display = 'block';
-            }
-        </script>
+          // get all pages, loop through them and hide them
+          var pages = document.getElementsByClassName('page');
+          for(var i = 0; i < pages.length; i++) {
+              pages[i].style.display = 'none';
+          }
+
+          // then show the requested page
+          ele.style.display = 'block';
+      }
+  </script>
 
 </head>
 
@@ -94,12 +109,15 @@
     <span onclick="window.location.href ='/gimme/stats-mag';">TRASH MAG</span>
           </p>
           <br>
-          <p style="color:white; font-size:25px;">DOWNLOADS AND DELETIONS</p>
+          <!-- <p style="color:white; font-size:25px;">DOWNLOADS AND DELETIONS</p> -->
+          <div class="responsive-inline-frame-inner">
           <center><iframe width="800" height="306" src="https://datastudio.google.com/embed/reporting/1NVjB_Ywl4CntOq5xtafCOFC7ZQJzC7Kj/page/1M" frameborder="0" style="border:0" allowfullscreen></iframe></center>
+        </div>
           <br><br>
-          <p style="color:white; font-size:25px;">SOURCES</p>
+          <!-- <p style="color:white; font-size:25px;">SOURCES</p> -->
+          <div class="responsive-inline-frame-inner">
           <center><iframe width="800" height="483" src="https://datastudio.google.com/embed/reporting/1cZlXoHVfsk4Lq0dUsWdhB-oeiJxYV0-Y/page/1M" frameborder="0" style="border:0" allowfullscreen></iframe></center>
-
+</div>
   <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
 </body>
