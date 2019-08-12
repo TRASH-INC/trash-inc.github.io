@@ -7,5 +7,8 @@
         "paths": ["/posts/*"]
       }
     ]
+  },
+  "webcredentials": {
+    "apps": [ "Q46J873AYZ.app.trash.roscoe" ]
   }
 }
