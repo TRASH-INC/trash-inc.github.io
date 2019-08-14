@@ -13,21 +13,24 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$blue: #1565c0;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
+$black: #000;
+$white: #fff;
+$gray-medium: #828282;
+$gray-light: #e8e8e8;
+
+$cyan: #01FEFE;
+$purple: #745CFF;
 
 // Font Colors
-$base-font-color: $dark-gray;
-$action-color: $blue;
+$base-font-color: $black;
+$action-color: $cyan;
 
 // Border
-$base-border-color: $light-gray;
+$base-border-color: $gray-light;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
-$viewport-background-color: #fff;
+$viewport-background-color: $white;
 
 // Focus
 $focus-outline-color: transparentize($action-color, 0.4);
