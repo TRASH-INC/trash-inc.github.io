@@ -1,13 +1,13 @@
 table {
   border-collapse: collapse;
-  margin: $base-spacing 0;
+  margin: $spacing-base 0;
   table-layout: fixed;
   text-align: left;
   width: 100%;
 }
 
 thead {
-  line-height: $heading-line-height;
+  line-height: $line-height-heading;
   vertical-align: bottom;
 }
 
@@ -25,5 +25,5 @@ th {
 
 th,
 td {
-  padding: $small-spacing $small-spacing $small-spacing 0;
+  padding: $spacing-small $spacing-small $spacing-small 0;
 }

@@ -1,16 +1,16 @@
 // Typography
-$base-font-family: $font-stack-system;
-$heading-font-family: $base-font-family;
+$font-family-base: $font-stack-system;
+$font-family-heading: $font-family-base;
 
 // Line height
-$base-line-height: 1.5;
-$heading-line-height: 1.2;
+$line-height-base: 1.5;
+$line-height-heading: 1.2;
 
 // Other Sizes
-$base-border-radius: 3px;
-$base-spacing: 1.5em;
-$small-spacing: $base-spacing / 2;
-$base-z-index: 0;
+$border-radius-base: 3px;
+$spacing-base: 1.5em;
+$spacing-small: $spacing-base / 2;
+$z-index-base: 0;
 
 // Colors
 $black: #000;
