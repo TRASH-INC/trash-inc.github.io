@@ -1,0 +1,23 @@
+.site-header {
+  width: 100%;
+  a {
+    display: block;
+  }
+}
+
+.site-header__callout {
+  @include position(absolute, 0 null null 0);
+  background-image: url('../images/layout-you-shoot--white.png');
+  display: block;
+  width: 100%;
+  height: 70px;
+  z-index: $z-index-site-header;
+}
+
+.site-header__halo {
+  @include margin(null auto);
+  @include position(relative, -4rem null null null);
+  display: block;
+  max-width: 630px;
+  z-index: $z-index-base;
+}

@@ -1,6 +1,19 @@
+// Colors
+$black: #000;
+$white: #fff;
+$gray-medium: #828282;
+$gray-light: #e8e8e8;
+
+$cyan: #01FEFE;
+$purple: #745CFF;
+
+// // Font Families
+// $font-family-heading: "Plaid-XL", sans-serif;
+// $font-family-reading: "Plaid-XS-Mono", sans-serif;
+
 // Typography
-$font-family-base: $font-stack-system;
-$font-family-heading: $font-family-base;
+$font-family-base: "Plaid-XS-Mono", sans-serif;
+$font-family-heading: "Plaid-XL", sans-serif;
 
 // Line height
 $line-height-base: 1.5;
@@ -12,17 +25,8 @@ $spacing-base: 1.5em;
 $spacing-small: $spacing-base / 2;
 $z-index-base: 0;
 
-// Colors
-$black: #000;
-$white: #fff;
-$gray-medium: #828282;
-$gray-light: #e8e8e8;
-
-$cyan: #01FEFE;
-$purple: #745CFF;
-
 // Font Colors
-$base-font-color: $black;
+$font-color-base: $black;
 $action-color: $cyan;
 
 // Border
@@ -30,7 +34,7 @@ $base-border-color: $gray-light;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
-$viewport-background-color: $white;
+$background-color-base: $white;
 
 // Focus
 $focus-outline-color: transparentize($action-color, 0.4);
@@ -41,3 +45,19 @@ $focus-outline-offset: 2px;
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
+
+// Screen Sizes
+$screen-small: 420px;
+$screen-medium: 640px;
+$screen-large: 980px;
+$screen-x-large: 1480px;
+
+// Z-Index
+$z-index-base: 1;
+$z-index-site-header: 99;
+
+// Layout Specific
+$background-color-base: $white;
+$background-color-dark: $black;
+$background-color-light: $white;
+$background-color-secondary: $black;

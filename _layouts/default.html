@@ -1,20 +1,17 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1,   
+          shrink-to-fit=no, user-scalable=no" name="viewport">
     <title>{{ site.title }}</title>
-
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content= "width=device-width, user-scalable=no">
-
     <link href="assets/stylesheets/main.css" rel="stylesheet" type="text/css">
     {% include favicon.html %}
     {% include google-analytics.html %}
   </head>
 
   <body>
-    <main>
+    <main role="main" class="page u-background-color--{{ page.background }}">
       {% include site-header.html %}
       {{ content }}
       {% include site-footer.html %}
