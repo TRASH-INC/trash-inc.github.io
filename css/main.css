@@ -1,0 +1,223 @@
+html, body {
+  font-size: 20px;
+}
+
+/* Font Families */
+/* ----------------------------------------------------------------- */
+@font-face {
+  font-family: 'Plaid XS';
+  src: url('../fonts/Plaid-XS.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plaid XS Mono';
+  src: url('../fonts/Plaid-XS-Mono.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plaid XL Mono';
+  src: url('../fonts/Plaid-XL-Mono.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plaid XL';
+  src: url('../fonts/Plaid-XL.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Utility Classes */
+/* ----------------------------------------------------------------- */
+.u-background-white {
+  background-color: #ffffff;
+}
+
+.u-link-highlight {
+  background-color: #01fefe;
+  color: inherit;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0 .1em;
+  text-decoration: none;
+}
+
+.u-link-highlight:hover {
+  background-color: #8484ff;
+  color: #ffffff;
+}
+
+/* Site Logo */
+/* ----------------------------------------------------------------- */
+.site-logo,
+.site-logo__image {
+  width: 100%;
+}
+
+.site-logo__image {
+  display: block;
+  margin: 2rem 0;
+}
+
+@media (min-width: 480px) {
+  .site-logo__image {
+    margin: 2.5rem 0;
+  }
+}
+
+/* Site Navigation */
+/* ----------------------------------------------------------------- */
+.site-navigation {
+  font-family: "Plaid XL", sans-serif;
+  padding: 0 1rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 480px) {
+  .site-navigation {
+    padding: 0 3rem;
+  }
+}
+
+@media (min-width: 840px) {
+  .site-navigation {
+    padding: 0 6rem;
+  }
+}
+
+.site-navigation__links {
+  list-style: none;
+  padding: 0;
+}
+
+.site-navigation__links li + li {
+  margin-top: 1rem;
+}
+
+.site-navigation__link {
+  background-color: #e5e5e5;
+  color: #8484ff;
+  padding: 0 .1em;
+  text-decoration: none;
+}
+
+.site-navigation__link:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+/* Page Styling */
+/* ----------------------------------------------------------------- */
+.page {
+  margin: 4rem 0;
+  max-width: 41rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 480px) {
+  .page {
+    padding: 0 3rem;
+  }
+}
+
+@media (min-width: 840px) {
+  .page {
+    padding: 0 6rem;
+  }
+}
+
+.page__heading,
+.page__subheading,
+.page-content__heading {
+  font-family: "Plaid XL Mono", sans-serif;
+}
+
+.page__heading {
+  font-size: 2rem;
+}
+
+.page-section {
+  margin: 2.5rem 0;
+}
+
+.page-section__heading,
+.page-section__copy,
+.page-section__list {
+  font-family: "Plaid XS Mono", sans-serif;
+  font-size: 1rem;
+}
+
+.page-section__heading {
+  font-weight: bold;
+}
+
+.page-section__copy {
+  line-height: 1.4em;
+}
+
+.page-section__list {
+  margin: 1.5rem 0;
+}
+
+.page-section__list-item {
+  margin-bottom: 1rem;
+}
+
+.page-section__image {
+  width: 100%;
+}
+
+/* Site Footer */
+/* ----------------------------------------------------------------- */
+.site-footer {
+  color: #828282;
+  font-family: "Plaid XS Mono", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 2rem 0;
+  padding: 0 1rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 480px) {
+  .site-footer {
+    padding: 0 3rem;
+  }
+}
+
+@media (min-width: 840px) {
+  .site-footer {
+    padding: 0 6rem;
+  }
+}
+
+.site-footer__links {
+  list-style: none;
+  padding: 0;
+}
+
+.site-footer__links li {
+  display: inline-block;
+}
+
+.site-footer__links li + li:before {
+  content: "| ";
+}
+
+.site-footer__link {
+  background-color: #e5e5e5;
+  color: #8484ff;
+  padding: 0 .1em;
+  text-decoration: none;
+}
+
+.site-footer__link:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
