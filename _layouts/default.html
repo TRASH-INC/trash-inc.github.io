@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1,   
+          shrink-to-fit=no, user-scalable=no" name="viewport">
+    <title>{{ site.title }}</title>
+    <link href="assets/stylesheets/main.css" rel="stylesheet" type="text/css">
+    {% include favicon.html %}
+    {% include google-analytics.html %}
+  </head>
+
+  <body>
+    <main role="main" class="page u-background-color--{{ page.background }}">
+      {% include site-header.html %}
+      {{ content }}
+      {% include site-footer.html %}
+    </main>
+  </body>
+</html>
