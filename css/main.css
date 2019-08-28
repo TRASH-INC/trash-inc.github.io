@@ -52,6 +52,38 @@ html, body {
   color: #ffffff;
 }
 
+.u-margin-top--add {
+  margin-top: 3rem;
+}
+
+.u-margin-all--remove {
+  margin: 0;
+}
+
+.u-margin-bottom--remove {
+  margin-bottom: 0;
+}
+
+.u-margin-top--remove {
+  margin-top: 0;
+}
+
+.u-padding-left--add {
+  padding-left: .75rem !important;
+}
+
+@media (min-width: 480px) {
+  .u-padding-left--add {
+    padding-left: 1.5rem !important;
+  }
+}
+
+@media (min-width: 840px) {
+  .u-padding-left--add {
+    padding-left: 2rem !important;
+  }
+}
+
 /* Site Logo */
 /* ----------------------------------------------------------------- */
 .site-logo,
@@ -86,7 +118,7 @@ html, body {
 
 @media (min-width: 840px) {
   .site-navigation {
-    padding: 0 6rem;
+    padding: 0 8rem;
   }
 }
 
@@ -128,27 +160,36 @@ html, body {
 
 @media (min-width: 840px) {
   .page {
-    padding: 0 6rem;
+    padding: 0 8rem;
   }
 }
 
 .page__heading,
 .page__subheading,
-.page-content__heading {
+.page-content__heading,
+.page-content__subheading {
   font-family: "Plaid XL Mono", sans-serif;
 }
 
 .page__heading {
-  font-size: 2rem;
+  font-size: 1.8rem;
+}
+
+@media (min-width: 480px) {
+  .page__heading {
+    font-size: 2rem;
+  }
 }
 
 .page-section {
   margin: 2.5rem 0;
 }
 
+.page-content__copy,
 .page-section__heading,
 .page-section__copy,
-.page-section__list {
+.page-section__list-ordered,
+.page-section__list-unordered {
   font-family: "Plaid XS Mono", sans-serif;
   font-size: 1rem;
 }
@@ -161,8 +202,18 @@ html, body {
   line-height: 1.4em;
 }
 
-.page-section__list {
+.page-section__list-ordered,
+.page-section__list-unordered {
   margin: 1.5rem 0;
+}
+
+.page-section__list-unordered {
+  list-style: none;
+  padding-left: 0;
+}
+
+.page-section__list-unordered li {
+  margin-bottom: 0.1rem;
 }
 
 .page-section__list-item {
@@ -193,7 +244,7 @@ html, body {
 
 @media (min-width: 840px) {
   .site-footer {
-    padding: 0 6rem;
+    padding: 0 8rem;
   }
 }
 
