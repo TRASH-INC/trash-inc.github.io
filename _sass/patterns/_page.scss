@@ -1,4 +1,4 @@
 .page {
-  @include padding(2rem 6rem);
+  @include padding($spacing-base);
   height: 100%;
 }

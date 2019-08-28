@@ -10,10 +10,11 @@
     {% include google-analytics.html %}
   </head>
 
-  <body>
-    <main role="main" class="page u-background-color--{{ page.background }}">
+  <body class="u-background-color--{{ page.background }}">
+    <main role="main" class="page">
       {% include site-header.html %}
       {{ content }}
+      {% include site-navigation.html %}
       {% include site-footer.html %}
     </main>
   </body>

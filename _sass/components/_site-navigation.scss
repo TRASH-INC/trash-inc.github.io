@@ -1,0 +1,26 @@
+.site-navigation {
+  font-family: $font-family-plaid-xl;
+  text-transform: uppercase;
+
+  @media (min-width: $screen-size-medium) {
+    @include padding(0 $spacing-medium);
+  }
+
+  @media (min-width: $screen-size-large) {
+    @include padding(0 $spacing-large);
+  }
+}
+
+.site-navigation__links {
+  @include padding(0);
+  list-style: none;
+}
+
+.site-navigation__link {
+  color: $gray-medium;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+  }
+}

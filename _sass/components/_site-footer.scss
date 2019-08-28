@@ -1,0 +1,29 @@
+.site-footer {
+  @include margin(2rem 0);
+  color: $gray-medium;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.site-footer__links {
+  @include padding(0);
+  list-style: none;
+}
+
+.site-footer__links li {
+  display: inline-block;
+
+  & + li:before {
+    content: "| ";
+  }
+}
+
+.site-footer__link {
+  @include padding(0 .1em);
+  color: $gray-medium;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+  }
+}

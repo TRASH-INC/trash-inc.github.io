@@ -1,8 +1,10 @@
 .site-header {
+  @include margin(null null $spacing-medium null);
   width: 100%;
-  a {
-    display: block;
-  }
+}
+
+.site-header a {
+  display: block;
 }
 
 .site-header__callout {
@@ -16,8 +18,8 @@
 
 .site-header__halo {
   @include margin(null auto);
-  @include position(relative, -4rem null null null);
+  @include position(relative, 1rem null null null);
   display: block;
-  max-width: 630px;
+  width: 100%;
   z-index: $z-index-base;
 }
