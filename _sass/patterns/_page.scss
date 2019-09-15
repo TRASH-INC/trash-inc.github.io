@@ -1,4 +1,16 @@
 .page {
   @include padding($spacing-base);
   height: 100%;
+
+  @media (min-width: $screen-size-medium) {
+    @include padding($spacing-medium);
+  }
+
+  @media (min-width: $screen-size-large) {
+    @include padding($spacing-medium $spacing-large);
+  }
+}
+
+.page--inner {
+  max-width: 825px;
 }

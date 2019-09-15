@@ -20,14 +20,5 @@ body {
 
 body {
   @include margin(0);
-  @include padding(null $spacing-small);
   -webkit-font-smoothing: antialiased;
-
-  @media (min-width: $screen-size-medium) {
-    @include padding(null $spacing-medium);
-  }
-
-  @media (min-width: $screen-size-large) {
-    @include padding(null $spacing-large);
-  }
 }
