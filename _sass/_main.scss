@@ -9,6 +9,7 @@
 @import "base/layout";
 @import "base/media";
 
+@import "components/faq-slat";
 @import "components/site-header";
 @import "components/site-footer";
 @import "components/site-navigation";
@@ -16,6 +17,7 @@
 @import "pages/page-index";
 
 @import "patterns/page";
+@import "patterns/page-section";
 
 @import "utilities/background-color";
 @import "utilities/color";
