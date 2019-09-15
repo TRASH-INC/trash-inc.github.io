@@ -1,24 +1,63 @@
 html {
   color: $font-color-base;
   font-family: $font-family-base;
-  font-size: 100%;
+  font-size: 18px;
   line-height: $line-height-base;
+
+  @media (min-width: $screen-size-medium) {
+    font-size: 20px;
+  }
 }
 
-h1,
+
+h1 {
+  @include margin($spacing-medium 0 $spacing-base);
+  font-family: $font-family-plaid-xl;
+  font-size: 1.11rem;
+  line-height: 1.1;
+
+  @media (min-width: $screen-size-medium) {
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+}
+
 h2,
-h3,
+h3 {
+  @include margin($spacing-base 0 $spacing-small);
+  font-size: .88rem;
+  font-weight: normal;
+  line-height: 1.375;
+
+  @media (min-width: $screen-size-medium) {
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+}
+
+h2 {
+  font-family: $font-family-plaid-xl-mono;
+}
+
+h3 {
+  font-family: $font-family-plaid-xs-mono;
+  text-transform: uppercase;
+}
+
 h4,
 h5,
 h6 {
+  @include margin(0 0 $spacing-small);
   font-family: $font-family-heading;
   font-size: modular-scale(1);
   line-height: $line-height-heading;
-  margin: 0 0 $spacing-small;
 }
 
 p {
-  margin: 0 0 $spacing-small;
+  @media (min-width: $screen-size-medium) {
+    font-size: 1.11rem;
+    line-height: 1.5;
+  }
 }
 
 a {
@@ -37,9 +76,9 @@ a {
 }
 
 hr {
+  @include margin($spacing-base 0);
   border-bottom: $base-border;
   border-left: 0;
   border-right: 0;
   border-top: 0;
-  margin: $spacing-base 0;
 }

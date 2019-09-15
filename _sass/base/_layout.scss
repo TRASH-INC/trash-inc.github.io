@@ -1,10 +1,5 @@
 html {
-  box-sizing: border-box;
-  font-size: 18px;
-
-  @media (min-width: $screen-size-medium) {
-    font-size: 20px;
-  }
+  box-sizing: content-box;
 }
 
 html,
@@ -15,10 +10,14 @@ body {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 
 body {
   @include margin(0);
   -webkit-font-smoothing: antialiased;
+}
+
+p {
+  @include margin(0 0 $spacing-small);
 }
