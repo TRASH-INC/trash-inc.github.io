@@ -1,6 +1,6 @@
 .page {
   @include padding($spacing-base);
-  height: 100%;
+  position: relative;
 
   @media (min-width: $screen-size-medium) {
     @include padding($spacing-medium);
