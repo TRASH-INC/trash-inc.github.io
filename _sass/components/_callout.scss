@@ -1,0 +1,32 @@
+.callout {
+  display: block;
+  width: 100%;
+  z-index: $z-index-site-header;
+}
+
+.callout-footer {
+  background-image: url('../images/layout-you-shoot--black.png'), url('../images/layout-you-shoot--bg.png');
+  background-position: left center, left center;
+  background-repeat: repeat-x, no-repeat;
+  bottom: 0;
+  display: block;
+  height: 100px;
+  left: 0;
+  position: relative;
+}
+
+.callout-header {
+  background-image: url('../images/layout-you-shoot--white-light.png');
+  height: 70px;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.callout-header--dark {
+  background-image: url('../images/layout-you-shoot--white-dark.png');
+  height: 70px;
+  left: 0;
+  position: absolute;
+  top: 0;
+}

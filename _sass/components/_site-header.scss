@@ -1,22 +1,24 @@
 .site-header {
-  @include margin(null null $spacing-medium null);
+  margin-bottom: $spacing-medium;
+  position: absolute;
   width: 100%;
 }
 
-.site-header__callout-dark,
-.site-header__callout-light {
+.site-header__callout,
+.site-header__callout--home {
   @include position(absolute, 0 null null 0);
   display: block;
   width: 100%;
   height: 70px;
   z-index: $z-index-site-header;
 }
-.site-header__callout-dark {
-  background-image: url('../images/layout-you-shoot--white-dark.png');
+
+.site-header__callout {
+  background-image: url('../images/layout-you-shoot--white-light.png');
 }
 
-.site-header__callout-light {
-  background-image: url('../images/layout-you-shoot--white-light.png');
+.site-header__callout--home {
+  background-image: url('../images/layout-you-shoot--white-dark.png');
 }
 
 .site-header__halo {

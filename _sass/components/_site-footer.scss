@@ -1,8 +1,9 @@
 .site-footer {
-  @include margin(2rem 0);
+  @include margin($spacing-base 0 null);
   color: $gray-medium;
   font-weight: bold;
   text-transform: uppercase;
+  position: relative;
 }
 
 .site-footer__links {
