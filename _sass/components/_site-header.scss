@@ -3,17 +3,20 @@
   width: 100%;
 }
 
-.site-header a {
-  display: block;
-}
-
-.site-header__callout {
+.site-header__callout-dark,
+.site-header__callout-light {
   @include position(absolute, 0 null null 0);
-  background-image: url('../images/layout-you-shoot--white.png');
   display: block;
   width: 100%;
   height: 70px;
   z-index: $z-index-site-header;
+}
+.site-header__callout-dark {
+  background-image: url('../images/layout-you-shoot--white-dark.png');
+}
+
+.site-header__callout-light {
+  background-image: url('../images/layout-you-shoot--white-light.png');
 }
 
 .site-header__halo {
