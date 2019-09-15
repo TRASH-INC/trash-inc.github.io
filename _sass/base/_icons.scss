@@ -1,0 +1,66 @@
+.icon-social__container {
+  align-items: center;
+  background-image: url('../images/social-hoop.svg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 75px;
+  justify-content: space-evenly;
+  max-width: 425px;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    bottom: -30px;
+    color: $purple;
+    content: 'Like...';
+    display: block;
+    font-family: $font-family-plaid-xs-mono;
+    height: 30px;
+    left: 0;
+    position: absolute;
+    text-transform: lowercase;
+    width: 30px;
+  }
+}
+
+.icon-social {
+  background-color: $purple;
+  display: inline-block;
+  height: 35px;
+
+  &:hover {
+    background-color: $white;
+  }
+}
+
+.icon-social__instagram {
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  mask-image: url('../images/social-instagram.svg');
+  width: 34px;
+}
+
+.icon-social__medium {
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  mask-image: url('../images/social-medium.svg');
+  width: 43px;
+}
+
+.icon-social__twitter {
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  mask-image: url('../images/social-twitter.svg');
+  width: 45px;
+}
+
+.icon-social__snap {
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  mask-image: url('../images/social-snap.svg');
+  width: 37px;
+}
