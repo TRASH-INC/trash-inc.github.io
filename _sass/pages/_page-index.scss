@@ -1,0 +1,40 @@
+.page-index {
+  position: relative;
+  @include margin(null null $spacing-large);
+
+  @media screen and (min-width: $screen-size-large) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+.page-index section {
+  @include margin($spacing-medium initial);
+  max-width: 420px;
+}
+
+.page-index__app {
+  @media screen and (min-width: $screen-size-large) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+
+.page-index__mag {
+  @media screen and (min-width: $screen-size-large) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.page-index__social {
+  @media screen and (min-width: $screen-size-large) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    left: 25%;
+    position: absolute;
+  }
+}
