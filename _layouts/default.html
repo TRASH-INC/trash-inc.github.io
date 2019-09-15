@@ -11,7 +11,7 @@
   </head>
 
   <body class="u-background-color--{{ page.background }}">
-    <main role="main" class="page{% unless page.url == '/' or page.url == 'index.html' %}{{ ' page--inner' }} %}{% endunless %}">
+    <main role="main" class="page{% unless page.url == '/' or page.url == 'index.html' %}{{ ' page--inner' }}{% endunless %}">
       {% if page.url == "/" or page.url == 'index.html' %}
         {% include site-header-home.html %}
       {% elsif page.url != "/" and page.url != 'index.html' %}
