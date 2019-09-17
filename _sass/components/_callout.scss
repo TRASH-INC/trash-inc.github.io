@@ -7,26 +7,32 @@
 .callout-footer {
   background-image: url('../images/layout-you-shoot--black.png'), url('../images/layout-you-shoot--bg.png');
   background-position: left center, left center;
-  background-repeat: repeat-x, no-repeat;
+  background-repeat: repeat-x, repeat-x;
   bottom: 0;
   display: block;
   height: 100px;
   left: 0;
+  margin-top: $spacing-medium;
   position: relative;
+
+  @media (min-width: $screen-size-medium) {
+    margin-top: $spacing-large;
+  }
 }
 
 .callout-header {
+  @include margin($spacing-base null);
   background-image: url('../images/layout-you-shoot--white-light.png');
   height: 70px;
-  left: 0;
-  position: absolute;
-  top: 0;
 }
 
 .callout-header--dark {
+  @include margin($spacing-base null);
   background-image: url('../images/layout-you-shoot--white-dark.png');
   height: 70px;
-  left: 0;
-  position: absolute;
-  top: 0;
+}
+
+.callout__link {
+  display: block;
+  height: 100%;
 }

@@ -1,12 +1,17 @@
+{% if page.url == "/" or page.url == 'index.html' %}
+<div class="callout callout-header--dark">
+  <a class="callout__link" href="/"></a>
+</div>
+
 <header class="site-header">
-  {% if page.url == "/" or page.url == 'index.html' %}
-    <a class="callout callout-header--dark" href="/"></a>
-    <video class="site-header__halo" autoplay loop muted playsinline>
-      <source src="assets/videos/trash__halo--cropped.webm" type="video/webm">
-      <source src="assets/videos/trash__halo--cropped.mp4" type="video/mp4">
-      <img src="assets/images/trash__halo--cropped.gif" alt="Animated image of the TRASH halo rotating continuously.">
-    </video>
-  {% elsif page.url != "/" and page.url != 'index.html' %}
-    <a class="callout callout-header" href="/"></a>
-  {% endif %}
+  <video class="site-header__halo" autoplay loop muted playsinline>
+    <source src="assets/videos/trash__halo--cropped.webm" type="video/webm">
+    <source src="assets/videos/trash__halo--cropped.mp4" type="video/mp4">
+    <img src="assets/images/trash__halo--cropped.gif" alt="Animated image of the TRASH halo rotating continuously.">
+  </video>
 </header>
+{% elsif page.url != "/" and page.url != 'index.html' %}
+<div class="callout callout-header">
+  <a class="callout__link" href="/"></a>
+</div>
+{% endif %}
