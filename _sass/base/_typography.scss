@@ -11,7 +11,7 @@ html {
 
 
 h1 {
-  @include margin($spacing-medium 0 $spacing-base);
+  @include margin($spacing-base 0);
   font-family: $font-family-plaid-xl;
   font-size: 1.11rem;
   line-height: 1.1;
@@ -25,7 +25,7 @@ h1 {
 h2,
 h3 {
   @include margin($spacing-base 0 $spacing-small);
-  font-size: .88rem;
+  font-size: 1.2rem;
   font-weight: normal;
   line-height: 1.375;
 

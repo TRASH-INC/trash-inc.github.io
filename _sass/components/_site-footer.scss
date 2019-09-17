@@ -1,14 +1,23 @@
 .site-footer {
   @include margin($spacing-base 0 null);
+  @include padding(null $spacing-base);
   color: $gray-medium;
-  font-weight: bold;
-  text-transform: uppercase;
   position: relative;
+  text-transform: uppercase;
+
+  @media (min-width: $screen-size-medium) {
+    @include padding(null $spacing-medium);
+  }
+
+  @media (min-width: $screen-size-large) {
+    @include padding(null $spacing-large);
+  }
 }
 
 .site-footer__links {
   @include padding(0);
   list-style: none;
+  margin-bottom: 0;
 }
 
 .site-footer__links li {
@@ -25,6 +34,12 @@
   text-decoration: none;
 
   &:hover {
-    color: $white;
+    color: $purple;
   }
+}
+
+.site-footer__links,
+.site-footer__copyright {
+  font-family: $font-family-plaid-xs-mono;
+  font-size: 1.11rem;
 }
