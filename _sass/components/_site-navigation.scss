@@ -1,6 +1,16 @@
 .site-navigation {
+  @include padding(null $spacing-base);
   font-family: $font-family-plaid-xl;
+  margin-top: $spacing-medium;
   text-transform: uppercase;
+
+  @media (min-width: $screen-size-medium) {
+    @include padding(null $spacing-medium);
+  }
+
+  @media (min-width: $screen-size-large) {
+    @include padding(null $spacing-large);
+  }
 }
 
 .site-navigation__links {
@@ -8,11 +18,19 @@
   list-style: none;
 }
 
+.site-navigation__links li + li {
+  margin-top: .35rem;
+}
+
 .site-navigation__link {
-  color: $gray-medium;
+  @include padding(.1em $spacing-small);
+  background-color: $gray-light;
+  color: $purple;
   text-decoration: none;
 
   &:hover {
-    color: $white;
+    background-color: $white;
+    border: 1px solid $black;
+    color: $black;
   }
 }
