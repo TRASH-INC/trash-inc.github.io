@@ -1,4 +1,4 @@
-<footer class="site-footer">
+<footer class="site-footer{% if page.url == '/' or page.url == 'index.html' %} site-footer--home{% endif %}">
   <ul class="site-footer__links">
     <li><a class="site-footer__link" href="privacy">Privacy</a></li>
     <li><a class="site-footer__link" href="terms">Terms</a></li>

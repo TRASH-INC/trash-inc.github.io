@@ -34,3 +34,17 @@
     color: $black;
   }
 }
+
+.site-navigation--home {
+  .site-navigation__link {
+    @include padding(0);
+    background-color: unset;
+    color: $gray-medium;
+
+    &:hover {
+      background-color: unset;
+      border: none;
+      color: $white;
+    }
+  }
+}

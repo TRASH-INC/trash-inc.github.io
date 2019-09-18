@@ -43,3 +43,11 @@
   font-family: $font-family-plaid-xs-mono;
   font-size: 1.11rem;
 }
+
+.site-footer--home {
+  .site-footer__link {
+    &:hover {
+      color: $white;
+    }
+  }
+}
