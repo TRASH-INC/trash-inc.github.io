@@ -61,12 +61,12 @@ p {
 }
 
 a {
-  color: $action-color;
+  color: $font-color-base;
   text-decoration-skip: ink;
   transition: color $base-duration $base-timing;
 
   &:hover {
-    color: shade($action-color, 25%);
+    color: shade($font-color-base, 25%);
   }
 
   &:focus {

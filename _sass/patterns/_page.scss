@@ -2,6 +2,20 @@
   @include padding($spacing-base);
   position: relative;
 
+  a {
+      @include padding(0 .1em);
+      background-color: $cyan;
+      color: inherit;
+      display: inline-block;
+      text-decoration: none;
+      transition: all $base-duration $base-timing;
+
+    &:hover {
+      background-color: $purple;
+      color: $white;
+    }
+  }
+
   @media (min-width: $screen-size-medium) {
     @include padding($spacing-medium);
   }
