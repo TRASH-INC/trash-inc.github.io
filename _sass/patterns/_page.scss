@@ -8,7 +8,7 @@
       color: inherit;
       display: inline-block;
       text-decoration: none;
-      transition: all $base-duration $base-timing;
+      transition: background-color $base-duration $base-timing, color $base-duration $base-timing,;
 
     &:hover {
       background-color: $purple;
