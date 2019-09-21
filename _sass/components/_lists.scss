@@ -3,6 +3,11 @@ ol {
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $screen-size-medium) {
+    font-size: 1.11rem;
+    line-height: 1.5;
+  }
 }
 
 dl {
