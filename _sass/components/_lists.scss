@@ -1,13 +1,16 @@
-ul,
-ol {
+ol,
+ul {
   line-height: 1.5;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
 
   @media (min-width: $screen-size-medium) {
     font-size: 1.11rem;
   }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 dl {

@@ -16,6 +16,10 @@
     }
   }
 
+  img {
+    width: 100%;
+  }
+
   @media (min-width: $screen-size-medium) {
     @include padding($spacing-medium);
   }
