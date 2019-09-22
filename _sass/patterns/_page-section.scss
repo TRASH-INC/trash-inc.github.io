@@ -2,10 +2,10 @@
   @include margin($spacing-medium auto null);
 }
 
-.page-section--home {
+.page-section--index {
   max-width: 420px;
 }
 
-.page-section--home + .page-section--home {
+.page-section--index + .page-section--index {
   @include margin($spacing-medium null null);
 }
