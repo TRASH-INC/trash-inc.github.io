@@ -1,104 +1,94 @@
-# trash-inc.github.io
-TRASH github page
+# TRASH
 
-<b> FYI: </b>
-* An alterantive to all of this is to use <b>GitHub Desktop</b> or to edit and commit using the browser GitHub file editor.
-* To develop locally follow the *Requirements* and *Step 4* from these instructions:
-https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll
+Welcome to the offical GitHub repository for the TRASH website, located at [_https://trash.app_](https://trash.app/)
 
+If you’d like to make edits to the website, please read this README thoroughly. It will provide you will all the tools you need to get running.
 
-If you already have your Github account configured locally, skip the next section: 
+## *Table of Contents*
 
-### Follow these instructions to set up your GitHub account locally:
+  - [**Getting Started**](#getting-started)
+  - [**Contributing**](#contributing)
+  - [**Troubleshooting**](#troubleshooting)
 
-1. Install git using homebrew
-```
-brew install git 
-```
+---
 
-2. Go to your home directory 
-```
-cd ~/
-```
+### **Getting Started**
 
-3. Run the following command
-```
-ssh-keygen -t rsa
+If you’ve never used Jekyll before, we’ll need to get you up-to-speed.
+
+**Step 1**
+The site uses [Jekyll](https://jekyllrb.com/), so you'll need to make sure that you have a few tools installed. First, let’s make sure you have Xcode Command Line Tools installed. In your terminal, type the following command:
+
+```sh
+xcode-select --install
 ```
 
-4. When prompted to enter filename, press enter to use the default filename. When prompted to enter passphrase, also press enter for no passphrase. 
+Next, make sure you have at least Ruby 2.4.0 installed on your machine. For details on how to do this, please see [this guide.](https://jekyllrb.com/docs/installation/)
 
-5. This creates an ssh key. Run the following command to copy it
+Finally, we'll install the Jekyll gem:
+
+```sh
+gem install jekyll
 ```
-pbcopy < ~/.ssh/id_rsa.pub
-```
 
-6. Log in to GitHub and go to your profile: https://github.com/settings/profile. <br>
+**Step 2**
+In your Terminal and clone the repository with the following command:
 
-7. Select <b>'SSH and GPG keys'</b>, then select <b>'New SSH Key'</b>, and paste the key.<br>
-
-8. Click <b>'Add SSH Key'</b> <br>
-
-### Cloning the website repo:
-
-You can now clone the website repo locally by running: <br>
-```
+```sh
 git@github.com:TRASH-INC/trash-inc.github.io.git
 ```
 
-### To edit locally and deploy your changes:
+Next, you'll `cd` into the cloned `trash-inc.github.io` folder using the command:
 
-
-1. Navigate to the repo location
-```
+```sh
 cd trash-inc.github.io
 ```
-2. Check if there are changes in the remote that you do not have locally
+
+**Step 3**
+Since Jekyll uses [Bundler](https://bundler.io), we need to make sure that the gems listed in our [Gemfile](/blob/master/Gemfile) we need are installed. to do that, run the command:
+
+```sh
+bundle install
 ```
-git status 
+
+Once that's complete, you can run the site's local server with the command:
+
+```sh
+bundle exec jekyll serve --watch --incremental --livereload
 ```
-3. If there are, pull those changes 
-```
+
+This will generate a URL that will allow you to see changes as you make them live. Any changes you make will automagically refresh in the browser. ☺️
+
+---
+
+### **Contributing**
+
+If you have quick edits you need to make, first make sure you have the most updated files to work with:
+
+```sh
 git pull
 ```
-4. Change your files locally 
-5. Add any new files
-```
-git add .
-```
-6. Commit your changes with a commit message explaining the changes 
-```
-git commit -m "this is my commit message"
-```
-7. Deploy to master
-```
-git push origin master 
+
+Then, create a new branch:
+
+```sh
+git checkout -b <name of your branch>
 ```
 
-### Some notes:
+Make your changes to the files necessary.
 
-To check what's happening at any point in time: 
-```
-git status 
-```
+Next, push your changes to your remote branch:
 
-To create a new branch:
-
-```
-git checkout -b newbranchname
+```sh
+git push origin <name of your branch>
 ```
 
-To switch to a branch: 
-```
-git checkout branchname
-```
+You can then go to the [TRASH website repository](https://github.com/TRASH-INC/trash-inc.github.io) and submit a pull request so that your changes can be checked over (it isn’t a good idea to make changes directly to `master` since the `master` branch is directly connected to our App Store app).
 
-To switch back to master: 
-```
-git checkout master
-```
+Once you get approval, you can merge your branch into `master`.
 
+---
 
+### **Troubleshooting**
 
-
-
+If you're having trouble setting this up, please post a message in the [#engineering](https://app.slack.com/client/T6DMJDJ4R/CHQETFH60) or [#design](https://app.slack.com/client/T6DMJDJ4R/CHRUSE9RC) channel in Slack.
