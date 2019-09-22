@@ -2,20 +2,6 @@
   @include padding($spacing-base);
   position: relative;
 
-  a {
-      @include padding(0 .1em);
-      background-color: $cyan;
-      color: inherit;
-      display: inline-block;
-      text-decoration: none;
-      transition: background-color $base-duration $base-timing, color $base-duration $base-timing,;
-
-    &:hover {
-      background-color: $purple;
-      color: $white;
-    }
-  }
-
   img {
     width: 100%;
   }
@@ -29,6 +15,32 @@
   }
 }
 
+.page--home {
+  @include padding(0 $spacing-base);
+
+  @media (min-width: $screen-size-medium) {
+    @include padding(0 $spacing-medium $spacing-medium);
+  }
+
+  @media (min-width: $screen-size-large) {
+    @include padding(0 $spacing-large $spacing-medium);
+  }
+}
+
 .page--inner {
   max-width: 825px;
+
+  a {
+    @include padding(0 .1em);
+    background-color: $cyan;
+    color: inherit;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color $base-duration $base-timing, color $base-duration $base-timing,;
+
+  &:hover {
+    background-color: $purple;
+    color: $white;
+  }
+}
 }

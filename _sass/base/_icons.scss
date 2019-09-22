@@ -1,66 +1,86 @@
 .icon-social__container {
   align-items: center;
-  background-image: url('../images/social-hoop.svg');
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  background-size: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   height: 75px;
-  justify-content: space-evenly;
-  max-width: 425px;
+  justify-content: space-between;
   position: relative;
-  width: 100%;
 
-  &::before {
-    bottom: -30px;
-    color: $purple;
-    content: 'Like...';
-    display: block;
-    font-family: $font-family-plaid-xs-mono;
-    height: 30px;
-    left: 0;
-    position: absolute;
-    text-transform: lowercase;
-    width: 30px;
+  @media (min-width: $screen-size-large) {
+    background-image: url('../images/social-hoop.svg');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 130px;
+    justify-content: space-evenly;
+    width: 420px;
+
+    &::before {
+      bottom: -30px;
+      color: $purple;
+      content: 'Like...';
+      display: block;
+      font-family: $font-family-plaid-xs-mono;
+      left: 0;
+      position: absolute;
+      text-transform: lowercase;
+    }
   }
 }
 
-.icon-social {
-  background-color: $purple;
-  display: inline-block;
-  height: 35px;
+.icon-social--fill {
+  fill: $purple;
+}
 
-  &:hover {
-    background-color: $white;
+.icon-social__link:hover .icon-social--fill {
+  fill: $white;
+}
+
+@media (min-width: $screen-size-large) {
+  .icon-social__link:hover {
+    &:nth-child(1)::after {
+      bottom: -30px;
+      color: $white;
+      content: 'fun videos';
+      display: block;
+      font-family: $font-family-plaid-xs-mono;
+      left: 80px;
+      position: absolute;
+      text-transform: lowercase;
+    }
+
+    &:nth-child(2)::after {
+      bottom: -30px;
+      color: $white;
+      content: 'sweet science';
+      display: block;
+      font-family: $font-family-plaid-xs-mono;
+      left: 80px;
+      position: absolute;
+      text-transform: lowercase;
+    }
+
+    &:nth-child(3)::after {
+      bottom: -30px;
+      color: $white;
+      content: 'announcements';
+      display: block;
+      font-family: $font-family-plaid-xs-mono;
+      left: 80px;
+      position: absolute;
+      text-transform: lowercase;
+    }
+
+    &:nth-child(4)::after {
+      bottom: -30px;
+      color: $white;
+      content: 'who knows';
+      display: block;
+      font-family: $font-family-plaid-xs-mono;
+      left: 80px;
+      position: absolute;
+      text-transform: lowercase;
+    }
   }
-}
-
-.icon-social__instagram {
-  mask-repeat: no-repeat;
-  mask-size: cover;
-  mask-image: url('../images/social-instagram.svg');
-  width: 34px;
-}
-
-.icon-social__medium {
-  mask-repeat: no-repeat;
-  mask-size: cover;
-  mask-image: url('../images/social-medium.svg');
-  width: 43px;
-}
-
-.icon-social__twitter {
-  mask-repeat: no-repeat;
-  mask-size: cover;
-  mask-image: url('../images/social-twitter.svg');
-  width: 45px;
-}
-
-.icon-social__snap {
-  mask-repeat: no-repeat;
-  mask-size: cover;
-  mask-image: url('../images/social-snap.svg');
-  width: 37px;
 }
