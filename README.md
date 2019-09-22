@@ -16,7 +16,8 @@ If you’d like to make edits to the website, please read this README thoroughly
 
 If you’ve never used Jekyll before, we’ll need to get you up-to-speed.
 
-**Step 1**
+#### Step 1
+
 The site uses [Jekyll](https://jekyllrb.com/), so you'll need to make sure that you have a few tools installed. First, let’s make sure you have Xcode Command Line Tools installed. In your terminal, type the following command:
 
 ```sh
@@ -31,7 +32,8 @@ Finally, we'll install the Jekyll gem:
 gem install jekyll
 ```
 
-**Step 2**
+#### Step 2
+
 In your Terminal and clone the repository with the following command:
 
 ```sh
@@ -44,7 +46,8 @@ Next, you'll `cd` into the cloned `trash-inc.github.io` folder using the command
 cd trash-inc.github.io
 ```
 
-**Step 3**
+#### Step 3
+
 Since Jekyll uses [Bundler](https://bundler.io), we need to make sure that the gems listed in our [Gemfile](/blob/master/Gemfile) we need are installed. to do that, run the command:
 
 ```sh
@@ -66,7 +69,7 @@ This will generate a URL that will allow you to see changes as you make them liv
 If you have quick edits you need to make, first make sure you have the most updated files to work with:
 
 ```sh
-git pull
+git pull origin master
 ```
 
 Then, create a new branch:
