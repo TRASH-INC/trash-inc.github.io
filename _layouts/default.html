@@ -1,34 +1,14 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1,   
-          shrink-to-fit=no, user-scalable=no" name="viewport">
-    <title>{{ site.title }}</title>
-    <link href="assets/stylesheets/main.css" rel="stylesheet" type="text/css">
-    {% include favicon.html %}
-    {% include google-analytics.html %}
-  </head>
+  {% include site-head.html %}
 
   <body class="u-background-color--{{ page.background }}">
     {% include site-header.html %}
-    {% if page.url != "/" and page.url != 'index.html' %}
-      {% include site-navigation.html %}
-    {% endif %}
-    <main role="main" class="page{% unless page.url == '/' or page.url == 'index.html' %}{{ ' page--inner' }}{% endunless %}">
+    {% include site-navigation.html %}
+    <main class="page page--inner">
       {{ content }}
     </main>
-    {% if page.url == "/" or page.url == 'index.html' %}
-      <nav class="site-navigation site-navigation--home">
-        <ul class="site-navigation__links">
-          <li><a class="site-navigation__link" href="/FAQ">Help &amp; FAQ</a></li>
-          <li><a class="site-navigation__link" href="/communityrulez">Community Rulez</a></li>
-          <li><a class="site-navigation__link" href="https://angel.co/trash" target="_blank">Team &amp; Jobs</a></li>
-        </ul>
-      </nav>
-    {% elsif page.url != "/" and page.url != 'index.html' %}
-      {% include site-navigation.html %}
-    {% endif %}
+    {% include site-navigation.html %}
     {% include site-footer.html %}
   </body>
 </html>
