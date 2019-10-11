@@ -100,6 +100,27 @@ Your browser is a poopy and doesn't support video playback!
             Use code GUCCI to get into our beta!</p>
       </div>
 
+<!-- The script below parses the uuid from the query string in this page's url. It requests an s3 temporary URL from benny.trash.app !-->
+<script>
+var $log = $( "#log" ),
+  str = "hello, <b>my name is</b> jQuery.",
+  html = $.parseHTML( str ),
+  nodeNames = [];
+ 
+// Append the parsed HTML
+$log.append( html );
+ 
+// Gather the parsed HTML's node names
+$.each( html, function( i, el ) {
+  nodeNames[ i ] = "<li>" + el.nodeName + "</li>";
+});
+ 
+// Insert the node names
+$log.append( "<h3>Node Names:</h3>" );
+$( "<ol></ol>" )
+  .append( nodeNames.join( "" ) )
+  .appendTo( $log );
+</script>
     <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/webflow.js" type="text/javascript"></script>
 </body>
