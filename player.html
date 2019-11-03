@@ -95,38 +95,22 @@
   <source src="https://s3.amazonaws.com/dev.media.trash.app/0a0caf6b-8c5f-4258-8aac-b20ff1f52606.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIEC3D5R7EY5VOD7A%2F20191011%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20191011T162442Z&X-Amz-Expires=86400&X-Amz-Signature=d9b3c2207f78569e89e3e09aadaabfd71394016c9cc2636dabae3de712d29433&X-Amz-SignedHeaders=host"
   type="video/mp4">
 Your browser is a poopy and doesn't support video playback!
-</video> 
+</video>
 <div>
-      <p> To make your own download <a href="https://www.trash.app/dl">the TRASH app</a>. 
-            Use code GUCCI to get into our beta!</p>
+      <p> To make your own download <a href="https://www.trash.app/dl">the TRASH app</a>.</p>
+      <p> Use code GUCCI to get into our beta!</p>
       </div>
 
-<!-- The script below makes the video player controls visible !-->      
+<!-- The script below makes the video player controls visible !-->
 <script>
 $('.container.main.content').css('z-index',-1)
-      </script>      
+</script>
 <!-- The script below parses the uuid from the query string in this page's url. It requests an s3 temporary URL from benny.trash.app !-->
 <script>
-var $log = $( "#log" ),
-  str = "hello, <b>my name is</b> jQuery.",
-  html = $.parseHTML( str ),
-  nodeNames = [];
- 
-// Append the parsed HTML
-$log.append( html );
- 
-// Gather the parsed HTML's node names
-$.each( html, function( i, el ) {
-  nodeNames[ i ] = "<li>" + el.nodeName + "</li>";
-});
- 
-// Insert the node names
-$log.append( "<h3>Node Names:</h3>" );
-$( "<ol></ol>" )
-  .append( nodeNames.join( "" ) )
-  .appendTo( $log );
-var obj = jQuery.parseJSON( '{ "name": "John" }' );
-alert( obj.name === "John" );
+  var urlParams = new URLSearchParams(window.location.search);
+  console.log(urlParams.get('uuid'));
+//var obj = jQuery.parseJSON( '{ "name": "John" }' );
+//alert( obj.name === "John" );
 </script>
     <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/webflow.js" type="text/javascript"></script>
