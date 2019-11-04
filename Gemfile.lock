@@ -8,6 +8,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    bourbon (6.0.0)
+      thor (~> 0.19)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
