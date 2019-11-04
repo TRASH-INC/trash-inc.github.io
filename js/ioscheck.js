@@ -6,9 +6,9 @@ function iOScheck() {
 }
 
 isiOS = iOScheck();
-isSafari = navigator.userAgent.indexOf("Safari") > -1;
+isiOSChrome = navigator.userAgent.match('CriOS');
 
-if (isiOS && isSafari) {
+if (isiOS && !navigator.userAgent.match('CriOS')) {
     // remove the download from app store button if this is in iOS
     // because there will be a smart banner
     document.getElementById("appstore1").remove();
