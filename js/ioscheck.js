@@ -18,6 +18,6 @@ if (isiOS && !navigator.userAgent.match('CriOS')) {
     var footer = document.getElementById("menu");
     var dlLink = document.createElement('h4');
     footer.prepend(dlLink);
-    dlLink.outerHTML = '<h4><a href="https://apps.apple.com/us/app/trash-you-shoot-we-edit/id1412091383?ls=1" >DOWNLOAD APP</a></h4><br>';
+    dlLink.outerHTML = '<h4><a href="https://apps.apple.com/app/id1412091383" >DOWNLOAD APP</a></h4><br>';
 
 }
