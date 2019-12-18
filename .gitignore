@@ -9,6 +9,7 @@
 /test/tmp/
 /test/version_tmp/
 /tmp/
+scratch.html
 
 # Used by dotenv library to load environment variables.
 # .env
@@ -45,6 +46,7 @@ build-iPhoneSimulator/
 # Gemfile.lock
 # .ruby-version
 # .ruby-gemset
+.jekyll-metadata
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
@@ -52,6 +54,3 @@ build-iPhoneSimulator/
 .DS_Store
 _site
 .sass-cache/
-#~
-#~
-.#~

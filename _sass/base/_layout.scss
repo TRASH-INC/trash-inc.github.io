@@ -1,0 +1,23 @@
+html {
+  box-sizing: content-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: content-box;
+}
+
+body {
+  @include margin(0);
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  @include margin(0 0 $spacing-small);
+}
