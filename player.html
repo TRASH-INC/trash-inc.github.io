@@ -91,8 +91,8 @@
 </head>
 <body>
 
-<video controls>
-  <source src="https://s3.amazonaws.com/dev.media.trash.app/0a0caf6b-8c5f-4258-8aac-b20ff1f52606.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIEC3D5R7EY5VOD7A%2F20191011%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20191011T162442Z&X-Amz-Expires=86400&X-Amz-Signature=d9b3c2207f78569e89e3e09aadaabfd71394016c9cc2636dabae3de712d29433&X-Amz-SignedHeaders=host"
+<video id="vid" controls loop>
+  <source src=""
   type="video/mp4">
 Your browser is a poopy and doesn't support video playback!
 </video>
@@ -105,12 +105,28 @@ Your browser is a poopy and doesn't support video playback!
 <script>
 $('.container.main.content').css('z-index',-1)
 </script>
-<!-- The script below parses the uuid from the query string in this page's url. It requests an s3 temporary URL from benny.trash.app !-->
+<!-- The script below parses the post id from the query string in this page's url. It requests an s3 signed URL from benny.trash.app !-->
 <script>
+
   var urlParams = new URLSearchParams(window.location.search);
-  console.log(urlParams.get('uuid'));
-//var obj = jQuery.parseJSON( '{ "name": "John" }' );
-//alert( obj.name === "John" );
+
+  fetch('https://benny.trash.app/graphql', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    },
+    body: JSON.stringify({query: '{ post(id:"'+urlParams.get('id')+'") { signed_urls } }'})
+  })
+    .then(r => r.json())
+      .then(data => {
+  	  var video = $('#vid')[0];
+  	  video.src = data.data.post.signed_urls.original.url;
+  	  video.load();
+
+  	 })
+      .catch(err => { throw err });
+
 </script>
     <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/webflow.js" type="text/javascript"></script>
