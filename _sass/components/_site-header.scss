@@ -1,0 +1,16 @@
+.site-header {
+  width: 100%;
+}
+
+.site-header__halo {
+  display: block;
+  position: relative;
+  margin: -7em auto 0;
+  max-width: 33rem;
+  width: 100%;
+  z-index: -1;
+
+  @media (min-width: $screen-size-medium) {
+    margin-top: -10em;
+  }
+}

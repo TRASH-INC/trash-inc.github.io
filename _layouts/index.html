@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  {% include site-head.html %}
+
+  <body class="u-background-color--{{ page.background }}">
+    {% include site-header.html %}
+    <main class="page page--home">
+      {{ content }}
+    </main>
+    <nav class="site-navigation site-navigation--home">
+      <ul class="site-navigation__links">
+        <li><a class="site-navigation__link" href="/FAQ">Help &amp; FAQ</a></li>
+        <li><a class="site-navigation__link" href="/communityrulez">Community Rulez</a></li>
+        <li><a class="site-navigation__link" href="https://angel.co/trash" target="_blank">Team &amp; Jobs</a></li>
+      </ul>
+    </nav>
+    {% include site-footer.html %}
+  </body>
+</html>

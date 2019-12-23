@@ -1,0 +1,11 @@
+.page-section + .page-section {
+  @include margin($spacing-medium auto null);
+}
+
+.page-section--index {
+  max-width: 420px;
+}
+
+.page-section--index + .page-section--index {
+  @include margin($spacing-medium null null);
+}

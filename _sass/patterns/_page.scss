@@ -1,0 +1,46 @@
+.page {
+  @include padding($spacing-base);
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+
+  @media (min-width: $screen-size-medium) {
+    @include padding($spacing-medium);
+  }
+
+  @media (min-width: $screen-size-large) {
+    @include padding($spacing-medium $spacing-large);
+  }
+}
+
+.page--home {
+  @include padding(0 $spacing-base);
+
+  @media (min-width: $screen-size-medium) {
+    @include padding(0 $spacing-medium $spacing-medium);
+  }
+
+  @media (min-width: $screen-size-large) {
+    @include padding(0 $spacing-large $spacing-medium);
+  }
+}
+
+.page--inner {
+  max-width: 825px;
+
+  a {
+    @include padding(0 .1em);
+    background-color: $cyan;
+    color: inherit;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color $base-duration $base-timing, color $base-duration $base-timing,;
+
+  &:hover {
+    background-color: $purple;
+    color: $white;
+  }
+}
+}

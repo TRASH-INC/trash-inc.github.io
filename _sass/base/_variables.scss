@@ -1,0 +1,71 @@
+// Colors
+$black: #000000;
+$cyan: #01fefe;
+$gray-light: #e8e8e8;
+$gray-medium: #828282;
+$magenta: #fe01fe;
+$purple: #745cff;
+$white: #ffffff;
+
+// Font Families
+$font-family-plaid-xs: "Plaid-XS", sans-serif;
+$font-family-plaid-xs-italic: "Plaid-XS-Italic", sans-serif;
+$font-family-plaid-xs-mono: "Plaid-XS-Mono", sans-serif;
+$font-family-plaid-s: "Plaid-S", sans-serif;
+$font-family-plaid-s-italic: "Plaid-S-Italic", sans-serif;
+$font-family-plaid-s-mono: "Plaid-S-Mono", sans-serif;
+$font-family-plaid-m: "Plaid-M", sans-serif;
+$font-family-plaid-m-italic: "Plaid-M-Italic", sans-serif;
+$font-family-plaid-m-mono: "Plaid-M-Mono", sans-serif;
+$font-family-plaid-l: "Plaid-L", sans-serif;
+$font-family-plaid-l-italic: "Plaid-L-Italic", sans-serif;
+$font-family-plaid-l-mono: "Plaid-L-Mono", sans-serif;
+$font-family-plaid-xl: "Plaid-XL", sans-serif;
+$font-family-plaid-xl-italic: "Plaid-XL-Italic", sans-serif;
+$font-family-plaid-xl-mono: "Plaid-XL-Mono", sans-serif;
+
+// Typography
+$font-family-base: $font-family-plaid-m;
+$font-family-heading: $font-family-plaid-xl-mono;
+
+// Line height
+$line-height-base: 1.1875;
+$line-height-heading: 1.2;
+
+//Spacing
+$spacing-base: 1.5em;
+$spacing-small: $spacing-base / 2;
+$spacing-medium: $spacing-base * 2;
+$spacing-large: $spacing-medium * 2;
+
+// Font Colors
+$font-color-base: $black;
+$action-color: $cyan;
+
+// Border
+$base-border-color: $gray-light;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$background-color-dark: $black;
+$background-color-light: $white;
+
+// Focus
+$focus-outline-color: transparentize($action-color, 0.4);
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 2px;
+
+// Animations
+$base-duration: 200ms;
+$base-timing: ease;
+
+// Screen Sizes
+$screen-size-small: 420px;
+$screen-size-medium: 640px;
+$screen-size-large: 980px;
+$screen-size-xlarge: 1480px;
+
+// Z-Index
+$z-index-base: 1;
+$z-index-site-header: 99;

@@ -1,0 +1,71 @@
+.page-index {
+  @include margin(null null $spacing-large);
+  font-family: $font-family-plaid-xs;
+  color: $white;
+  position: relative;
+
+  @media screen and (min-width: $screen-size-large) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+.page-index__item {
+  @media screen and (min-width: $screen-size-large) {
+    &:nth-child(1) {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+
+    &:nth-child(2) {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      position: absolute;
+      right: 0;
+    }
+
+    &:nth-child(3) {
+      grid-column: 1/2;
+      grid-row: 3/4;
+      left: 25%;
+      position: absolute;
+    }
+  }
+}
+
+.page-index__link {
+  display: block;
+
+  // Link styling for App Store svg
+  .app-store--outer {
+    fill: $cyan;
+  }
+
+  .app-store--inner {
+    fill: $black;
+  }
+
+  // Link styling for Trash Mag svg
+  .trash-mag--fill {
+    fill: $magenta;
+  }
+
+  .trash-mag--stroke {
+    stroke: $magenta;
+  }
+
+  // Link hover styling for App Store svg
+  &:hover .app-store--outer  {
+    fill: $magenta;
+  }
+
+  // Link hover styling for Trash Mag svg
+  &:hover .trash-mag--fill {
+    fill: $white;
+  }
+
+  &:hover .trash-mag--stroke {
+    stroke: $white;
+  }
+}

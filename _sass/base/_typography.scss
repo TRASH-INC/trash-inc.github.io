@@ -1,0 +1,84 @@
+html {
+  color: $font-color-base;
+  font-family: $font-family-base;
+  font-size: 18px;
+  line-height: $line-height-base;
+
+  @media (min-width: $screen-size-medium) {
+    font-size: 20px;
+  }
+}
+
+
+h1 {
+  @include margin($spacing-base 0);
+  font-family: $font-family-plaid-xl;
+  font-size: 1.11rem;
+  line-height: 1.1;
+
+  @media (min-width: $screen-size-medium) {
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+}
+
+h2,
+h3 {
+  @include margin($spacing-base 0 $spacing-small);
+  font-size: 1.2rem;
+  font-weight: normal;
+  line-height: 1.375;
+
+  @media (min-width: $screen-size-medium) {
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+}
+
+h2 {
+  font-family: $font-family-plaid-xl-mono;
+}
+
+h3 {
+  font-family: $font-family-plaid-xs-mono;
+  text-transform: uppercase;
+}
+
+h4,
+h5,
+h6 {
+  @include margin(0 0 $spacing-small);
+  font-family: $font-family-heading;
+  font-size: modular-scale(1);
+  line-height: $line-height-heading;
+}
+
+p {
+  @media (min-width: $screen-size-medium) {
+    font-size: 1.11rem;
+    line-height: 1.5;
+  }
+}
+
+a {
+  color: $font-color-base;
+  text-decoration-skip: ink;
+  transition: color $base-duration $base-timing;
+
+  &:hover {
+    color: shade($font-color-base, 25%);
+  }
+
+  &:focus {
+    outline: $focus-outline;
+    outline-offset: $focus-outline-offset;
+  }
+}
+
+hr {
+  @include margin($spacing-base 0);
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+}
