@@ -34,8 +34,6 @@ $('.container.main.content').css('z-index',-1)
       .then(data => {
   	  var video = $('#vid')[0];
   	  video.src = data.data.post.signed_urls.original.url;
-  	  video.load();
-
   	 })
       .catch(err => { throw err });
 

@@ -53,4 +53,8 @@ build-iPhoneSimulator/
 *~
 .DS_Store
 _site
+.sass-cache/*#*
 .sass-cache/
+#*
+.#*
+*#
