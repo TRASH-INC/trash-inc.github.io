@@ -6,7 +6,10 @@ layout: index
 <video id="vid" controls loop style="height: 80vh;">
     Your browser is a poopy and doesn't support video playback!
 </video>
-<div>
+<div class="page-index">
+<p id="play_count"></p>
+</div>
+<div class="page-index">
   <section class="page-section--index page-index__item">
     <p>Use AI to make and share short videos. Out now in creator beta.</p>
     {% include_relative appstorebutton.html %}
@@ -28,12 +31,15 @@ $('.container.main.content').css('z-index',-1)
       'Content-Type': 'application/json',
       'Accept': 'application/json',
     },
-    body: JSON.stringify({query: '{ post(id:"'+urlParams.get('id')+'") { signed_urls } }'})
+    body: JSON.stringify({query: '{ post(id:"'+urlParams.get('id')+'") { signed_urls play_count } }'})
   })
     .then(r => r.json())
       .then(data => {
   	  var video = $('#vid')[0];
   	  video.src = data.data.post.signed_urls.original.url;
+	  var play_count_text = $('#play_count');
+	  play_count_text.text('Play Count: '+ data.data.post.play_count);
+	  console.log('Play Count: '+ data.data.post.play_count);
   	 })
       .catch(err => { throw err });
 
