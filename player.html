@@ -16,6 +16,8 @@ layout: index
   </section>
 </div>
 
+    <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
 <!-- The script below makes the video player controls visible !-->
 <script>
 $('.container.main.content').css('z-index',-1)
@@ -25,7 +27,8 @@ $('.container.main.content').css('z-index',-1)
 
   var urlParams = new URLSearchParams(window.location.search);
 
-  fetch('https://benny.trash.app/graphql', {
+  // https://benny.trash.app/graphql', {
+  fetch('http://localhost:3000/graphql', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -41,8 +44,22 @@ $('.container.main.content').css('z-index',-1)
 	  play_count_text.text('Play Count: '+ data.data.post.play_count);
 	  console.log('Play Count: '+ data.data.post.play_count);
   	 })
-      .catch(err => { throw err });
+    .catch(err => { throw err });
+
+  $('#vid').on('play', function(e) {
+      fetch('http://localhost:3000/v1/plays', {
+	  mode: "no-cors",
+	  method: 'POST',
+	  headers: {
+	      'Content-Type': 'application/x-www-form-urlencoded',
+	      'Accept': 'application/json',
+	  },
+	  body: "post="+urlParams.get('id')+"&play_count=1",
+      })
+	  .then(r => {console.log(r)})
+	  .catch(err => { throw err });
+  });
 
 </script>
-    <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
 
