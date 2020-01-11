@@ -1,6 +1,7 @@
 ---
 background: dark
 layout: index
+preview_image: "https://s3.amazonaws.com/preview.prod.media.trash.app/4648e7d0-6527-4434-8b48-86c49a5ad9dc.gif"
 ---
 
 <video id="vid" controls loop style="height: 80vh;">
@@ -47,9 +48,9 @@ $('.container.main.content').css('z-index',-1)
 	  play_count_text.text('Play Count: '+ data.data.post.play_count);
 	  console.log('Play Count: '+ data.data.post.play_count);
 
-	  $('meta[name="twitter:image"]').attr('content',
-					       'https://s3.amazonaws.com/preview.prod.media.trash.app/'+urlParams.get('id')+'.gif');
-	  $('meta[property="og:image"]').attr('content', 'https://s3.amazonaws.com/preview.prod.media.trash.app/'+urlParams.get('id')+'.gif');
+	  // $('meta[name="twitter:image"]').attr('content',
+	  // 				       'https://s3.amazonaws.com/preview.prod.media.trash.app/'+urlParams.get('id')+'.gif');
+	  // $('meta[property="og:image"]').attr('content', 'https://s3.amazonaws.com/preview.prod.media.trash.app/'+urlParams.get('id')+'.gif');
   	 })
     .catch(err => { throw err });
 
