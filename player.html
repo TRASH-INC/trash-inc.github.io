@@ -25,6 +25,10 @@ $('.container.main.content').css('z-index',-1)
 <!-- The script below parses the post id from the query string in this page's url. It requests an s3 signed URL from benny.trash.app !-->
 <script>
 
+  $(document).ready(function() {
+      $("head").append('<meta  property="og:title" content="TRASH Webplayer">');
+  });
+
   var urlParams = new URLSearchParams(window.location.search);
 
   fetch('https://benny.trash.app/graphql', {
