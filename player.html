@@ -27,8 +27,7 @@ $('.container.main.content').css('z-index',-1)
 
   var urlParams = new URLSearchParams(window.location.search);
 
-  // https://benny.trash.app/graphql', {
-  fetch('http://localhost:3000/graphql', {
+  fetch('https://benny.trash.app/graphql', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -47,7 +46,7 @@ $('.container.main.content').css('z-index',-1)
     .catch(err => { throw err });
 
   $('#vid').on('play', function(e) {
-      fetch('http://localhost:3000/v1/plays', {
+      fetch('https://benny.trash.app/v1/plays', {
 	  mode: "no-cors",
 	  method: 'POST',
 	  headers: {
