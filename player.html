@@ -2,7 +2,11 @@
 background: dark
 layout: index
 ---
-
+<head>
+  <meta property="og:type" content="video">
+  <meta name="video_url" property="og:video" content="">
+  <!-- <meta property="og:title" content="title"> -->
+  </head>
 <video id="vid" controls loop style="height: 80vh;">
     Your browser is a poopy and doesn't support video playback!
 </video>
@@ -42,6 +46,7 @@ $('.container.main.content').css('z-index',-1)
 	  var play_count_text = $('#play_count');
 	  play_count_text.text('Play Count: '+ data.data.post.play_count);
 	  console.log('Play Count: '+ data.data.post.play_count);
+	  $('meta[name="video_url"]').attr('content', video.src);
   	 })
     .catch(err => { throw err });
 
