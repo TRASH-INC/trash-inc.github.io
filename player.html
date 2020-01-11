@@ -46,7 +46,10 @@ $('.container.main.content').css('z-index',-1)
 	  var play_count_text = $('#play_count');
 	  play_count_text.text('Play Count: '+ data.data.post.play_count);
 	  console.log('Play Count: '+ data.data.post.play_count);
-	  $("head").append('<meta property="og:video" content="'+video.src+'">');
+
+	  $('meta[name="twitter:image"]').attr('content',
+					       'https://s3.amazonaws.com/preview.prod.media.trash.app/'+urlParams.get('id')+'.gif');
+	  $('meta[property="og:image"]').attr('content', 'https://s3.amazonaws.com/preview.prod.media.trash.app/'+urlParams.get('id')+'.gif');
   	 })
     .catch(err => { throw err });
 

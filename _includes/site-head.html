@@ -4,6 +4,27 @@
         shrink-to-fit=no, user-scalable=no" name="viewport">
   <title>{{ site.title }}{% if page.title %}: {{ page.title }}{% endif %}</title>
   <link href="assets/stylesheets/main.css" rel="stylesheet" type="text/css">
+
+  <meta property="og:url" content={{site.url}} />
+  <meta property="og:site_name" content={{site.title}} />
+  <meta property="og:title" content={{ site.title }}{% if page.title %}: {{ page.title }}{% endif %} />
+  <meta property="og:description" content={{ page.preview_descriptiion }} />
+  <meta property="og:image"
+	content={% if page.preview_image %}{{page.preview_image}}{% else %}"{{site.url}}/assets/images/trash__halo--cropped.gif"{% endif %} />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content={{site.title}} />
+  <meta name="twitter:title" content={{ site.title }}{% if page.title %}: {{ page.title }}{% endif %} />
+  <meta name="twitter:description" content={{ page.preview_descriptiion }} />
+  <meta name="twitter:image" content={% if page.preview_image
+  %}{{page.preview_image}}{% else
+	%}"{{site.url}}/assets/images/trash__halo--cropped.gif"{% endif %} />
+  <meta name="twitter:player:stream" content="" />
+  <meta name="twitter:app:name:iphone" content="TRASH App" />
+  <meta name="twitter:app:id:iphone" content="1412091383" />
   {% include favicon.html %}
   {% include google-analytics.html %}
+
+
+
 </head>
