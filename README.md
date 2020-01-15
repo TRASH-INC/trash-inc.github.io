@@ -57,7 +57,7 @@ In your Terminal and clone the repository with the following command:
 
 If you have SSH setup you may clone the repository with the follow command.
 ```sh
-git clone git@github.com/TRASH-INC/trash-inc.github.io.git
+git clone git@github.com:TRASH-INC/trash-inc.github.io
 ```
 Alternatively, albeit _not recommended for security reasons_, you can clone the repository without setting up SSH with a GitHub username and password as follows.
 ```sh
