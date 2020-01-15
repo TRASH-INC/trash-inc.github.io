@@ -36,15 +36,35 @@ gem install jekyll
 
 In your Terminal and clone the repository with the following command:
 
+### Setup SSH with GitHub:
+
+1. Create a SSH key
+   - ```sh
+     ssh-keygen -t rsa
+     ```
+     When prompted to enter a file location or to set a password hit the _return_ key to accept the default value.
+2. Copy the SSH key to the Pasteboard
+   - ```sh
+     pbcopy < ~/.ssh/id_rsa.pub
+     ```
+3. Add the SSH key to GitHub
+   - Go to [GitHub > Settings > SSH and GPG keys > Add new SSH keys](https://github.com/settings/ssh/new)
+   - Paste the key from the Pasteboard in to the bottom portion of the form with **⌘+P**
+   - Click the "Add SSH key" button to save
+
+   
+### Clone the repository
+
+If you have SSH setup you may clone the repository with the follow command.
+```sh
+git clone git@github.com/TRASH-INC/trash-inc.github.io.git
+```
+Alternatively, albeit _not recommended for security reasons_, you can clone the repository without setting up SSH with a GitHub username and password as follows.
 ```sh
 git clone https://<your username>:<your password>@github.com/TRASH-INC/trash-inc.github.io.git
 ```
-If you have SSH setup with github use:
-```sh
-git clone git@github.com:TRASH-INC/trash-inc.github.io.git
-```
 
-Next, you'll `cd` into the cloned `trash-inc.github.io` folder using the command:
+Next, you'll go into the cloned `trash-inc.github.io` folder using the command:
 
 ```sh
 cd trash-inc.github.io
