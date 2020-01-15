@@ -72,7 +72,12 @@ cd trash-inc.github.io
 
 #### Step 3
 
-Since Jekyll uses [Bundler](https://bundler.io), we need to make sure that the gems listed in our [Gemfile](/blob/master/Gemfile) we need are installed. to do that, run the command:
+Since Jekyll uses [Bundler](https://bundler.io), that needs to be installed first.
+```sh
+gem install bundler
+```
+
+Next, we need to make sure that the gems listed in our [Gemfile](/blob/master/Gemfile) are installed. To do that, run the command:
 
 ```sh
 bundle install
