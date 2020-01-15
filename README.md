@@ -37,7 +37,7 @@ gem install jekyll
 In your Terminal and clone the repository with the following command:
 
 ```sh
-git@github.com:TRASH-INC/trash-inc.github.io.git
+git clone https://<your username>:<your password>@github.com/TRASH-INC/trash-inc.github.io.git
 ```
 
 Next, you'll `cd` into the cloned `trash-inc.github.io` folder using the command:
