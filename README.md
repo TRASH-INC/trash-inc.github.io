@@ -39,6 +39,10 @@ In your Terminal and clone the repository with the following command:
 ```sh
 git clone https://<your username>:<your password>@github.com/TRASH-INC/trash-inc.github.io.git
 ```
+If you have SSH setup with github use:
+```sh
+git clone git@github.com:TRASH-INC/trash-inc.github.io.git
+```
 
 Next, you'll `cd` into the cloned `trash-inc.github.io` folder using the command:
 
