@@ -4,6 +4,18 @@
     "details": [
       {
         "appID": "Q46J873AYZ.app.trash.roscoe",
+        "paths": ["/posts"]
+      },
+      {
+        "appID": "Q46J873AYZ.app.trash.roscoe.staging",
+        "paths": ["/posts"]
+      },
+      {
+        "appID": "Q46J873AYZ.app.trash.roscoe.development",
+        "paths": ["/posts"]
+      },
+      {
+        "appID": "Q46J873AYZ.app.trash.roscoe",
         "paths": ["/posts/*"]
       },
       {
