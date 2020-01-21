@@ -6,23 +6,7 @@
 
 .callout-footer { 
     display: block;
-    padding-top: 20px;
-    height: 90px;
-
-    .divider {
-      display: block;
-      background: no-repeat url(/assets/images/layout-rainbowstrip.svg);
-      background-size: cover;
-      height: 3px;
-      width: 100%;
-    }
-
-    .banner {
-      display: block;
-      background: repeat-x url(/assets/images/layout-dontedityourself.svg);
-      height: 77px;
-      width: 100%;
-    }
+    margin-top: 6em;
 }
 
 .callout-header {
@@ -35,5 +19,21 @@
 
 .callout__link {
   display: block;
-  height: 100%;
+  padding-bottom: 0.8em;
+
+  .divider {
+    display: block;
+    background: no-repeat url(/assets/images/layout-rainbowstrip.svg);
+    background-size: cover;
+    height: 3px;
+    width: 100%;
+  }
+
+  .banner {
+    display: block;
+    background: repeat-x url(/assets/images/layout-dontedityourself.svg);
+    height: 77px;
+    width: 100%;
+    margin-top: 0.2em;
+  }
 }
