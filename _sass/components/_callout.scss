@@ -4,35 +4,36 @@
   z-index: $z-index-site-header;
 }
 
-.callout-footer {
-  display: none;
-
-  @media (min-width: $screen-size-medium) {
-    background-image: url('../images/layout-you-shoot--black.png'), url('../images/layout-you-shoot--bg.png');
-    background-position: left center, left center;
-    background-repeat: repeat-x, repeat-x;
-    bottom: 0;
+.callout-footer { 
     display: block;
-    height: 100px;
-    left: 0;
-    margin-top: $spacing-large;
-    position: relative;
-  }
+    margin-top: 6em;
 }
 
 .callout-header {
   @include margin($spacing-base null);
-  background-image: url('../images/layout-you-shoot--white-light.png');
-  height: 70px;
 }
 
 .callout-header--dark {
   @include margin($spacing-base null);
-  background-image: url('../images/layout-you-shoot--white-dark.png');
-  height: 70px;
 }
 
 .callout__link {
   display: block;
-  height: 100%;
+  padding-bottom: 0.8em;
+
+  .divider {
+    display: block;
+    background: no-repeat url(/assets/images/layout-rainbowstrip.svg);
+    background-size: cover;
+    height: 3px;
+    width: 100%;
+  }
+
+  .banner {
+    display: block;
+    background: repeat-x url(/assets/images/layout-dontedityourself.svg);
+    height: 77px;
+    width: 100%;
+    margin-top: 0.2em;
+  }
 }

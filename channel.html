@@ -4,10 +4,10 @@ layout: index
 ---
 
 <div id="videos" class="page-index">
- </div>
+</div>
 <div>
   <section class="page-section--index page-index__item">
-    <p>Use AI to make and share short videos. Out now in creator beta.</p>
+    <p>Use AI to make and share short videos. Out now for iOS.</p>
     {% include_relative appstorebutton.html %}
   </section>
 </div>
@@ -29,32 +29,32 @@ layout: index
       'Content-Type': 'application/json',
       'Accept': 'application/json',
     },
-      body: JSON.stringify({query: '{ channel(id:"'+urlParams.get('id')+'"){ id  name subtitle posts(limit:10, offset:10) { signed_urls }  }}'})
+    body: JSON.stringify({ query: '{ channel(id:"' + urlParams.get('id') + '"){ id  name subtitle posts(limit:10, offset:10) { signed_urls }  }}' })
   })
     .then(r => r.json())
     .then(data => {
-        var video_div = $('#videos');
-	var title = $('<p>'+data.data.channel.name+'</p>');
-	video_div.append(title);
-	var subtitle = $('<p>'+data.data.channel.subtitle+'</p>');
-	video_div.append(subtitle);
-        // for each post, add a <video> item to the page
-        for (i = 0; i < data.data.channel.posts.length; i++) {
+      var video_div = $('#videos');
+      var title = $('<p>' + data.data.channel.name + '</p>');
+      video_div.append(title);
+      var subtitle = $('<p>' + data.data.channel.subtitle + '</p>');
+      video_div.append(subtitle);
+      // for each post, add a <video> item to the page
+      for (i = 0; i < data.data.channel.posts.length; i++) {
 
-            var video = $('<video />', {
-        	id: 'video'+i,
-        	src: data.data.channel.posts[i].signed_urls.original.url,
-        	type: 'video/mp4',
-        	style: "height: 50vh;",
-        	controls: true,
-        	loop: true
-            });
-	    video_div.append(video);
+        var video = $('<video />', {
+          id: 'video' + i,
+          src: data.data.channel.posts[i].signed_urls.original.url,
+          type: 'video/mp4',
+          style: "height: 50vh;",
+          controls: true,
+          loop: true
+        });
+        video_div.append(video);
 
-	}
-      })
-      .catch(err => { throw err });
+      }
+    })
+    .catch(err => { throw err });
 
 </script>
-    <script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
+<script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

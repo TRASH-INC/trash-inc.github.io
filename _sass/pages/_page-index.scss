@@ -37,35 +37,15 @@
 .page-index__link {
   display: block;
 
-  // Link styling for App Store svg
-  .app-store--outer {
-    fill: $cyan;
+  .on {
+    display: none;
   }
 
-  .app-store--inner {
-    fill: $black;
+  &:hover .off  {
+    display: none;    
   }
 
-  // Link styling for Trash Mag svg
-  .trash-mag--fill {
-    fill: $magenta;
-  }
-
-  .trash-mag--stroke {
-    stroke: $magenta;
-  }
-
-  // Link hover styling for App Store svg
-  &:hover .app-store--outer  {
-    fill: $magenta;
-  }
-
-  // Link hover styling for Trash Mag svg
-  &:hover .trash-mag--fill {
-    fill: $white;
-  }
-
-  &:hover .trash-mag--stroke {
-    stroke: $white;
+  &:hover .on {
+    display: inline;
   }
 }
