@@ -4,27 +4,27 @@
     "details": [
       {
         "appID": "Q46J873AYZ.app.trash.roscoe",
-        "paths": ["/posts"]
+        "paths": ["/posts", "/profile"]
       },
       {
         "appID": "Q46J873AYZ.app.trash.roscoe.staging",
-        "paths": ["/posts"]
+        "paths": ["/posts", "/profile"]
       },
       {
         "appID": "Q46J873AYZ.app.trash.roscoe.development",
-        "paths": ["/posts"]
+        "paths": ["/posts", "/profile"]
       },
       {
         "appID": "Q46J873AYZ.app.trash.roscoe",
-        "paths": ["/posts/*"]
+        "paths": ["/posts/*", "/profile"]
       },
       {
         "appID": "Q46J873AYZ.app.trash.roscoe.staging",
-        "paths": ["/posts/*"]
+        "paths": ["/posts/*", "/profile"]
       },
       {
         "appID": "Q46J873AYZ.app.trash.roscoe.development",
-        "paths": ["/posts/*"]
+        "paths": ["/posts/*", "/profile"]
       }
     ]
   },
