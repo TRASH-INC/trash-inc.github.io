@@ -88,10 +88,54 @@
 	}
 
 	a {
+		--border: 3px;
 		display: inline-block;
-		img {
-			display: inline-block;
-			height: 4em;
+		position: relative;
+
+		text-decoration: none;
+		border-radius: 99px;
+
+		font-size: 24px;
+		font-family: $font-family-plaid-xl;
+		color: #fff;
+		background: #000;
+		padding: 0.6em 1em;
+
+		background-clip: padding-box;
+		border: solid var(--border) transparent;
+
+		@media (max-width: 320px) {
+			font-size: 18px;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+			margin: calc(var(--border) * -1);
+			border-radius: inherit;
+			background: linear-gradient(
+				to left,
+				#bb68fd 2.08%,
+				#9b85ff 17.19%,
+				#77cce6 31.77%,
+				#8effa7 46.88%,
+				#f1ff6b 62.5%,
+				#f0c559 78.65%,
+				#ff5d9c 94.79%
+			);
+		}
+
+		&:hover:before {
+			background: #fff;
+		}
+
+		&:active:before {
+			--border: 6px;
 		}
 	}
 }
