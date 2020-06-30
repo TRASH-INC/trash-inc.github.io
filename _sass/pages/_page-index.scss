@@ -41,11 +41,22 @@
     display: none;
   }
 
-  &:hover .off  {
+  &:hover .off {
     display: none;    
   }
 
   &:hover .on {
     display: inline;
+  }
+}
+
+.page-index__inline-link {
+  font-family: 'Plaid-M';
+  color: #fff;
+  text-decoration-color: #828282;
+
+  &:hover {
+    color: #fff;
+    text-decoration-color: #fff;
   }
 }
