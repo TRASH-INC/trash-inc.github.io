@@ -33,12 +33,14 @@
   fill: $purple;
 }
 
-.icon-social__link:hover .icon-social--fill {
-  fill: $white;
+.icon-social__link:hover, .icon-social__link:focus { 
+  .icon-social--fill {
+    fill: $white;
+  }
 }
 
 @media (min-width: $screen-size-large) {
-  .icon-social__link:hover {
+  .icon-social__link:hover, .icon-social__link:focus {
     &:nth-child(1)::after {
       bottom: -30px;
       color: $white;
