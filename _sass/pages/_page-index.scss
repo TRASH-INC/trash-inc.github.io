@@ -1,3 +1,5 @@
+@use sass.color;
+
 .site-banner {
   background: #000;
   color: #fff;
@@ -44,8 +46,27 @@ header {
         margin-left: 0.8rem;
         margin-right: 0;
         padding: 0.6rem 1rem;
+
+        &:hover {
+          background: linear-gradient(
+            90deg,
+            color.scale(#bb68fd, $whiteness: 60%) 2.08333%,
+            color.scale(#9b85ff, $whiteness: 60%) 17.1875%,
+            color.scale(#77cce6, $whiteness: 60%) 31.770799999999998%,
+            color.scale(#8effa7, $whiteness: 60%) 46.875%,
+            color.scale(#f1ff6b, $whiteness: 60%) 62.5%,
+            color.scale(#f0c559, $whiteness: 60%) 78.6458%,
+            color.scale(#ff5d9c, $whiteness: 60%) 94.7917%
+          );
+        }
       }
     }
+  }
+}
+
+.slider {
+  h2 {
+    font-size: 5rem;
   }
 }
 
