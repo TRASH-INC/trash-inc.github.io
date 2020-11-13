@@ -3,7 +3,7 @@ html {
   font-family: $font-family-base;
   font-size: 18px;
   line-height: $line-height-base;
-  font-feature-settings: "ss02", "ss04";
+  font-feature-settings: "salt" ,"ss02", "ss04";
 
   @media (min-width: $screen-size-medium) {
     font-size: 20px;
@@ -37,12 +37,11 @@ h3 {
 }
 
 h2 {
-  font-family: $font-family-plaid-xl-mono;
+  font-family: $font-family-plaid-l;
 }
 
 h3 {
-  font-family: $font-family-plaid-xs-mono;
-  text-transform: uppercase;
+  font-family: $font-family-plaid-l;
 }
 
 h4,
@@ -62,13 +61,13 @@ p {
 }
 
 a {
-  color: $font-color-base;
+  color: inherit;
   text-decoration-skip: ink;
-  transition: color $base-duration $base-timing;
+  // transition: color $base-duration $base-timing;
 
-  &:hover {
-    color: shade($font-color-base, 25%);
-  }
+  // &:hover {
+  //   color: shade($font-color-base, 25%);
+  // }
 
   &:focus {
     outline: $focus-outline;
@@ -82,4 +81,9 @@ hr {
   border-left: 0;
   border-right: 0;
   border-top: 0;
+}
+
+strong {
+  font-weight: normal;
+  font-family: $font-family-plaid-l;
 }

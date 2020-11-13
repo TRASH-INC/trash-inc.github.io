@@ -21,3 +21,30 @@ body {
 p {
   @include margin(0 0 $spacing-small);
 }
+
+.container-s {
+  margin: 0 auto;
+  // max-width: 1285px;
+  @include padding(0 $spacing-base);
+
+  @media (min-width: $screen-size-medium) {
+    @include padding(0 $spacing-base $spacing-medium);
+  }
+
+  @media (min-width: $screen-size-large) {
+    @include padding(0 $spacing-medium $spacing-medium);
+  }
+}
+.container-l {
+  margin: 0 auto;
+  // max-width: 1125px;
+  @include padding(0 $spacing-medium);
+
+  @media (min-width: $screen-size-medium) {
+    @include padding(0 $spacing-medium $spacing-medium);
+  }
+
+  @media (min-width: $screen-size-large) {
+    @include padding(0 $spacing-xlarge $spacing-medium);
+  }
+}
