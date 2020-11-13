@@ -7,7 +7,7 @@ display_banner: true
 {% capture banner %}
   <strong>New!</strong>
   Check out our
-  <a href="#">latest post!</a>
+  <a href="{{site.posts | map: "url" | first}}">latest post!</a>
 {% endcapture %}
 
 {% if page.display_banner %}
