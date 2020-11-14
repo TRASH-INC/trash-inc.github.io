@@ -1,5 +1,3 @@
-@use sass.color;
-
 .site-banner {
   background: #000;
   color: #fff;
@@ -20,7 +18,7 @@ header {
     height: 100%;
     object-fit: cover;
     filter: sepia(1) grayscale(1) contrast(0.7);
-    z-index: -1;
+    z-index: -2;
     pointer-events: none;
   }
 
@@ -39,6 +37,30 @@ header {
       text-decoration: none;
       border-radius: 0.8rem;
 
+      &:nth-of-type(1):hover {
+        background: linear-gradient(
+          90deg,
+          #bb68fd 4.85%,
+          #9b85ff 29.68%,
+          #77cce6 50.37%,
+          #8effa7 72.44%,
+          #f1ff6b 93.12%
+        );
+        color: transparent;
+        background-clip: text;
+      }
+      &:nth-of-type(2):hover {
+        background: linear-gradient(
+          90deg,
+          #8effa7 0%,
+          #f1ff6b 35.42%,
+          #f0c559 67.71%,
+          #ff5d9c 100%
+        );
+        color: transparent;
+        background-clip: text;
+      }
+
       &.primary {
         color: #000;
         background: #fff;
@@ -46,18 +68,23 @@ header {
         margin-left: 0.8rem;
         margin-right: 0;
         padding: 0.6rem 1rem;
+        position: relative;
 
         &:hover {
+          // background: linear-gradient(90deg, #8653fd 0%, #ff5d9c 100%);
+
           background: linear-gradient(
             90deg,
-            color.scale(#bb68fd, $whiteness: 60%) 2.08333%,
-            color.scale(#9b85ff, $whiteness: 60%) 17.1875%,
-            color.scale(#77cce6, $whiteness: 60%) 31.770799999999998%,
-            color.scale(#8effa7, $whiteness: 60%) 46.875%,
-            color.scale(#f1ff6b, $whiteness: 60%) 62.5%,
-            color.scale(#f0c559, $whiteness: 60%) 78.6458%,
-            color.scale(#ff5d9c, $whiteness: 60%) 94.7917%
+            tint(#bb68fd, 0%) 2.08333%,
+            tint(#9b85ff, 0%) 17.1875%,
+            tint(#77cce6, 0%) 31.770799999999998%,
+            tint(#8effa7, 0%) 46.875%,
+            tint(#f1ff6b, 0%) 62.5%,
+            tint(#f0c559, 0%) 78.6458%,
+            tint(#ff5d9c, 0%) 94.7917%
           );
+
+          color: #000;
         }
       }
     }
@@ -65,8 +92,26 @@ header {
 }
 
 .slider {
+  .slider-item {
+    display: flex;
+    flex-wrap: wrap;
+  }
   h2 {
     font-size: 5rem;
+    flex: 1 1 50%;
+    margin-right: 1em;
+  }
+  p {
+    font-size: 2.7rem;
+    text-align: center;
+  }
+  .slider-mockup {
+    background: #c4c4c4;
+    border-radius: 52px;
+    width: 412px;
+    height: 779px;
+    margin-top: -140px;
+    flex: 0 0 412px;
   }
 }
 
