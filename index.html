@@ -4,6 +4,13 @@ title: "One Tap Video"
 display_banner: true
 ---
 
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@glidejs/glide@3.4.1/dist/css/glide.core.min.css"
+  integrity="sha384-XaCph/Oktsa59bhepa2YPUKgUAJijwcfawF2PiUKsCi5xOMPvREEZrVLcIABxSBP"
+  crossorigin="anonymous"
+/>
+
 <!-- prettier-ignore -->
 {% capture banner %}
 <strong>New!</strong>
@@ -28,43 +35,47 @@ Check out our
     <p>video + logo stuff goes here</p>
   </video>
 </header>
-<section class="container-l">
-  <div class="slider">
-    <div class="slider-item active">
-      <h2>Get instant video you can tweak</h2>
-      <div class="slider-mockup">
-        <video>
-          <p>illustration 1</p>
-        </video>
-      </div>
-      <p>
-        Trash uses AI to generate a rough cut in seconds. “Photo filters for
-        video”.
-      </p>
-    </div>
-    <div class="slider-item">
-      <h2>Shoot or pick some video clips</h2>
-      <div class="slider-mockup">
-        <video>
-          <p>illustration 2</p>
-        </video>
-      </div>
-      <p>
-        Trash uses AI to generate a rough cut in seconds. “Photo filters for
-        video”.
-      </p>
-    </div>
-    <div class="slider-item">
-      <h2>Tap one button...</h2>
-      <div class="slider-mockup">
-        <video>
-          <p>illustration 3</p>
-        </video>
-      </div>
-      <p>
-        Trash uses AI to generate a rough cut in seconds. “Photo filters for
-        video”.
-      </p>
+<section>
+  <div class="slider glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        <li class="container-l glide__slide slider-item active">
+          <h2>Get instant video you can tweak</h2>
+          <div class="slider-mockup">
+            <video>
+              <p>illustration 1</p>
+            </video>
+          </div>
+          <p>
+            Trash uses AI to generate a rough cut in seconds. “Photo filters for
+            video”.
+          </p>
+        </li>
+        <li class="container-l glide__slide slider-item">
+          <h2>Shoot or pick some video clips</h2>
+          <div class="slider-mockup">
+            <video>
+              <p>illustration 2</p>
+            </video>
+          </div>
+          <p>
+            Trash uses AI to generate a rough cut in seconds. “Photo filters for
+            video”.
+          </p>
+        </li>
+        <li class="container-l glide__slide slider-item">
+          <h2>Tap one button...</h2>
+          <div class="slider-mockup">
+            <video>
+              <p>illustration 3</p>
+            </video>
+          </div>
+          <p>
+            Trash uses AI to generate a rough cut in seconds. “Photo filters for
+            video”.
+          </p>
+        </li>
+      </ul>
     </div>
   </div>
   <div class="slider-controls">
@@ -153,3 +164,15 @@ Check out our
     </div>
   </div>
 </footer>
+<script
+  src="https://unpkg.com/@glidejs/glide@3.4.1/dist/glide.min.js"
+  integrity="sha384-dtzf8LbA8nQyrALYzWaJ8Ej83yptPlBvEdYNkDaaErj6lP6Fkdc7qk/xMqcUPcdy"
+  crossorigin="anonymous"
+></script>
+<script>
+  new Glide(".glide", {
+    type: "carousel",
+    autoplay: 4000,
+    hoverpause: false
+  }).mount();
+</script>

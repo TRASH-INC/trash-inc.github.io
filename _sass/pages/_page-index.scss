@@ -92,9 +92,11 @@ header {
 }
 
 .slider {
+  margin-top: -140px;
   .slider-item {
     display: flex;
     flex-wrap: wrap;
+    padding-right: 6.75em;
   }
   h2 {
     font-size: 5rem;
@@ -110,7 +112,7 @@ header {
     border-radius: 52px;
     width: 412px;
     height: 779px;
-    margin-top: -140px;
+
     flex: 0 0 412px;
   }
 }
