@@ -4,7 +4,7 @@ $cyan: #01fefe;
 $gray-light: #e8e8e8;
 $gray-medium: #828282;
 $magenta: #fe01fe;
-$purple: #9B85FF;
+$purple: #9b85ff;
 $white: #ffffff;
 
 // Font Families
@@ -33,7 +33,7 @@ $line-height-base: 1.1875;
 $line-height-heading: 1.2;
 
 //Spacing
-$spacing-base: 1.5em;
+$spacing-base: 1.5rem;
 $spacing-small: $spacing-base / 2;
 $spacing-medium: $spacing-base * 1.5;
 $spacing-large: $spacing-medium * 1.5;
@@ -70,3 +70,48 @@ $screen-size-xlarge: 1480px;
 // Z-Index
 $z-index-base: 1;
 $z-index-site-header: 99;
+
+// Gradients
+/// Rainbow
+$gradient-full-spectrum: linear-gradient(
+  90deg,
+  #bb68fd 2.08333%,
+  #9b85ff 17.1875%,
+  #77cce6 31.770799999999998%,
+  #8effa7 46.875%,
+  #f1ff6b 62.5%,
+  #f0c559 78.6458%,
+  #ff5d9c 94.7917%
+);
+$gradient-holorainbow: linear-gradient(
+  90deg,
+  tint(#bb68fd, 60%) 2.08333%,
+  tint(#9b85ff, 60%) 17.1875%,
+  tint(#77cce6, 60%) 31.770799999999998%,
+  tint(#8effa7, 60%) 46.875%,
+  tint(#f1ff6b, 60%) 62.5%,
+  tint(#f0c559, 60%) 78.6458%,
+  tint(#ff5d9c, 60%) 94.7917%
+);
+$gradient-purple-blue-yellow: linear-gradient(
+  90deg,
+  #bb68fd 4.85%,
+  #9b85ff 29.68%,
+  #77cce6 50.37%,
+  #8effa7 72.44%,
+  #f1ff6b 93.12%
+);
+$gradient-green-yellow-pink: linear-gradient(
+  90deg,
+  #8effa7 0%,
+  #f1ff6b 35.42%,
+  #f0c559 67.71%,
+  #ff5d9c 100%
+);
+/// 2-Color
+$gradient-purple-blue: linear-gradient(90deg, #bb68fd 0%, #77cce6 100%);
+$gradient-purple-pink: linear-gradient(90deg, #8653fd 0%, #ff5d9c 100%);
+$gradient-pink-orange: linear-gradient(90deg, #ff5d9c 0%, #f0c559 100%);
+$gradient-blue-yellow: linear-gradient(90deg, #77cce6 0%, #f1ff6b 100%);
+$gradient-blue-pink: linear-gradient(90deg, #77cce6 0%, #ff5d9c 100%);
+$gradient-orange-yellow: linear-gradient(90deg, #f0c559 0%, #f1ff6b 100%);

@@ -39,8 +39,8 @@ Check out our
   <div class="slider glide">
     <div class="glide__track" data-glide-el="track">
       <ul class="glide__slides">
-        <li class="container-l glide__slide slider-item active">
-          <h2>Get instant video you can tweak</h2>
+        <li class="glide__slide slider-item active">
+          <h2><span>Get instant video you can tweak</span></h2>
           <div class="slider-mockup">
             <video>
               <p>illustration 1</p>
@@ -51,8 +51,8 @@ Check out our
             video”.
           </p>
         </li>
-        <li class="container-l glide__slide slider-item">
-          <h2>Shoot or pick some video clips</h2>
+        <li class="glide__slide slider-item">
+          <h2><span>Shoot or pick some video clips</span></h2>
           <div class="slider-mockup">
             <video>
               <p>illustration 2</p>
@@ -63,8 +63,8 @@ Check out our
             video”.
           </p>
         </li>
-        <li class="container-l glide__slide slider-item">
-          <h2>Tap one button...</h2>
+        <li class="glide__slide slider-item">
+          <h2><span>Tap one button...</span></h2>
           <div class="slider-mockup">
             <video>
               <p>illustration 3</p>
@@ -84,7 +84,7 @@ Check out our
     <div class="slider-button"></div>
   </div>
 </section>
-<section class="container-s">
+<section class="section-people">
   <h2>Meet the people making Trash</h2>
   <div class="articles">
     {% assign articles = site.posts | map: "homepage" | compact %}
@@ -96,7 +96,7 @@ Check out our
     {% endfor %}
   </div>
 </section>
-<footer class="container-s">
+<footer>
   <div class="category">
     <h3>Community</h3>
     <a href="/support">Support</a>
@@ -173,6 +173,6 @@ Check out our
   new Glide(".glide", {
     type: "carousel",
     autoplay: 4000,
-    hoverpause: false
+    hoverpause: false,
   }).mount();
 </script>

@@ -22,29 +22,58 @@ p {
   @include margin(0 0 $spacing-small);
 }
 
-.container-s {
+@mixin container($size: s, $all-sides: false) {
   margin: 0 auto;
   // max-width: 1285px;
-  @include padding(0 $spacing-base);
+
+  $viewport-base: 0;
+  $viewport-medium-v: 0;
+  $viewport-medium-h: 0;
+  $viewport-large-v: 0;
+  $viewport-large-h: 0;
+
+  @if $size == s {
+    $viewport-base: $spacing-base;
+    $viewport-medium-v: $spacing-base;
+    $viewport-medium-h: $spacing-medium;
+    $viewport-large-v: $spacing-medium;
+    $viewport-large-h: $spacing-medium;
+  } @else if $size == l {
+    $viewport-base: $spacing-medium;
+    $viewport-medium-v: $spacing-medium;
+    $viewport-medium-h: $spacing-medium;
+    $viewport-large-v: $spacing-medium;
+    $viewport-large-h: $spacing-large;
+  } @else if $size == xl {
+    $viewport-base: $spacing-medium;
+    $viewport-medium-v: $spacing-medium;
+    $viewport-medium-h: $spacing-large;
+    $viewport-large-v: $spacing-medium;
+    $viewport-large-h: $spacing-xlarge;
+  } @else {
+    @error "Container size specified (#{$size}) does not exist.";
+  }
+
+  
+
+  $viewport-base: null $viewport-base;
+    $viewport-medium: null $viewport-medium-h;
+    $viewport-large: null $viewport-large-h;
+
+  @if $all-sides {
+    $viewport-base: $viewport-base;
+    $viewport-medium: $viewport-medium-v $viewport-medium-h;
+    $viewport-large: $viewport-large-v $viewport-large-h;
+  }
+
+  @include padding($viewport-base);
 
   @media (min-width: $screen-size-medium) {
-    @include padding(0 $spacing-base $spacing-medium);
+    @include padding($viewport-medium);
   }
 
   @media (min-width: $screen-size-large) {
-    @include padding(0 $spacing-medium $spacing-medium);
+    @include padding($viewport-large);
   }
-}
-.container-l {
-  margin: 0 auto;
-  // max-width: 1125px;
-  @include padding(0 $spacing-medium);
-
-  @media (min-width: $screen-size-medium) {
-    @include padding(0 $spacing-medium $spacing-medium);
-  }
-
-  @media (min-width: $screen-size-large) {
-    @include padding(0 $spacing-xlarge $spacing-medium);
-  }
+  // }
 }

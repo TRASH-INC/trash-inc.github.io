@@ -26,7 +26,8 @@ header {
     display: flex;
     justify-content: flex-end;
     // padding: 1rem;
-    padding: $spacing-base * 1.5;
+    // padding: $spacing-base * 1.5;
+    @include container(s, $all-sides: true);
 
     a {
       color: #fff;
@@ -38,25 +39,12 @@ header {
       border-radius: 0.8rem;
 
       &:nth-of-type(1):hover {
-        background: linear-gradient(
-          90deg,
-          #bb68fd 4.85%,
-          #9b85ff 29.68%,
-          #77cce6 50.37%,
-          #8effa7 72.44%,
-          #f1ff6b 93.12%
-        );
+        background: $gradient-purple-blue-yellow;
         color: transparent;
         background-clip: text;
       }
       &:nth-of-type(2):hover {
-        background: linear-gradient(
-          90deg,
-          #8effa7 0%,
-          #f1ff6b 35.42%,
-          #f0c559 67.71%,
-          #ff5d9c 100%
-        );
+        background: $gradient-green-yellow-pink;
         color: transparent;
         background-clip: text;
       }
@@ -72,18 +60,7 @@ header {
 
         &:hover {
           // background: linear-gradient(90deg, #8653fd 0%, #ff5d9c 100%);
-
-          background: linear-gradient(
-            90deg,
-            tint(#bb68fd, 0%) 2.08333%,
-            tint(#9b85ff, 0%) 17.1875%,
-            tint(#77cce6, 0%) 31.770799999999998%,
-            tint(#8effa7, 0%) 46.875%,
-            tint(#f1ff6b, 0%) 62.5%,
-            tint(#f0c559, 0%) 78.6458%,
-            tint(#ff5d9c, 0%) 94.7917%
-          );
-
+          background: $gradient-full-spectrum;
           color: #000;
         }
       }
@@ -97,15 +74,25 @@ header {
     display: flex;
     flex-wrap: wrap;
     padding-right: 6.75em;
+    @include container(xl);
   }
   h2 {
     font-size: 5rem;
     flex: 1 1 50%;
     margin-right: 1em;
+    margin-top: calc(1em + 140px);
+    span {
+      background-image: $gradient-purple-blue;
+      background-repeat: no-repeat;
+      background-size: 100% 0.15em;
+      background-position: 0 100%;
+      text-shadow: 0.1em 0 0 #fff;
+    }
   }
   p {
     font-size: 2.7rem;
     text-align: center;
+    font-family: $font-family-plaid-l;
   }
   .slider-mockup {
     background: #c4c4c4;
@@ -117,6 +104,17 @@ header {
   }
 }
 
+.section-people {
+  // background: #c4c4c4;
+  background: $gradient-holorainbow;
+  @include container(s, $all-sides: true);
+  h2 {
+    font-size: 2.7rem;
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
 footer {
   color: #fff;
   background: #000;
@@ -124,9 +122,10 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
 
+  @include container(l, $all-sides: true);
+
   .category {
-    padding-top: 4rem;
-    flex: 0 0 30%;
+    flex: 1 1 0;
     font-size: 1.3rem;
     line-height: 2rem;
     a {
