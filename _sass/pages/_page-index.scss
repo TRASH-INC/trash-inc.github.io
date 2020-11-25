@@ -81,10 +81,10 @@ header {
       &[href]:hover {
         background: var(--col, #000);
         outline: none;
-        }
       }
     }
   }
+}
 
 .section-slider {
   max-width: $screen-size-xlarge;
@@ -95,7 +95,7 @@ header {
     font-family: $font-family-plaid-l;
     @include container(xl);
     padding-bottom: 6rem;
-}
+  }
 }
 
 .slider {
@@ -175,13 +175,19 @@ header {
 }
 
 .section-people {
-  // background: #c4c4c4;
-  background: $gradient-holorainbow;
+  background: linear-gradient(90deg, #79cae7 0%, #ba69fd 100%);
+
   @include container(s, $all-sides: true);
   h2 {
     font-size: 2.7rem;
     text-align: center;
     margin-top: 0;
+  }
+
+  p {
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: $font-family-plaid-m;
   }
 }
 
@@ -190,35 +196,46 @@ footer {
   background: #000;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 
   @include container(l, $all-sides: true);
+  margin-top: 6rem;
+
+  max-width: $screen-size-xlarge;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
   .category {
     flex: 1 1 0;
     font-size: 1.3rem;
     line-height: 2rem;
+    margin: 0 1.8rem 1.8rem;
     a {
-      display: block;
-      text-decoration: none;
+      float: left;
+      clear: left;
     }
     h3 {
       margin: 0;
       text-transform: uppercase;
       font-family: $font-family-plaid-xl;
       font-size: inherit;
+      color: var(--col);
     }
   }
   .bottom {
-    flex: 1 0 100%;
-    margin: 3rem 0 1rem;
+    flex: 1 1 100%;
+    margin: 3rem 1.8rem 1rem;
     text-align: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
     .soc {
-      margin: 0 1.5rem 0 0;
+      margin: 0 1.5rem 0 -0.7rem;
       a {
         text-decoration: none;
         margin: 0.5rem;
@@ -230,12 +247,18 @@ footer {
         fill: #fff;
         width: 1.6em;
         height: 1.6em;
-      }
-    }
-
-    .links {
-      a {
-        text-decoration-color: #666;
+        &[title="Instagram"] {
+          --col: #bb68fd;
+        }
+        &[title="Twitter"] {
+          --col: #77cce6;
+        }
+        &[title="Snapchat"] {
+          --col: #f1ff6b;
+        }
+        &:hover {
+          fill: var(--col, #fff9);
+        }
       }
     }
   }
