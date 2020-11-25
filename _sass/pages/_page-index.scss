@@ -1,5 +1,26 @@
-.site-banner {
+body {
   background: #000;
+  color: #fff;
+}
+
+.i1 {
+  --bg: #{$gradient-purple-blue};
+  --col: #77cce6;
+}
+.i2 {
+  --bg: #{$gradient-purple-pink};
+  --col: #9b85ff;
+}
+.i3 {
+  --bg: #{$gradient-pink-orange};
+  --col: #bb68fd;
+}
+.i4 {
+  --col: #ff6e97;
+}
+
+.site-banner {
+  background: $gradient-purple-blue;
   color: #fff;
   padding: 1.5rem;
   text-align: center;
@@ -66,41 +87,92 @@ header {
       }
     }
   }
-}
 
-.slider {
-  margin-top: -140px;
-  .slider-item {
-    display: flex;
-    flex-wrap: wrap;
-    padding-right: 6.75em;
-    @include container(xl);
-  }
-  h2 {
-    font-size: 5rem;
-    flex: 1 1 50%;
-    margin-right: 1em;
-    margin-top: calc(1em + 140px);
-    span {
-      background-image: $gradient-purple-blue;
-      background-repeat: no-repeat;
-      background-size: 100% 0.15em;
-      background-position: 0 100%;
-      text-shadow: 0.1em 0 0 #fff;
-    }
-  }
+.section-slider {
+  max-width: $screen-size-xlarge;
+  margin: -140px auto 0;
   p {
     font-size: 2.7rem;
     text-align: center;
     font-family: $font-family-plaid-l;
+    @include container(xl);
+    padding-bottom: 6rem;
+}
+}
+
+.slider {
+  .slider-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 6.75em;
+    @include container(xl);
+    padding-top: 140px;
   }
+  h2 {
+    font-size: 5rem;
+    flex: 1 1 50%;
+    margin: 0 1em 0 0;
+
+    span {
+      background: var(--bg, $gradient-purple-blue);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
   .slider-mockup {
-    background: #c4c4c4;
-    border-radius: 52px;
+    margin-top: -140px;
+    padding-bottom: 6rem;
+    margin-bottom: 3.3125rem;
+    background: #515151;
+    box-shadow: 0 0 0 10px #fff inset;
+    border-radius: 50px;
     width: 412px;
-    height: 779px;
+    height: 778.85px;
 
     flex: 0 0 412px;
+  }
+  .bullets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6rem;
+  }
+  .bullet {
+    @include hide-visually;
+    & + label {
+      width: 22px;
+      height: 22px;
+      border: none;
+      background: #c4c4c4;
+      opacity: 0.5;
+      border-radius: 50%;
+      margin: 0.5em;
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      span {
+        @include hide-visually;
+      }
+    }
+    &:checked {
+      & + label {
+        opacity: 1;
+      }
+    }
+    &:focus + label {
+      outline: $focus-outline;
+      outline-offset: $focus-outline-offset;
+    }
+
+    @at-root .js-focus-visible &:focus:not(.focus-visible) + label {
+      outline: none;
+    }
   }
 }
 
