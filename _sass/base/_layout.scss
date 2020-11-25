@@ -24,7 +24,6 @@ p {
 
 @mixin container($size: s, $all-sides: false) {
   margin: 0 auto;
-  // max-width: 1285px;
 
   $viewport-base: 0;
   $viewport-medium-v: 0;
@@ -48,22 +47,22 @@ p {
     $viewport-base: $spacing-medium;
     $viewport-medium-v: $spacing-medium;
     $viewport-medium-h: $spacing-large;
-    $viewport-large-v: $spacing-medium;
+    $viewport-large-v: $spacing-large;
     $viewport-large-h: $spacing-xlarge;
   } @else {
     @error "Container size specified (#{$size}) does not exist.";
   }
 
-  
-
-  $viewport-base: null $viewport-base;
-    $viewport-medium: null $viewport-medium-h;
-    $viewport-large: null $viewport-large-h;
+  $viewport-base: $viewport-base;
+  $viewport-medium: null $viewport-medium-h;
+  $viewport-large: null $viewport-large-h;
 
   @if $all-sides {
     $viewport-base: $viewport-base;
     $viewport-medium: $viewport-medium-v $viewport-medium-h;
     $viewport-large: $viewport-large-v $viewport-large-h;
+  } @else {
+    $viewport-base: null $viewport-base;
   }
 
   @include padding($viewport-base);
@@ -75,5 +74,4 @@ p {
   @media (min-width: $screen-size-large) {
     @include padding($viewport-large);
   }
-  // }
 }
