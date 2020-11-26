@@ -1,8 +1,42 @@
+.homepage-navigation {
+  @include container(s, $all-sides: true);
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  li {
+    list-style-type: none;
+    &:first-of-type {
+      flex: 1;
+    }
+  }
+
+  a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 0.8rem;
+    padding: 0.6rem 1rem;
+    font-family: $font-family-plaid-l;
+    text-decoration: none;
+    border-radius: 0.8rem;
+
+    &.active {
+      opacity: 0.5;
+    }
+
+    &[href]:hover {
+      background: var(--col, #000);
+      outline: none;
+    }
+  }
+}
+
 .site-navigation {
   @include padding(null $spacing-base);
   font-family: $font-family-plaid-xl;
   margin-top: $spacing-medium;
-  text-transform: uppercase;
 
   @media (min-width: $screen-size-medium) {
     @include padding(null $spacing-medium);
@@ -19,11 +53,11 @@
 }
 
 .site-navigation__links li + li {
-  margin-top: .35rem;
+  margin-top: 0.35rem;
 }
 
 .site-navigation__link {
-  @include padding(.1em $spacing-small);
+  @include padding(0.1em $spacing-small);
   background-color: $gray-light;
   color: $purple;
   text-decoration: none;

@@ -1,14 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   {% include site-head.html %}
 
-  <body class="u-background-color--{{ page.background }}">
+  <body {% if page.background %}class="u-background-color--{{ page.background }}"{% endif %}>
     {% include site-header.html %}
     {% include site-navigation.html %}
     <main class="page page--inner">
       {{ content }}
     </main>
-    {% include site-navigation.html %}
     {% include site-footer.html %}
   </body>
 </html>

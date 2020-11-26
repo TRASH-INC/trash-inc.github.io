@@ -1,0 +1,123 @@
+.section-about {
+  @include container(xl, $all-sides: true);
+  max-width: $screen-size-xlarge;
+
+  h1 {
+    font-weight: normal;
+    font-size: 5rem;
+    background: $gradient-blue-purple;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    float: left;
+    margin-bottom: 4rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin: 4rem 0 2rem 0;
+  }
+  > * {
+    max-width: 50rem;
+    clear: both;
+  }
+}
+
+.section-team {
+  background: $gradient-blue-purple;
+  @include container(xl, $all-sides: true);
+  text-align: center;
+  h2 {
+    font-family: $font-family-plaid-xl;
+    font-size: 5rem;
+    margin-bottom: 1em;
+    @media (max-width: $screen-size-large) {
+      font-size: 4rem;
+    }
+  }
+  .team {
+    max-width: $screen-size-xlarge;
+    margin: 0 auto 4rem;
+    --image-size: 310px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+    gap: 1.5rem;
+    a {
+      max-width: var(--image-size);
+      width: 100%;
+      text-decoration: none;
+      grid-column-end: span 2;
+
+      &:nth-of-type(4) {
+        grid-column-start: 2;
+      }
+
+      &:hover {
+        p:first-of-type {
+          text-decoration: underline;
+        }
+        img {
+          box-shadow: 0 0 0 5px #fff inset;
+        }
+      }
+      .img {
+        position: relative;
+        max-width: var(--image-size);
+        height: 0;
+        padding-bottom: 100%;
+        margin-bottom: 1rem;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #c4c4c4;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      p {
+        margin: 0;
+        font-size: 1.3rem;
+        line-height: 1.2;
+      }
+    }
+
+    @media (max-width: $screen-size-xlarge) {
+      // grid-template-columns: repeat(4, 1fr);
+      // --image-size: 200px;
+      a {
+        img {
+          width: 100%;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+      }
+      // a:nth-of-type(4) {
+      //   grid-column-start: unset;
+      // }
+    }
+
+    @media (max-width: $screen-size-large) {
+      grid-template-columns: repeat(4, 1fr);
+      a p {
+        font-size: 1.1rem;
+      }
+      a:nth-of-type(4) {
+        grid-column-start: unset;
+      }
+    }
+
+    @media (max-width: $screen-size-medium) {
+      a p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: $screen-size-medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

@@ -110,8 +110,26 @@ $gradient-green-yellow-pink: linear-gradient(
 );
 /// 2-Color
 $gradient-purple-blue: linear-gradient(90deg, #bb68fd 0%, #77cce6 100%);
+$gradient-blue-purple: linear-gradient(90deg, #79cae7 0%, #ba69fd 100%);
 $gradient-purple-pink: linear-gradient(90deg, #8653fd 0%, #ff5d9c 100%);
 $gradient-pink-orange: linear-gradient(90deg, #ff5d9c 0%, #f0c559 100%);
 $gradient-blue-yellow: linear-gradient(90deg, #77cce6 0%, #f1ff6b 100%);
 $gradient-blue-pink: linear-gradient(90deg, #77cce6 0%, #ff5d9c 100%);
 $gradient-orange-yellow: linear-gradient(90deg, #f0c559 0%, #f1ff6b 100%);
+
+// Indexed colors
+.i1 {
+  --bg: #{$gradient-purple-blue};
+  --col: #77cce6;
+}
+.i2 {
+  --bg: #{$gradient-purple-pink};
+  --col: #9b85ff;
+}
+.i3 {
+  --bg: #{$gradient-pink-orange};
+  --col: #bb68fd;
+}
+.i4 {
+  --col: #ff6e97;
+}

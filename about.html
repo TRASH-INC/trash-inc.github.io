@@ -1,0 +1,126 @@
+---
+layout: blank
+title: "About"
+display_banner: true
+background: dark
+---
+
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@glidejs/glide@3.4.1/dist/css/glide.core.min.css"
+  integrity="sha384-XaCph/Oktsa59bhepa2YPUKgUAJijwcfawF2PiUKsCi5xOMPvREEZrVLcIABxSBP"
+  crossorigin="anonymous"
+/>
+
+<!-- prettier-ignore -->
+{% capture banner %}
+<strong>New!</strong>
+Check out our
+<!-- prettier-ignore -->
+<a href="https://medium.com/thetrashapp/trash-adds-popular-music-a43d39d87df5">latest post!</a>
+{% endcapture %}
+
+<!-- prettier-ignore -->
+{% if page.display_banner %}
+  {% include banner.html content=banner %}
+{% endif %}
+
+<header>
+  <nav class="homepage-navigation">
+    <ul>
+      <li class="i4">
+        <a href="/">Home</a>
+      </li>
+      <li class="i1">
+        <a class="active">About</a>
+      </li>
+      <li class="i2">
+        <a href="/faq">Support</a>
+      </li>
+      <li class="i3">
+        <a href="/download">Download</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<section class="section-about">
+  <h1>About Us</h1>
+  <p>
+    We want everyone to be able to easily share their story in video, regardless
+    of their skill. Inspired by a career of building tools & experiences for
+    self expression in the tech industry, <a href="">Hannah Donovan</a> (product
+    & design) teamed up with <a href="">Dr. Geneviève Patterson</a> (science &
+    technology) in 2018 to create Trash. A venture backed start up, Trash has
+    also won two National Science Foundation awards.
+  </p>
+  <h2>Why use AI to help make videos?</h2>
+  <p>
+    The blank canvas is scary, it’s much easier to react ta generated draft than
+    start from nothing. You shouldn’t need to know every single editing
+    technique to get a vibey music video. AI is a powerful creative tool and
+    collaborator.
+  </p>
+</section>
+<section class="section-team">
+  <h2>Team Trash</h2>
+  <div class="team">
+    <a href="">
+      <div class="img"><img src="" alt="" /></div>
+      <p class="name">Hannah Donovan</p>
+      <p class="role">Founder & CEO</p>
+    </a>
+    <a href="">
+      <div class="img"><img src="" alt="" /></div>
+      <p class="name">Geneviève Patterson</p>
+      <p class="role">Co-founder & CSTO</p>
+    </a>
+    <a href="">
+      <div class="img"><img src="" alt="" /></div>
+      <p class="name">Karina Bernacki</p>
+      <p class="role">Chief of Staff</p>
+    </a>
+    <a href="">
+      <div class="img"><img src="" alt="" /></div>
+      <p class="name">Drew Olbrich</p>
+      <p class="role">Engineering</p>
+    </a>
+    <a href="">
+      <div class="img"><img src="" alt="" /></div>
+      <p class="name">Chihyu Chang</p>
+      <p class="role">Engineering</p>
+    </a>
+    <a href="">
+      <div class="img"><img src="" alt="" /></div>
+      <p class="name">Ela Komsul</p>
+      <p class="role">Content</p>
+    </a>
+    <a href="">
+      <div class="img"><img src="" alt="" /></div>
+      <p class="name">Armand Saramout</p>
+      <p class="role">Growth</p>
+    </a>
+    <a href="">
+      <div class="img"><img src="" alt="" /></div>
+      <p class="name">Kat To</p>
+      <p class="role">Operations</p>
+    </a>
+  </div>
+</section>
+{% include site-footer.html %}
+<script
+  src="https://cdn.jsdelivr.net/gh/edensg/glide@97cb7ba/dist/glide.min.js"
+  integrity="sha384-5GFnnVDI8CYcydwF0OhHC+Wq9037K4MOezsWhLwUrETblG+UhyMcTrR6SWAwXq1i"
+  crossorigin="anonymous"
+></script>
+<script>
+  const glide = new Glide(".glide", {
+    type: "carousel",
+    autoplay: 4000,
+    hoverpause: false,
+    // dragThreshold: false,
+    keyboard: false,
+    focusAt: "center",
+  });
+
+  glide.mount();
+</script>
