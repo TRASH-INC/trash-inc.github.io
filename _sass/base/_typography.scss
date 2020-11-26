@@ -3,13 +3,12 @@ html {
   font-family: $font-family-base;
   font-size: 18px;
   line-height: $line-height-base;
-  font-feature-settings: "salt" ,"ss02", "ss04";
+  font-feature-settings: "salt", "ss02", "ss04";
 
   @media (min-width: $screen-size-medium) {
     font-size: 20px;
   }
 }
-
 
 h1 {
   @include margin($spacing-base 0);

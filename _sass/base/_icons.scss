@@ -8,7 +8,7 @@
   position: relative;
 
   @media (min-width: $screen-size-large) {
-    background-image: url('../images/social-hoop.svg');
+    background-image: url("../images/social-hoop.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -19,7 +19,7 @@
     &::before {
       bottom: -30px;
       color: $purple;
-      content: 'Like...';
+      content: "Like...";
       display: block;
       font-family: $font-family-plaid-xs-mono;
       left: 0;
@@ -33,18 +33,20 @@
   fill: $purple;
 }
 
-.icon-social__link:hover, .icon-social__link:focus { 
+.icon-social__link:hover,
+.icon-social__link:focus {
   .icon-social--fill {
     fill: $white;
   }
 }
 
 @media (min-width: $screen-size-large) {
-  .icon-social__link:hover, .icon-social__link:focus {
+  .icon-social__link:hover,
+  .icon-social__link:focus {
     &:nth-child(1)::after {
       bottom: -30px;
       color: $white;
-      content: 'fun videos';
+      content: "fun videos";
       display: block;
       font-family: $font-family-plaid-xs-mono;
       left: 80px;
@@ -55,7 +57,7 @@
     &:nth-child(2)::after {
       bottom: -30px;
       color: $white;
-      content: 'sweet science';
+      content: "sweet science";
       display: block;
       font-family: $font-family-plaid-xs-mono;
       left: 80px;
@@ -66,7 +68,7 @@
     &:nth-child(3)::after {
       bottom: -30px;
       color: $white;
-      content: 'announcements';
+      content: "announcements";
       display: block;
       font-family: $font-family-plaid-xs-mono;
       left: 80px;
@@ -77,7 +79,7 @@
     &:nth-child(4)::after {
       bottom: -30px;
       color: $white;
-      content: 'who knows';
+      content: "who knows";
       display: block;
       font-family: $font-family-plaid-xs-mono;
       left: 80px;
