@@ -38,7 +38,10 @@ Check out our
         <a href="/faq">Support</a>
       </li>
       <li class="i3">
-        <a href="https://apps.apple.com/app/trash-you-shoot-we-edit/id1412091383">Download</a>
+        <a
+          href="https://apps.apple.com/app/trash-you-shoot-we-edit/id1412091383"
+          >Download</a
+        >
       </li>
     </ul>
   </nav>
@@ -113,16 +116,30 @@ Check out our
     Trash uses AI to generate a rough cut in seconds. “Photo filters for video”.
   </p>
 </section>
-<section class="section-people">
-  <h2>Meet the people making Trash</h2>
-  <div class="articles">
-    {% assign articles = site.posts | map: "homepage" | compact %}
-    <!-- prettier-ignore -->
-    {% for post in articles limit:3 %}
-    <a href="{{ post.url }}">
-      <img src="{{ post.header_image }}" alt="{{ post.title }}" />
+<section class="section-spotlight">
+  <h2>Creator Spotlight</h2>
+  <div class="spotlight">
+    <a href="https://mag.trash.app/MEZ-Conducts-His-Parties">
+      <div class="img">
+        <img src="/assets/blog/mez.jpg" alt="MÈZ conducts his parties" />
+      </div>
     </a>
-    {% endfor %}
+    <a href="https://mag.trash.app/Airis-Encarnacion-Edits-Everything">
+      <div class="img">
+        <img
+          src="/assets/blog/airis.jpg"
+          alt="Airis Encarnacion Edits Everything"
+        />
+      </div>
+    </a>
+    <a href="https://mag.trash.app/Saturn-WOWs-At-TRASH-s-Party-In-L-A">
+      <div class="img">
+        <img
+          src="/assets/blog/saturn.jpg"
+          alt="Saturn WOWs At TRASH's Party In L.A."
+        />
+      </div>
+    </a>
   </div>
   <p>
     <a href="https://mag.trash.app/">Read the interviews</a> with creators...
