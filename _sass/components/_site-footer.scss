@@ -75,3 +75,31 @@ footer {
     }
   }
 }
+
+.scroller {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $gradient-full-spectrum;
+    mix-blend-mode: multiply;
+  }
+  #text {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: scroll 6s linear infinite both;
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-390px);
+  }
+}
