@@ -67,7 +67,7 @@
           height: calc(100% - 6px);
           border: 6px solid #fff;
           border-radius: 50%;
-          opacity: 0;
+          transition: all 0.04s ease;
         }
       }
       img {
@@ -91,14 +91,12 @@
           text-decoration: underline;
         }
         .img::after {
-          opacity: 1;
+          transform: scale(0.93);
         }
       }
     }
 
     @media (max-width: $screen-size-xlarge) {
-      // grid-template-columns: repeat(4, 1fr);
-      // --image-size: 200px;
       a {
         img {
           width: 100%;
@@ -107,9 +105,6 @@
           font-size: 1.2rem;
         }
       }
-      // a:nth-of-type(4) {
-      //   grid-column-start: unset;
-      // }
     }
 
     @media (max-width: $screen-size-large) {
