@@ -67,7 +67,7 @@
           height: calc(100% - 6px);
           border: 6px solid #fff;
           border-radius: 50%;
-          transition: all 0.04s ease;
+          transition: all 0.05s cubic-bezier(0, 0.55, 0.45, 1);
         }
       }
       img {
