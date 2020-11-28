@@ -7,6 +7,25 @@
     width: 100%;
   }
 
+  h1 {
+    font-weight: normal;
+    font-size: 5rem;
+    background: $gradient-blue-purple;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    float: left;
+    margin-bottom: 4rem;
+    & ~ * {
+      clear: both;
+    }
+  }
+  h2 {
+    font-size: 2rem;
+    margin: 4rem 0 2rem 0;
+    color: #9b85ff;
+  }
+
   @media (min-width: $screen-size-medium) {
     @include padding($spacing-medium);
   }
@@ -30,17 +49,11 @@
 
 .page--inner {
   a {
-    @include padding(0 0.1em);
-    background-color: $cyan;
     color: inherit;
-    display: inline-block;
-    text-decoration: none;
-    transition: background-color $base-duration $base-timing,
-      color $base-duration $base-timing;
 
     &:hover {
-      background-color: $purple;
-      color: $white;
+      color: #55b2d6;
+      text-decoration-color: #5cb9dc;
     }
   }
 }

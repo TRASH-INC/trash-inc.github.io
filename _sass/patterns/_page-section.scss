@@ -1,5 +1,5 @@
 .page-section {
-  max-width: 825px;
+  max-width: 50rem;
 }
 .page-section + .page-section {
   @include margin($spacing-medium 0 null);
