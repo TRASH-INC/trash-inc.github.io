@@ -49,7 +49,19 @@ background: dark
           <div class="slider-mockup">
             <div class="video">
               <video autoplay muted playsinline loop tabindex="-1">
-                <p>illustration 1</p>
+                <source
+                  src="/assets/video/page1.av1.mp4"
+                  type='video/mp4;codecs="av01.0.080.08"'
+                />
+                <source
+                  src="/assets/video/page1.vp9.webm"
+                  type='video/webm;codecs="vp9"'
+                />
+                <source
+                  src="/assets/video/page1.h265.mov"
+                  type="video/quicktime"
+                />
+                <source src="/assets/video/page1.h264.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -59,7 +71,19 @@ background: dark
           <div class="slider-mockup">
             <div class="video">
               <video autoplay muted playsinline loop tabindex="-1">
-                <p>illustration 2</p>
+                <source
+                  src="/assets/video/page2.av1.mp4"
+                  type='video/mp4;codecs="av01.0.080.08"'
+                />
+                <source
+                  src="/assets/video/page2.vp9.webm"
+                  type='video/webm;codecs="vp9"'
+                />
+                <source
+                  src="/assets/video/page2.h265.mov"
+                  type="video/quicktime"
+                />
+                <source src="/assets/video/page2.h264.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -69,7 +93,19 @@ background: dark
           <div class="slider-mockup">
             <div class="video">
               <video autoplay muted playsinline loop tabindex="-1">
-                <p>illustration 3</p>
+                <source
+                  src="/assets/video/page3.av1.mp4"
+                  type='video/mp4;codecs="av01.0.080.08"'
+                />
+                <source
+                  src="/assets/video/page3.vp9.webm"
+                  type='video/webm;codecs="vp9"'
+                />
+                <source
+                  src="/assets/video/page3.h265.mov"
+                  type="video/quicktime"
+                />
+                <source src="/assets/video/page3.h264.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -163,11 +199,24 @@ background: dark
 <script>
   const glide = new Glide(".glide", {
     type: "carousel",
-    autoplay: 3500,
+    autoplay: 3000,
     hoverpause: false,
     // dragThreshold: false,
     keyboard: false,
     focusAt: "center",
+  });
+
+  const mockupVideos = document.querySelectorAll(".slider-mockup video");
+
+  // Restart videos after animating to them
+  glide.on("run.after", () => {
+    mockupVideos.forEach((el) => {
+      try {
+        el.fastSeek(0);
+      } catch (e) {
+        el.currentTime = 0;
+      }
+    });
   });
 
   glide.mount();
