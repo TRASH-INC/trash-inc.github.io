@@ -11,10 +11,22 @@
     -webkit-text-fill-color: transparent;
     float: left;
     margin-bottom: 4rem;
+
+    @media (max-width: $screen-size-large) {
+      font-size: 4rem;
+    }
+
+    @media (max-width: $screen-size-medium) {
+      font-size: 3.5rem;
+      margin-bottom: 3rem;
+    }
   }
   h2 {
     font-size: 1.5rem;
     margin: 4rem 0 2rem 0;
+    @media (max-width: $screen-size-medium) {
+      margin: 3rem 0 1.5rem 0;
+    }
   }
   > * {
     max-width: 50rem;
@@ -33,6 +45,10 @@
     @media (max-width: $screen-size-large) {
       font-size: 4rem;
     }
+
+    @media (max-width: $screen-size-medium) {
+      font-size: 3.5rem;
+    }
   }
   .team {
     max-width: $screen-size-xlarge;
@@ -41,7 +57,8 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     justify-items: center;
-    gap: 1.5rem;
+    gap: 3rem;
+
     a {
       max-width: var(--image-size);
       width: 100%;
@@ -58,6 +75,10 @@
         height: 0;
         padding-bottom: 100%;
         margin-bottom: 1rem;
+
+        @media (max-width: $screen-size-medium) {
+          margin-bottom: 0.5rem;
+        }
         &::after {
           content: "";
           position: absolute;
@@ -92,6 +113,9 @@
         }
         .img::after {
           transform: scale(0.93);
+          @media (max-width: $screen-size-large) {
+            transform: scale(0.9);
+          }
         }
       }
     }
@@ -118,12 +142,14 @@
     }
 
     @media (max-width: $screen-size-medium) {
+      gap: 2rem;
+      --image-size: 200px;
       a p {
         font-size: 1rem;
       }
     }
 
-    @media (max-width: $screen-size-medium) {
+    @media (max-width: $screen-size-small) {
       grid-template-columns: repeat(2, 1fr);
     }
   }

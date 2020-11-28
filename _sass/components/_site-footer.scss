@@ -9,6 +9,10 @@ footer {
     @include container(l, $all-sides: true);
     margin: 6rem auto 0;
 
+    @media (max-width: $screen-size-medium) {
+      margin: 3rem auto 0;
+    }
+
     max-width: $screen-size-xlarge;
     a {
       text-decoration: none;
@@ -44,13 +48,17 @@ footer {
       align-items: center;
 
       .soc {
-        margin: 0 1.5rem 0 -0.7rem;
+        margin: 0 1.5rem 0;
         a {
           text-decoration: none;
           margin: 0.5rem;
           padding: 0.2rem;
           display: inline-block;
           height: 1.6em;
+
+          &:first-of-type {
+            margin-left: -0.7rem;
+          }
         }
         svg {
           fill: currentColor;

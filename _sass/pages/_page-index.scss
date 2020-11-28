@@ -20,14 +20,38 @@
 }
 
 .section-slider {
+  --offset: -140px;
   max-width: $screen-size-xlarge;
-  margin: -140px auto 0;
+  margin: var(--offset) auto 0;
+
+  @media (max-width: $screen-size-large) {
+    --offset: -120px;
+  }
+
+  @media (max-width: $screen-size-medium) {
+    --offset: -60px;
+  }
+
+  @media (max-width: $screen-size-small) {
+    --offset: -40px;
+  }
+
   p {
     font-size: 2.7rem;
     text-align: center;
     font-family: $font-family-plaid-l;
     @include container(xl);
     padding-bottom: 6rem;
+
+    @media (max-width: $screen-size-large) {
+      font-size: 1.8rem;
+      padding-bottom: 4rem;
+    }
+
+    @media (max-width: $screen-size-medium) {
+      font-size: 1.2rem;
+      padding-bottom: 3rem;
+    }
   }
 }
 
@@ -38,12 +62,27 @@
     align-items: center;
     padding-right: 6.75em;
     @include container(xl);
-    padding-top: 140px;
+    padding-top: calc(var(--offset) * -1);
   }
   h2 {
     font-size: 5rem;
     flex: 1 1 50%;
     margin: 0 1em 1.5em 0;
+
+    @media (max-width: $screen-size-xlarge) {
+      font-size: 3.2rem;
+      margin: 0 0.5em 1.5em 0;
+    }
+
+    @media (max-width: $screen-size-large) {
+      font-size: 2rem;
+      margin: 0 0.5em 1em 0;
+      flex: 1 1 206px;
+    }
+
+    @media (max-width: $screen-size-medium) {
+      font-size: 1.2rem;
+    }
 
     span {
       background: var(--bg, $gradient-purple-blue);
@@ -54,7 +93,7 @@
   }
 
   .slider-mockup {
-    margin-top: -140px;
+    margin-top: var(--offset);
     margin-bottom: 3.3125rem;
     background: #515151;
     border: 10px solid #fff;
@@ -63,6 +102,26 @@
 
     flex: 0 1 412px;
     overflow: hidden;
+
+    @media (max-width: $screen-size-large) {
+      border: 5px solid #fff;
+      border-radius: 25px;
+      width: 206px;
+      flex: 1 1 206px;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: $screen-size-medium) {
+      border: 3px solid #fff;
+      border-radius: 20px;
+      width: 180px;
+      flex: 0 1 180px;
+      margin-bottom: 2rem;
+    }
+    @media (max-width: $screen-size-medium) {
+      border: 2px solid #fff;
+      border-radius: 14px;
+    }
     .video {
       height: 0;
       padding-bottom: 19.5 / 9 * 100%;
@@ -82,6 +141,12 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 6rem;
+    @media (max-width: $screen-size-large) {
+      margin-bottom: 4rem;
+    }
+    @media (max-width: $screen-size-medium) {
+      margin-bottom: 3rem;
+    }
   }
   .bullet {
     @include hide-visually;
@@ -94,6 +159,18 @@
       border-radius: 50%;
       margin: 0.5em;
       transition: opacity 0.2s cubic-bezier(0, 0.55, 0.45, 1);
+
+      @media (max-width: $screen-size-medium) {
+        width: 18px;
+        height: 18px;
+        margin: 0.4em;
+      }
+
+      @media (max-width: $screen-size-small) {
+        width: 10px;
+        height: 10px;
+        margin: 0.2em;
+      }
 
       &:hover {
         opacity: 0.7;
@@ -127,6 +204,10 @@
     font-size: 2.7rem;
     text-align: center;
     margin: 2rem;
+
+    @media (max-width: $screen-size-medium) {
+      font-size: 2rem;
+    }
   }
 
   .spotlight {
@@ -135,6 +216,16 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+
+    @media (max-width: $screen-size-medium) {
+      margin: 2rem auto;
+      gap: 0.25rem;
+    }
+
+    @media (max-width: $screen-size-small) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
 
     a {
       position: relative;
@@ -178,5 +269,9 @@
     text-align: center;
     font-family: $font-family-plaid-m;
     margin-bottom: 2rem;
+
+    @media (max-width: $screen-size-medium) {
+      font-size: 1rem;
+    }
   }
 }

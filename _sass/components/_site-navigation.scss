@@ -1,9 +1,20 @@
 .navigation {
   @include container(s, $all-sides: true);
 
+  @media (max-width: $screen-size-medium) {
+    padding: 0.75rem;
+  }
+
   ul {
     display: flex;
     justify-content: flex-end;
+    margin: 0 -0.8rem;
+    @media (max-width: $screen-size-large) {
+      margin: 0;
+    }
+    @media (max-width: $screen-size-medium) {
+      flex-wrap: wrap;
+    }
   }
 
   li {
@@ -24,6 +35,16 @@
     font-family: $font-family-plaid-l;
     text-decoration: none;
     border-radius: 0.8rem;
+
+    @media (max-width: $screen-size-large) {
+      font-size: 1rem;
+      margin: 0;
+      padding: 0.4rem 0.5rem;
+    }
+
+    @media (max-width: $screen-size-medium) {
+      font-size: 0.8rem;
+    }
 
     &.active {
       opacity: 0.5;
