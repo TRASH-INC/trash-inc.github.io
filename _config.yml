@@ -6,12 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: TRASH
+title: Trash
 subtitle: trash.app
 email: feedback@trash.app
-organization: TRASH Inc.
+organization: Trash Inc.
 description: > # this means to ignore newlines until "baseurl:"
-  TRASH Inc., Brooklyn, NY, USA.
+  Trash Inc., Brooklyn, NY, USA.
 baseurl: ""
 url: "http://trash.app"
 
