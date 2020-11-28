@@ -12,39 +12,8 @@ background: dark
   crossorigin="anonymous"
 />
 
-<!-- prettier-ignore -->
-{% capture banner %}
-<strong>New!</strong>
-Check out our
-<!-- prettier-ignore -->
-<a href="https://medium.com/thetrashapp/trash-adds-popular-music-a43d39d87df5">latest post!</a>
-{% endcapture %}
-
-<!-- prettier-ignore -->
-{% if page.display_banner %}
-  {% include banner.html content=banner %}
-{% endif %}
-
 <header>
-  <nav class="homepage-navigation">
-    <ul>
-      <li class="i4">
-        <a href="/">Home</a>
-      </li>
-      <li class="i1">
-        <a class="active">About</a>
-      </li>
-      <li class="i2">
-        <a href="/faq">Support</a>
-      </li>
-      <li class="i3">
-        <a
-          href="https://apps.apple.com/app/trash-you-shoot-we-edit/id1412091383"
-          >Download</a
-        >
-      </li>
-    </ul>
-  </nav>
+  {% include site-header.html %}
 </header>
 <section class="section-about">
   <h1>About Us</h1>
@@ -67,56 +36,56 @@ Check out our
 <section class="section-team">
   <h2>Team Trash</h2>
   <div class="team">
-    <a href="">
+    <a href="https://www.hannahdonovan.com/">
       <div class="img">
         <img src="/assets/images/profiles/han.jpg" alt="Hannah Donovan" />
       </div>
       <p class="name">Hannah Donovan</p>
       <p class="role">Founder & CEO</p>
     </a>
-    <a href="">
+    <a href="https://genp.github.io/">
       <div class="img">
         <img src="/assets/images/profiles/gen.jpg" alt="Geneviève Patterson" />
       </div>
       <p class="name">Geneviève Patterson</p>
       <p class="role">Co-founder & CSTO</p>
     </a>
-    <a href="">
+    <a href="https://www.linkedin.com/in/kbernacki/">
       <div class="img">
         <img src="/assets/images/profiles/karina.jpg" alt="Karina Bernacki" />
       </div>
       <p class="name">Karina Bernacki</p>
       <p class="role">Chief of Staff</p>
     </a>
-    <a href="">
+    <a href="http://www.drewolbrich.com/">
       <div class="img">
         <img src="/assets/images/profiles/drew.jpg" alt="Drew Olbrich" />
       </div>
       <p class="name">Drew Olbrich</p>
       <p class="role">Engineering</p>
     </a>
-    <a href="">
+    <a href="https://www.linkedin.com/in/chihyu-chang-020a0732/">
       <div class="img">
         <img src="/assets/images/profiles/chihyu.jpg" alt="Chihyu Chang" />
       </div>
       <p class="name">Chihyu Chang</p>
       <p class="role">Engineering</p>
     </a>
-    <a href="">
+    <a href="https://www.linkedin.com/in/elanurkomsul/">
       <div class="img">
         <img src="/assets/images/profiles/ela.jpg" alt="Ela Komsul" />
       </div>
       <p class="name">Ela Komsul</p>
       <p class="role">Content</p>
     </a>
-    <a href="">
+    <a href="https://twitter.com/2irl4u">
       <div class="img">
         <img src="/assets/images/profiles/armand.jpg" alt="Armand Saramout" />
       </div>
       <p class="name">Armand Saramout</p>
       <p class="role">Growth</p>
     </a>
-    <a href="">
+    <a href="http://www.katherineto.com">
       <div class="img">
         <img src="/assets/images/profiles/kat.jpg" alt="Kat To" />
       </div>

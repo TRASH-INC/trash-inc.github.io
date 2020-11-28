@@ -3,8 +3,11 @@
   {% include site-head.html %}
 
   <body {% if page.background %}class="u-background-color--{{ page.background }}"{% endif %}>
+    <!-- prettier-ignore -->
+    {% if site.data.banner.display_banner %}
+      {% include banner.html content=banner %}
+    {% endif %}
     {% include site-header.html %}
-    {% include site-navigation.html %}
     <main class="page page--inner">
       {{ content }}
     </main>

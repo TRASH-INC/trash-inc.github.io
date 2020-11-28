@@ -1,15 +1,39 @@
 {% if page.url == "/" or page.url == 'index.html' %}
-<div class="callout callout-header--dark">
-  <a class="callout__link" href="/"></a>
-</div>
-
-<header class="site-header" style="text-align: center;">
-  <img width="38%" src="/assets/images/trash_wordmark.svg" />
-  <br />
-  <img width="38%" src="/assets/images/trash_dontedityourself.svg" />
-</header>
+<nav class="navigation homepage-navigation">
+  <ul>
+    <li class="i4">
+      <a class="active">Home</a>
+    </li>
+    <li class="i1">
+      <a href="/about">About</a>
+    </li>
+    <li class="i2">
+      <a href="/faq">Support</a>
+    </li>
+    <li class="i3">
+      <a href="https://apps.apple.com/app/trash-you-shoot-we-edit/id1412091383"
+        >Download</a
+      >
+    </li>
+  </ul>
+</nav>
 {% elsif page.url != "/" and page.url != 'index.html' %}
-<div class="callout callout-header">
-  <a class="callout__link" href="/"></a>
-</div>
+<nav class="navigation">
+  <ul>
+    <li class="i4">
+      <a href="/">Home</a>
+    </li>
+    <li class="i1">
+      <a href="/about">About</a>
+    </li>
+    <li class="i2">
+      <a href="/faq">Support</a>
+    </li>
+    <li class="i3">
+      <a href="https://apps.apple.com/app/trash-you-shoot-we-edit/id1412091383"
+        >Download</a
+      >
+    </li>
+  </ul>
+</nav>
 {% endif %}

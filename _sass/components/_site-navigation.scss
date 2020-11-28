@@ -1,4 +1,4 @@
-.homepage-navigation {
+.navigation {
   @include container(s, $all-sides: true);
 
   ul {
@@ -14,6 +14,9 @@
   }
 
   a {
+    @at-root .u-background-color--light & {
+      color: #000;
+    }
     color: #fff;
     font-size: 1.5rem;
     margin: 0 0.8rem;
@@ -29,9 +32,12 @@
     &[href]:hover {
       background: var(--col, #000);
       outline: none;
+      color: #fff;
     }
   }
 }
+
+// Legacy
 
 .site-navigation {
   @include padding(null $spacing-base);

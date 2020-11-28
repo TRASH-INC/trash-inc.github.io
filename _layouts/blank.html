@@ -2,6 +2,10 @@
 <html lang="en">
   {% include site-head.html %}
   <body class="u-background-color--{{ page.background }}">
+    <!-- prettier-ignore -->
+    {% if site.data.banner.display_banner %}
+      {% include banner.html content=banner %}
+    {% endif %}
     {{ content }}
     <script
       src="https://unpkg.com/focus-visible@5.2.0/dist/focus-visible.js"

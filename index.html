@@ -12,21 +12,8 @@ background: dark
   crossorigin="anonymous"
 />
 
-<!-- prettier-ignore -->
-{% capture banner %}
-<strong>New!</strong>
-Check out our
-<!-- prettier-ignore -->
-<a href="https://medium.com/thetrashapp/trash-adds-popular-music-a43d39d87df5">latest post!</a>
-{% endcapture %}
-
-<!-- prettier-ignore -->
-{% if page.display_banner %}
-  {% include banner.html content=banner %}
-{% endif %}
-
 <header class="homepage-header">
-  <nav class="homepage-navigation">
+  <nav class="navigation homepage-navigation">
     <ul>
       <li class="i4">
         <a class="active">Home</a>
