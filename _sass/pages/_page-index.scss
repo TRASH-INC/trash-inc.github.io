@@ -71,16 +71,15 @@
 
     @media (max-width: $screen-size-xlarge) {
       font-size: 3.2rem;
-      margin: 0 0.5em 1.5em 0;
     }
 
     @media (max-width: $screen-size-large) {
       font-size: 2rem;
-      margin: 0 0.5em 1em 0;
       flex: 1 1 206px;
     }
 
     @media (max-width: $screen-size-medium) {
+      margin: 0 0.5em 1em 0;
       font-size: 1.2rem;
     }
 
@@ -104,7 +103,7 @@
     overflow: hidden;
 
     @media (max-width: $screen-size-large) {
-      border: 5px solid #fff;
+      border: 7px solid #fff;
       border-radius: 25px;
       width: 206px;
       flex: 1 1 206px;
@@ -112,10 +111,10 @@
     }
 
     @media (max-width: $screen-size-medium) {
-      border: 3px solid #fff;
+      border: 5px solid #fff;
       border-radius: 20px;
       width: 180px;
-      flex: 0 1 180px;
+      flex: 1 1 180px;
       margin-bottom: 2rem;
     }
     @media (max-width: $screen-size-medium) {
