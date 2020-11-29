@@ -1,24 +1,21 @@
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1,
-        shrink-to-fit=no, user-scalable=no" name="viewport">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
   <title>{{ site.title }}{% if page.title %}: {{ page.title }}{% endif %}</title>
   <link href="/assets/stylesheets/main.css" rel="stylesheet" type="text/css">
 
-  <meta property="og:url" content={{site.url}} />
-  <meta property="og:site_name" content={{site.title}} />
-  <meta property="og:title" content={{ site.title }}{% if page.title %}: {{ page.title }}{% endif %} />
+  <meta property="og:url" content="{{site.url}}" />
+  <meta property="og:site_name" content="{{site.title}}" />
+  <meta property="og:title" content="{{ site.title }}{% if page.title %}: {{ page.title }}{% endif %}" />
   <meta property="og:description" content="{% if page.preview_description %}{{ page.preview_description }}{% else %}{{ site.preview_description }}{% endif %}" />
   <meta property="og:image"
-    content={% if page.preview_image %}{{page.preview_image}}{% else %}"{{site.url}}/assets/images/trash_logolockup.png"{% endif %} />
+    content="{% if page.preview_image %}{{page.preview_image}}{% else %}{{site.url}}/assets/images/trash_logolockup.png{% endif %}" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content={{site.title}} />
-  <meta name="twitter:title" content={{ site.title }}{% if page.title %}: {{ page.title }}{% endif %} />
+  <meta name="twitter:site" content="{{site.title}}" />
+  <meta name="twitter:title" content="{{ site.title }}{% if page.title %}: {{ page.title }}{% endif %}" />
   <meta name="twitter:description" content="{% if page.preview_description %}{{ page.preview_description }}{% else %}{{ site.preview_description }}{% endif %}" />
-  <meta name="twitter:image" content={% if page.preview_image
-  %}{{page.preview_image}}{% else
-	%}"{{site.url}}/assets/images/trash_logolockup.png"{% endif %} />
+  <meta name="twitter:image" content="{% if page.preview_image %}{{page.preview_image}}{% else %}{{site.url}}/assets/images/trash_logolockup.png{% endif %}" />
   <meta name="twitter:player:stream" content="" />
   <meta name="twitter:app:name:iphone" content="TRASH App" />
   <meta name="twitter:app:id:iphone" content="1412091383" />
