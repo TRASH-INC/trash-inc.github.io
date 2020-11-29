@@ -1,53 +1,126 @@
-.site-footer {
-  @include margin($spacing-base 0 null);
-  @include padding(null $spacing-base);
-  color: $gray-medium;
-  position: relative;
-  text-transform: uppercase;
+footer {
+  background: #000;
+  color: #fff;
 
-  @media (min-width: $screen-size-medium) {
-    @include padding(null $spacing-medium);
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include container(l, $all-sides: true);
+    margin: 6rem auto 0;
+
+    @media (max-width: $screen-size-medium) {
+      margin: 3rem auto 0;
+    }
+
+    max-width: $screen-size-xlarge;
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .category {
+      flex: 1 0 auto;
+      font-size: 1.3rem;
+      line-height: 2rem;
+      margin: 0 1.8rem 1.8rem 0;
+      a {
+        float: left;
+        clear: left;
+      }
+      h3 {
+        margin: 0;
+        text-transform: uppercase;
+        font-family: $font-family-plaid-xl;
+        font-size: inherit;
+        color: var(--col);
+      }
+    }
+    .bottom {
+      flex: 1 1 100%;
+      margin: 3rem 1.8rem 1rem;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      line-height: 1.8;
+
+      .soc {
+        margin: 0 1.5rem 0;
+        a {
+          text-decoration: none;
+          margin: 0.5rem;
+          padding: 0.2rem;
+          display: inline-block;
+          height: 1.6em;
+
+          &:first-of-type {
+            margin-left: -0.7rem;
+          }
+        }
+        svg {
+          fill: currentColor;
+          width: 1.6em;
+          height: 1.6em;
+          &[title="Instagram"] {
+            --col: #bb68fd;
+          }
+          &[title="Twitter"] {
+            --col: #77cce6;
+          }
+          &[title="Snapchat"] {
+            --col: #f1ff6b;
+          }
+          &:hover {
+            fill: var(--col, #fff9);
+
+            // // Make Snapchat hover effect more visible on white backgrounds
+            // @at-root .u-background-color--light &[title="Snapchat"] {
+            //   --col: #fffc00;
+            //   stroke: #000;
+            //   stroke-width: 1px;
+            // }
+          }
+        }
+      }
+
+      .links {
+        color: #fff6;
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .scroller {
+    margin-top: 1.5rem;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $gradient-full-spectrum;
+      mix-blend-mode: multiply;
+    }
+    #text {
+      @media (prefers-reduced-motion: no-preference) {
+        animation: scroll 6s linear infinite both;
+      }
+    }
   }
 
-  @media (min-width: $screen-size-large) {
-    @include padding(null $spacing-large);
-  }
-}
-
-.site-footer__links {
-  @include padding(0);
-  list-style: none;
-  margin-bottom: 0;
-}
-
-.site-footer__links li {
-  display: inline-block;
-
-  & + li:before {
-    content: "| ";
-  }
-}
-
-.site-footer__link {
-  @include padding(0 .1em);
-  color: $gray-medium;
-  text-decoration: none;
-
-  &:hover {
-    color: $purple;
-  }
-}
-
-.site-footer__links,
-.site-footer__copyright {
-  font-family: $font-family-plaid-xs-mono;
-  font-size: 1.11rem;
-}
-
-.site-footer--home {
-  .site-footer__link {
-    &:hover {
-      color: $white;
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-390px);
     }
   }
 }

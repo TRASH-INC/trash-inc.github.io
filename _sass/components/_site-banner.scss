@@ -1,0 +1,10 @@
+.site-banner {
+  background: $gradient-blue-purple;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+
+  @media (max-width: $screen-size-medium) {
+    font-size: 0.7rem;
+  }
+}

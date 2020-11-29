@@ -1,62 +1,278 @@
-.page-index {
-  @include margin(null null $spacing-large);
-  font-family: $font-family-plaid-xs;
-  color: $white;
+.homepage-header {
+  height: 9 / 16 * 100vw;
+  max-height: 75%;
   position: relative;
 
-  @media screen and (min-width: $screen-size-large) {
+  h1 {
+    @include hide-visually;
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    pointer-events: none;
+  }
+}
+
+.section-slider {
+  --offset: -140px;
+  margin: var(--offset) auto 0;
+
+  @media (max-width: $screen-size-large) {
+    --offset: -120px;
+  }
+
+  @media (max-width: $screen-size-medium) {
+    --offset: -60px;
+  }
+
+  @media (max-width: $screen-size-small) {
+    --offset: -40px;
+  }
+
+  p {
+    max-width: $screen-size-xlarge;
+    font-size: 2.7rem;
+    text-align: center;
+    font-family: $font-family-plaid-l;
+    @include container(xl);
+    padding-bottom: 6rem;
+
+    @media (max-width: $screen-size-large) {
+      font-size: 1.8rem;
+      padding-bottom: 4rem;
+    }
+
+    @media (max-width: $screen-size-medium) {
+      font-size: 1.2rem;
+      padding-bottom: 3rem;
+    }
+  }
+}
+
+.slider {
+  .slider-item {
+    .inner {
+      max-width: $screen-size-xlarge;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include container(xl);
+      padding-top: calc(var(--offset) * -1);
+    }
+  }
+  h2 {
+    font-size: 5rem;
+    flex: 1 1 50%;
+    margin: 0 1em 1.5em 0;
+
+    @media (max-width: $screen-size-xlarge) {
+      font-size: 3.2rem;
+    }
+
+    @media (max-width: $screen-size-large) {
+      font-size: 2rem;
+      flex: 1 1 206px;
+    }
+
+    @media (max-width: $screen-size-medium) {
+      margin: 0 0.5em 1em 0;
+      font-size: 1.2rem;
+    }
+
+    span {
+      background: var(--bg, $gradient-purple-blue);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .slider-mockup {
+    margin-top: var(--offset);
+    margin-bottom: 3.3125rem;
+    background: #515151;
+    border: 10px solid #fff;
+    border-radius: 50px;
+    width: 412px;
+
+    flex: 0 1 412px;
+    overflow: hidden;
+
+    @media (max-width: $screen-size-large) {
+      border: 7px solid #fff;
+      border-radius: 25px;
+      width: 206px;
+      flex: 1 1 206px;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: $screen-size-medium) {
+      border: 5px solid #fff;
+      border-radius: 20px;
+      width: 180px;
+      flex: 1 1 180px;
+      margin-bottom: 2rem;
+    }
+    @media (max-width: $screen-size-medium) {
+      border: 2px solid #fff;
+      border-radius: 14px;
+    }
+    .video {
+      height: 0;
+      padding-bottom: 19.5 / 9 * 100%;
+      position: relative;
+      video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+    }
+  }
+  .bullets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6rem;
+    @media (max-width: $screen-size-large) {
+      margin-bottom: 4rem;
+    }
+    @media (max-width: $screen-size-medium) {
+      margin-bottom: 3rem;
+    }
+  }
+  .bullet {
+    @include hide-visually;
+    & + label {
+      width: 22px;
+      height: 22px;
+      border: none;
+      background: #c4c4c4;
+      opacity: 0.5;
+      border-radius: 50%;
+      margin: 0.5em;
+      transition: opacity 0.2s cubic-bezier(0, 0.55, 0.45, 1);
+
+      @media (max-width: $screen-size-medium) {
+        width: 18px;
+        height: 18px;
+        margin: 0.4em;
+      }
+
+      @media (max-width: $screen-size-small) {
+        width: 10px;
+        height: 10px;
+        margin: 0.2em;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      span {
+        @include hide-visually;
+      }
+    }
+    &:checked {
+      & + label {
+        opacity: 1;
+      }
+    }
+    &:focus + label {
+      outline: $focus-outline;
+      outline-offset: $focus-outline-offset;
+    }
+
+    @at-root .js-focus-visible &:focus:not(.focus-visible) + label {
+      outline: none;
+    }
+  }
+}
+
+.section-spotlight {
+  background: $gradient-blue-purple;
+
+  @include container(s, $all-sides: true);
+  h2 {
+    font-size: 2.7rem;
+    text-align: center;
+    margin: 2rem;
+
+    @media (max-width: $screen-size-medium) {
+      font-size: 2rem;
+    }
+  }
+
+  .spotlight {
+    max-width: $screen-size-xlarge;
+    margin: 4rem auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  }
-}
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 
-.page-index__item {
-  @media screen and (min-width: $screen-size-large) {
-    &:nth-child(1) {
-      grid-column: 1/2;
-      grid-row: 1/2;
+    @media (max-width: $screen-size-medium) {
+      margin: 2rem auto;
+      gap: 0.25rem;
     }
 
-    &:nth-child(2) {
-      grid-column: 2/3;
-      grid-row: 2/3;
-      position: absolute;
-      right: 0;
+    @media (max-width: $screen-size-small) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
     }
 
-    &:nth-child(3) {
-      grid-column: 1/2;
-      grid-row: 3/4;
-      left: 25%;
-      position: absolute;
+    a {
+      position: relative;
+      overflow: hidden;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        bottom: 8px;
+        right: 8px;
+        border: 7px solid #fff;
+        opacity: 0;
+        transform: scale(0.97, 0.99);
+        transition: all 0.05s cubic-bezier(0, 0.55, 0.45, 1);
+      }
+      &:hover::after {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .img {
+      width: 100%;
+      height: 0;
+      position: relative;
+      padding-bottom: 136%;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
-}
 
-.page-index__link {
-  display: block;
+  p {
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: $font-family-plaid-m;
+    margin-bottom: 2rem;
 
-  .on {
-    display: none;
-  }
-
-  &:hover .off {
-    display: none;    
-  }
-
-  &:hover .on {
-    display: inline;
-  }
-}
-
-.page-index__inline-link {
-  font-family: 'Plaid-M';
-  color: #fff;
-  text-decoration-color: #828282;
-
-  &:hover {
-    color: #fff;
-    text-decoration-color: #fff;
+    @media (max-width: $screen-size-medium) {
+      font-size: 1rem;
+    }
   }
 }

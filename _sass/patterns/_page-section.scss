@@ -1,5 +1,8 @@
+.page-section {
+  max-width: 50rem;
+}
 .page-section + .page-section {
-  @include margin($spacing-medium auto null);
+  @include margin($spacing-medium 0 null);
 }
 
 .page-section--index {

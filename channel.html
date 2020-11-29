@@ -3,8 +3,7 @@ background: dark
 layout: index
 ---
 
-<div id="videos" class="page-index">
-</div>
+<div id="videos" class="page-index"></div>
 <div>
   <section class="page-section--index page-index__item">
     <p>Use AI to make and share short videos. Out now for iOS.</p>
@@ -14,47 +13,54 @@ layout: index
 
 <!-- The script below makes the video player controls visible !-->
 <script>
-//$('.container.main.content').css('z-index',-1)
+  //$('.container.main.content').css('z-index',-1)
 </script>
 <!-- The script below parses the profile channel id from the query string in --
   -- this page's url. It requests a s3 signed URLs for all posts in that channel from benny.trash.app !-->
 <script>
-
   var urlParams = new URLSearchParams(window.location.search);
 
   // Fetch the next posts in this channel
-  fetch('https://benny.trash.app/graphql', {
-    method: 'POST',
+  fetch("https://benny.trash.app/graphql", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
+      "Content-Type": "application/json",
+      Accept: "application/json",
     },
-    body: JSON.stringify({ query: '{ channel(id:"' + urlParams.get('id') + '"){ id  name subtitle posts(limit:10, offset:10) { signed_urls }  }}' })
+    body: JSON.stringify({
+      query:
+        '{ channel(id:"' +
+        urlParams.get("id") +
+        '"){ id  name subtitle posts(limit:10, offset:10) { signed_urls }  }}',
+    }),
   })
-    .then(r => r.json())
-    .then(data => {
-      var video_div = $('#videos');
-      var title = $('<p>' + data.data.channel.name + '</p>');
+    .then((r) => r.json())
+    .then((data) => {
+      var video_div = $("#videos");
+      var title = $("<p>" + data.data.channel.name + "</p>");
       video_div.append(title);
-      var subtitle = $('<p>' + data.data.channel.subtitle + '</p>');
+      var subtitle = $("<p>" + data.data.channel.subtitle + "</p>");
       video_div.append(subtitle);
       // for each post, add a <video> item to the page
       for (i = 0; i < data.data.channel.posts.length; i++) {
-
-        var video = $('<video />', {
-          id: 'video' + i,
+        var video = $("<video />", {
+          id: "video" + i,
           src: data.data.channel.posts[i].signed_urls.original.url,
-          type: 'video/mp4',
+          type: "video/mp4",
           style: "height: 50vh;",
           controls: true,
-          loop: true
+          loop: true,
         });
         video_div.append(video);
-
       }
     })
-    .catch(err => { throw err });
-
+    .catch((err) => {
+      throw err;
+    });
 </script>
-<script src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js" type="text/javascript"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script
+  src="https://d1tdp7z6w94jbb.cloudfront.net/js/jquery-3.3.1.min.js"
+  type="text/javascript"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"
+></script>

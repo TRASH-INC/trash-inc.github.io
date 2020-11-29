@@ -1,53 +1,235 @@
 ---
-background: dark
-layout: index
+layout: blank
 title: "One Tap Video"
+display_banner: true
+background: dark
 ---
 
-<div class="page-index">
-  <section class="page-section--index page-index__item">
-    <p>Use AI to make and share short videos. Out now for iOS.<br />
-    Or <a class="page-index__inline-link" href="https://vibeche.cc">get a vibe check on the web</a>.</p>
-    {% include_relative appstorebutton.html %}
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@glidejs/glide@3.4.1/dist/css/glide.core.min.css"
+  integrity="sha384-XaCph/Oktsa59bhepa2YPUKgUAJijwcfawF2PiUKsCi5xOMPvREEZrVLcIABxSBP"
+  crossorigin="anonymous"
+/>
 
-  </section>
-
-  <section class="page-section--index page-index__item">
-    <p>Meet the TRASH Angels:</p>
-    {% include_relative trashmagbutton.html %}
-  </section>
-
-  <section class="page-section--index page-index__item">
-    <p>Follow us for updates:</p>
-
-    <div class="icon-social__container">
-      <a class="icon-social__link" href="https://instagram.com/thetrashapp" target="_blank">
-        <svg class="icon-social__instagram" width="54" height="55" viewBox="0 0 54 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="icon-social--fill" d="M26.9181 5.5295C33.9946 5.5295 34.8253 5.56105 37.6222 5.68723C40.2089 5.80289 41.6074 6.234 42.5432 6.60202C43.6893 7.02262 44.7303 7.70609 45.5925 8.57883C46.4758 9.43053 47.1487 10.4715 47.5693 11.6281C47.9374 12.564 48.3685 13.9625 48.4841 16.5491C48.6103 19.3461 48.6418 20.1768 48.6418 27.2533C48.6418 34.3298 48.6103 35.1605 48.4841 37.9575C48.3685 40.5441 47.9374 41.9426 47.5693 42.8784C46.6756 45.1917 44.8565 47.0108 42.5432 47.9046C41.6074 48.2726 40.2089 48.7037 37.6222 48.8194C34.8253 48.9455 33.9946 48.9771 26.9181 48.9771C19.8415 48.9771 19.0109 48.9455 16.2139 48.8194C13.6272 48.7037 12.2287 48.2726 11.2929 47.9046C10.1468 47.484 9.10582 46.8005 8.2436 45.9278C7.36035 45.0761 6.6874 44.0351 6.2668 42.8784C5.89878 41.9426 5.46767 40.5441 5.352 37.9575C5.22583 35.1605 5.19428 34.3298 5.19428 27.2533C5.19428 20.1768 5.22583 19.3461 5.352 16.5491C5.46767 13.9625 5.89878 12.564 6.2668 11.6281C6.6874 10.482 7.37087 9.44105 8.2436 8.57883C9.09531 7.69557 10.1363 7.02262 11.2929 6.60202C12.2287 6.234 13.6272 5.80289 16.2139 5.68723C19.0109 5.55053 19.8415 5.5295 26.9181 5.5295ZM26.9181 0.755737C19.7259 0.755737 18.8216 0.787282 15.9931 0.913461C13.1751 1.03964 11.2509 1.49178 9.56848 2.1437C7.80198 2.80614 6.20371 3.84712 4.87883 5.20354C3.52241 6.5179 2.48144 8.12668 1.819 9.89319C1.16707 11.5756 0.714933 13.4998 0.588754 16.3283C0.462575 19.1463 0.43103 20.0506 0.43103 27.2428C0.43103 34.435 0.462575 35.3393 0.588754 38.1678C0.714933 40.9858 1.16707 42.91 1.819 44.6029C2.48144 46.3694 3.52241 47.9677 4.87883 49.2925C6.20371 50.6384 7.80198 51.6794 9.56848 52.3419C11.2509 52.9938 13.1751 53.4459 16.0036 53.5721C18.8321 53.6983 19.7259 53.7298 26.9286 53.7298C34.1313 53.7298 35.0251 53.6983 37.8536 53.5721C40.6716 53.4459 42.5958 52.9938 44.2887 52.3419C47.8427 50.9644 50.6607 48.1569 52.0382 44.5924C52.6901 42.91 53.1422 40.9858 53.2684 38.1572C53.3946 35.3287 53.4261 34.435 53.4261 27.2323C53.4261 20.0296 53.3946 19.1358 53.2684 16.3073C53.1422 13.4893 52.6901 11.5651 52.0382 9.87216C51.3757 8.10566 50.3347 6.50739 48.9783 5.18251C47.6534 3.8366 46.0552 2.79563 44.2887 2.12267C42.6063 1.47075 40.6821 1.01861 37.8536 0.892431C35.0145 0.787282 34.1103 0.755737 26.9181 0.755737Z"/>
-
-          <path class="icon-social--fill" d="M26.918 13.6365C19.4104 13.6365 13.3118 19.7246 13.3118 27.2428C13.3118 34.7609 19.4104 40.849 26.918 40.849C34.4257 40.849 40.5243 34.7504 40.5243 27.2428C40.5243 19.7351 34.4257 13.6365 26.918 13.6365ZM26.918 36.0753C22.0391 36.0753 18.0855 32.1217 18.0855 27.2428C18.0855 22.3638 22.0391 18.4102 26.918 18.4102C31.797 18.4102 35.7506 22.3638 35.7506 27.2428C35.7506 32.1217 31.797 36.0753 26.918 36.0753Z"/>
-
-          <path class="icon-social--fill" d="M41.0606 16.2757C42.8144 16.2757 44.2361 14.854 44.2361 13.1002C44.2361 11.3464 42.8144 9.92468 41.0606 9.92468C39.3069 9.92468 37.8851 11.3464 37.8851 13.1002C37.8851 14.854 39.3069 16.2757 41.0606 16.2757Z"/>
-        </svg>
-      </a>
-
-      <a class="icon-social__link" href="https://medium.com/thetrashapp" target="_blank">
-        <svg width="64" height="56" viewBox="0 0 64 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="icon-social--fill" d="M21.7436 10.9966V53.5706C21.7436 54.1798 21.5967 54.691 21.3028 55.1152C21.0089 55.5394 20.5891 55.7461 20.0223 55.7461C19.6235 55.7461 19.2351 55.6482 18.8678 55.4524L2.58907 47.0116C2.09578 46.7723 1.68645 46.3589 1.35059 45.7933C1.01473 45.2277 0.836304 44.6621 0.836304 44.1073V2.72982C0.836304 2.25121 0.951756 1.83787 1.18266 1.50067C1.41356 1.16348 1.75992 0.989437 2.20074 0.989437C2.5261 0.989437 3.04039 1.17435 3.74359 1.53331L21.6386 10.8226C21.7121 10.8878 21.7436 10.9531 21.7436 10.9966ZM23.9897 14.6732L42.6929 46.1087L23.9897 36.4496V14.6732ZM63.6002 15.3258V53.5815C63.6002 54.1906 63.4322 54.6801 63.1069 55.0499C62.7815 55.4198 62.3407 55.6156 61.7739 55.6156C61.2176 55.6156 60.6614 55.4633 60.1261 55.1478L44.6765 47.1639L63.6002 15.3258ZM63.4952 10.964C63.4952 11.0401 60.5039 16.109 54.5109 26.1923C48.5179 36.2756 45.0124 42.1711 43.9838 43.8898L30.329 20.8733L41.6748 1.75085C42.0736 1.07646 42.6824 0.739258 43.501 0.739258C43.8264 0.739258 44.1308 0.815399 44.4142 0.956805L63.3588 10.7573C63.4427 10.8008 63.4952 10.8661 63.4952 10.964Z"/>
-        </svg>
-      </a>
-
-      <a class="icon-social__link" href="https://twitter.com/thetrashapp" target="_blank">
-        <svg width="66" height="55" viewBox="0 0 66 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="icon-social--fill" d="M65.5815 6.456C63.1888 7.55462 60.6275 8.29428 57.9292 8.6206C60.6802 6.92373 62.7883 4.22614 63.7896 1.01732C61.2072 2.59454 58.3613 3.73666 55.3152 4.35667C52.8803 1.68084 49.4231 0.0166016 45.5864 0.0166016C38.2292 0.0166016 32.2528 6.17319 32.2528 13.7656C32.2528 14.8425 32.3688 15.8976 32.6007 16.8983C21.5227 16.3218 11.6991 10.8505 5.13246 2.52927C3.98356 4.55246 3.33005 6.92373 3.33005 9.4364C3.33005 14.2116 5.68056 18.4211 9.25374 20.8794C7.07189 20.8032 5.01651 20.1832 3.21411 19.1499V19.3239C3.21411 25.9809 7.80971 31.5501 13.902 32.8119C12.7848 33.1273 11.6042 33.2905 10.3921 33.2905C9.52779 33.2905 8.6951 33.2034 7.88349 33.0403C9.58049 38.5116 14.5028 42.4818 20.3317 42.5906C15.7677 46.278 10.0232 48.4644 3.78329 48.4644C2.70817 48.4644 1.64359 48.3991 0.600098 48.2795C6.50271 52.1844 13.5015 54.4687 21.0273 54.4687C45.5442 54.4687 58.9516 33.508 58.9516 15.3319L58.9094 13.548C61.534 11.6336 63.8002 9.21885 65.5815 6.456Z"/>
-        </svg>
-      </a>
-
-      <a class="icon-social__link" href="https://www.snapchat.com/add/thetrashapp" target="_blank">
-        <svg width="57" height="56" viewBox="0 0 57 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="icon-social--fill" d="M0.581543 43.3406C0.581543 43.0687 0.581543 42.8185 0.581543 42.5466C0.739314 41.7743 1.28626 41.5023 1.96993 41.3827C4.77826 40.8171 7.11328 39.3377 9.06965 37.2275C10.5843 35.585 11.8149 33.725 12.6774 31.6365C13.1191 30.5488 12.8772 29.8418 11.8885 29.2544C11.2784 28.8954 10.6158 28.667 9.95317 28.4386C9.09068 28.1231 8.21768 27.8077 7.44986 27.2747C6.661 26.6873 6.04043 26.0021 6.06147 24.9143C6.06147 24.414 6.24028 24.0006 6.5453 23.6199C7.29209 22.6627 8.8698 21.9774 10.3213 22.6192C11.026 22.9346 11.7518 23.2283 12.5406 23.2283C13.2453 23.2283 13.3505 23.1195 13.2453 22.4125C13.1612 21.6837 13.1402 20.9332 13.1191 20.2044C13.077 18.8882 12.8982 17.5503 12.9824 16.245C13.1086 14.2654 13.1191 12.2639 13.8869 10.3821C15.5383 6.37925 18.3045 3.49674 22.2383 1.89777C25.2465 0.668621 28.3493 0.461951 31.5153 0.918801C34.3341 1.31039 36.9005 2.35462 39.0988 4.25816C41.9071 6.67294 43.8635 9.64246 44.2422 13.5148C44.3684 14.6569 44.4841 15.8099 44.442 16.9521C44.3789 18.7686 44.2842 20.5851 44.2001 22.3908C44.1791 23.1631 44.3263 23.348 45.0521 23.1848C45.6411 23.0543 46.2196 22.8476 46.7665 22.6192C47.913 22.1188 49.0279 22.2276 50.0692 22.9129C50.8791 23.435 51.4365 24.1203 51.3419 25.1862C51.2788 25.9368 50.9001 26.5024 50.3742 26.9593C49.6064 27.6228 48.7018 28.0252 47.7552 28.3516C47.0715 28.6017 46.3668 28.8084 45.6937 29.1674C44.5051 29.8091 44.2632 30.5597 44.8101 31.8323C45.578 33.5618 46.5877 35.1282 47.7762 36.5857C49.5117 38.6742 51.6048 40.197 54.1292 41.0672C54.592 41.2304 55.0968 41.2957 55.5596 41.4479C56.9059 41.8069 57.3582 43.4494 56.4116 44.5371C55.749 45.2877 54.8549 45.6684 53.9714 46.0164C52.6987 46.495 51.3734 46.7887 50.0376 47.0172C49.5959 47.1042 49.354 47.3108 49.2698 47.7459C49.1436 48.3116 49.0279 48.8554 48.8701 49.3884C48.5861 50.4544 47.8604 50.933 46.8086 50.8025C45.5149 50.6611 44.2422 50.3674 42.9379 50.3456C41.2655 50.3239 39.6668 50.6611 38.2574 51.6836C37.0057 52.5646 35.7751 53.5001 34.4498 54.2724C32.8405 55.2078 31.1051 55.6864 29.2644 55.7735C26.6454 55.904 24.2262 55.2513 22.0279 53.7503C21.2391 53.2064 20.4397 52.6625 19.6719 52.086C18.1362 50.9004 16.4218 50.3348 14.5496 50.3565C13.34 50.3565 12.1514 50.5849 10.9629 50.8134C9.55348 51.0853 8.78566 50.5632 8.39649 49.1274C8.27027 48.6488 8.15457 48.1702 8.04939 47.6916C7.94421 47.2782 7.72333 47.0607 7.30261 47.0063C5.96681 46.7561 4.64153 46.4842 3.36884 46.0056C2.84293 45.8206 2.3591 45.5705 1.87527 45.2985C1.19159 44.8417 0.644652 44.2761 0.581543 43.3406Z"/>
-        </svg>
-      </a>
+<header class="homepage-header">
+  <nav class="navigation homepage-navigation">
+    <ul>
+      <li class="i4">
+        <a class="active">Home</a>
+      </li>
+      <li class="i1">
+        <a href="/about">About</a>
+      </li>
+      <li class="i2">
+        <a href="/faq">Support</a>
+      </li>
+      <li class="i3">
+        <a
+          href="https://apps.apple.com/app/trash-you-shoot-we-edit/id1412091383"
+          >Download</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <h1>Trash</h1>
+  <video autoplay muted playsinline loop tabindex="-1">
+    <source
+      src="/assets/video/homepage.av1.mp4"
+      type='video/mp4;codecs="av01.0.080.08"'
+    />
+    <source
+      src="/assets/video/homepage.vp9.webm"
+      type='video/webm;codecs="vp9"'
+    />
+    <source src="/assets/video/homepage.h265.mov" type="video/quicktime" />
+    <source src="/assets/video/homepage.h264.mp4" type="video/mp4" />
+  </video>
+</header>
+<section class="section-slider">
+  <div class="slider glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        <li class="glide__slide slider-item i1">
+          <div class="inner">
+            <h2><span>Shoot or pick some video clips</span></h2>
+            <div class="slider-mockup">
+              <div class="video">
+                <video autoplay muted playsinline loop tabindex="-1">
+                  <source
+                    src="/assets/video/page1.av1.mp4"
+                    type='video/mp4;codecs="av01.0.080.08"'
+                  />
+                  <source
+                    src="/assets/video/page1.vp9.webm"
+                    type='video/webm;codecs="vp9"'
+                  />
+                  <source
+                    src="/assets/video/page1.h265.mov"
+                    type="video/quicktime"
+                  />
+                  <source src="/assets/video/page1.h264.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="glide__slide slider-item i2">
+          <div class="inner">
+            <h2><span>Tap one button...</span></h2>
+            <div class="slider-mockup">
+              <div class="video">
+                <video autoplay muted playsinline loop tabindex="-1">
+                  <source
+                    src="/assets/video/page2.av1.mp4"
+                    type='video/mp4;codecs="av01.0.080.08"'
+                  />
+                  <source
+                    src="/assets/video/page2.vp9.webm"
+                    type='video/webm;codecs="vp9"'
+                  />
+                  <source
+                    src="/assets/video/page2.h265.mov"
+                    type="video/quicktime"
+                  />
+                  <source src="/assets/video/page2.h264.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="glide__slide slider-item i3">
+          <div class="inner">
+            <h2><span>Get instant video you can tweak</span></h2>
+            <div class="slider-mockup">
+              <div class="video">
+                <video autoplay muted playsinline loop tabindex="-1">
+                  <source
+                    src="/assets/video/page3.av1.mp4"
+                    type='video/mp4;codecs="av01.0.080.08"'
+                  />
+                  <source
+                    src="/assets/video/page3.vp9.webm"
+                    type='video/webm;codecs="vp9"'
+                  />
+                  <source
+                    src="/assets/video/page3.h265.mov"
+                    type="video/quicktime"
+                  />
+                  <source src="/assets/video/page3.h264.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
-  </section>
-</div>
+    <div class="bullets" data-glide-el="controls[nav]">
+      <input
+        type="radio"
+        class="bullet"
+        name="slider"
+        id="slider-item-1"
+        value="0"
+        checked
+        data-glide-dir="=0"
+      />
+      <label for="slider-item-1"><span>1</span></label>
+      <input
+        type="radio"
+        class="bullet"
+        name="slider"
+        id="slider-item-2"
+        value="1"
+        data-glide-dir="=1"
+      />
+      <label for="slider-item-2"><span>2</span></label>
+      <input
+        type="radio"
+        class="bullet"
+        name="slider"
+        id="slider-item-3"
+        value="2"
+        data-glide-dir="=2"
+      />
+      <label for="slider-item-3"><span>3</span></label>
+    </div>
+  </div>
+  <p>
+    Trash uses AI to generate a rough cut in seconds. “Photo filters for video”.
+  </p>
+</section>
+<section class="section-spotlight">
+  <h2>Creator Spotlight</h2>
+  <div class="spotlight">
+    <a
+      href="https://mag.trash.app/MEZ-Conducts-His-Parties"
+      title="MÈZ conducts his parties"
+    >
+      <div class="img">
+        <img src="/assets/blog/mez.jpg" alt="MÈZ conducts his parties" />
+      </div>
+    </a>
+    <a
+      href="https://mag.trash.app/Airis-Encarnacion-Edits-Everything"
+      title="Airis Encarnacion Edits Everything"
+    >
+      <div class="img">
+        <img
+          src="/assets/blog/airis.jpg"
+          alt="Airis Encarnacion Edits Everything"
+        />
+      </div>
+    </a>
+    <a
+      href="https://mag.trash.app/Saturn-WOWs-At-TRASH-s-Party-In-L-A"
+      title="Saturn WOWs At TRASH's Party In L.A."
+    >
+      <div class="img">
+        <img
+          src="/assets/blog/saturn.jpg"
+          alt="Saturn WOWs At TRASH's Party In L.A."
+        />
+      </div>
+    </a>
+  </div>
+  <p>
+    <a href="https://mag.trash.app/">Read the interviews</a> with creators...
+  </p>
+</section>
+{% include site-footer.html %}
+<script
+  src="https://unpkg.com/focus-visible@5.2.0/dist/focus-visible.js"
+  integrity="sha384-5z3iSp5+LvYQllC9ja+4hb/5E2tjCqVdYqGgjFrfy2ogTpm7UxAzlsZGiiGKP0q4"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/gh/edensg/glide@8e118e2/dist/glide.min.js"
+  integrity="sha384-cXFCznFsTCcVR7F5kHb0f7MnIf9vVD5OfD/FbvMiWtD8bSSZyawET6lQY9jfRLLk"
+  crossorigin="anonymous"
+></script>
+<script>
+  const glide = new Glide(".glide", {
+    type: "carousel",
+    autoplay: 3000,
+    hoverpause: false,
+    // dragThreshold: false,
+    keyboard: false,
+    focusAt: "center",
+  });
+
+  const mockupVideos = document.querySelectorAll(".slider-mockup video");
+
+  // Restart videos after animating to them
+  glide.on("run.after", () => {
+    mockupVideos.forEach((el) => {
+      try {
+        el.fastSeek(0);
+      } catch (e) {
+        el.currentTime = 0;
+      }
+    });
+  });
+
+  glide.mount();
+</script>

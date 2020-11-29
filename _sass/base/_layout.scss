@@ -7,6 +7,10 @@ body {
   height: 100%;
 }
 
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
 *,
 *::before,
 *::after {
@@ -20,4 +24,58 @@ body {
 
 p {
   @include margin(0 0 $spacing-small);
+}
+
+@mixin container($size: s, $all-sides: false) {
+  margin: 0 auto;
+
+  $viewport-base: 0;
+  $viewport-medium-v: 0;
+  $viewport-medium-h: 0;
+  $viewport-large-v: 0;
+  $viewport-large-h: 0;
+
+  @if $size == s {
+    $viewport-base: $spacing-base;
+    $viewport-medium-v: $spacing-base;
+    $viewport-medium-h: $spacing-medium;
+    $viewport-large-v: $spacing-medium;
+    $viewport-large-h: $spacing-medium;
+  } @else if $size == l {
+    $viewport-base: $spacing-medium;
+    $viewport-medium-v: $spacing-medium;
+    $viewport-medium-h: $spacing-medium;
+    $viewport-large-v: $spacing-medium;
+    $viewport-large-h: $spacing-large;
+  } @else if $size == xl {
+    $viewport-base: $spacing-medium;
+    $viewport-medium-v: $spacing-medium;
+    $viewport-medium-h: $spacing-large;
+    $viewport-large-v: $spacing-large;
+    $viewport-large-h: $spacing-xlarge;
+  } @else {
+    @error "Container size specified (#{$size}) does not exist.";
+  }
+
+  $viewport-base: $viewport-base;
+  $viewport-medium: null $viewport-medium-h;
+  $viewport-large: null $viewport-large-h;
+
+  @if $all-sides {
+    $viewport-base: $viewport-base;
+    $viewport-medium: $viewport-medium-v $viewport-medium-h;
+    $viewport-large: $viewport-large-v $viewport-large-h;
+  } @else {
+    $viewport-base: null $viewport-base;
+  }
+
+  @include padding($viewport-base);
+
+  @media (min-width: $screen-size-medium) {
+    @include padding($viewport-medium);
+  }
+
+  @media (min-width: $screen-size-large) {
+    @include padding($viewport-large);
+  }
 }
