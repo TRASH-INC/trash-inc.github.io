@@ -21,7 +21,6 @@
 
 .section-slider {
   --offset: -140px;
-  max-width: $screen-size-xlarge;
   margin: var(--offset) auto 0;
 
   @media (max-width: $screen-size-large) {
@@ -57,12 +56,14 @@
 
 .slider {
   .slider-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 6.75em;
-    @include container(xl);
-    padding-top: calc(var(--offset) * -1);
+    .inner {
+      max-width: $screen-size-xlarge;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include container(xl);
+      padding-top: calc(var(--offset) * -1);
+    }
   }
   h2 {
     font-size: 5rem;
