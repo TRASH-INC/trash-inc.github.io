@@ -46,6 +46,7 @@ footer {
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+      line-height: 1.8;
 
       .soc {
         margin: 0 1.5rem 0;
@@ -83,6 +84,13 @@ footer {
             //   stroke-width: 1px;
             // }
           }
+        }
+      }
+
+      .links {
+        color: #fff6;
+        a {
+          color: #fff;
         }
       }
     }

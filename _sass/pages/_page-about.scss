@@ -42,10 +42,10 @@
     font-family: $font-family-plaid-xl;
     font-size: 5rem;
     margin-bottom: 1em;
+    
     @media (max-width: $screen-size-large) {
       font-size: 4rem;
     }
-
     @media (max-width: $screen-size-medium) {
       font-size: 3.5rem;
     }

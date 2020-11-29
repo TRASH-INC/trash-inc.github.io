@@ -19,19 +19,34 @@
     & ~ * {
       clear: both;
     }
+
+    @media (max-width: $screen-size-large) {
+      font-size: 4rem;
+    }
+    @media (max-width: $screen-size-medium) {
+      font-size: 3.5 * 20px / $screen-size-medium * 100vw;
+      float: none;
+    }
+    @media (max-width: $screen-size-small) {
+      font-size: 2rem;
+    }
   }
   h2 {
     font-size: 2rem;
     margin: 4rem 0 2rem 0;
     color: #9b85ff;
-  }
 
-  @media (min-width: $screen-size-medium) {
-    @include padding($spacing-medium);
+    @media (max-width: $screen-size-small) {
+      font-size: 1.5rem;
+    }
   }
 
   @media (min-width: $screen-size-large) {
     @include padding($spacing-medium $spacing-large);
+  }
+
+  @media (min-width: $screen-size-medium) {
+    @include padding($spacing-medium);
   }
 }
 
