@@ -12,6 +12,7 @@ email: feedback@trash.app
 organization: Trash Inc.
 description: > # this means to ignore newlines until "baseurl:"
   Trash Inc., Brooklyn, NY, USA.
+preview_description: Trash uses AI to generate a rough cut in seconds. “Photo filters for video”.
 baseurl: ""
 url: "http://trash.app"
 
