@@ -1,0 +1,78 @@
+<html class="mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRASH for Artists</title>
+    <link type="text/css" rel="stylesheet" href="./tfa_files/main.css">
+    <link type="text/css" rel="stylesheet" href="./tfa_files/login.css">
+    <link type="text/css" rel="stylesheet" href="./tfa_files/login-modal.css">
+
+  </head>
+  <body class="vsc-initialized">
+    <div class="container">
+      <div class="topbar">
+        <a href="https://artists.trash.app/">
+          <img class="logo" src="./tfa_files/trash-logo.svg" alt="TRASH">
+        </a>
+        <img class="for-artists" src="./tfa_files/for-artists@2x.png" alt="TRASH FOR ARTISTS">
+      </div>
+
+      <div class="content">
+        <h2 class="hit-record">Trash has been acquired
+          by VSCO. <a href="https://medium.com/thetrashapp/trash-is-joining-vsco-def29918dca"
+          style="color: rgb(236,255,71);text-decoration: none;">Read more</a> and
+          stay in touch <a href="https://www.instagram.com/vsco/" style="color: rgb(236,255,71);text-decoration: none;">@vsco</a>.</h2>
+      </div>
+
+      <div class="footer">
+        <div class="footer-primary-links">
+          <a href="https://trash.app/" class="footer-link">TRASH.APP</a>
+          <a href="https://trash.app/faq-artists" class="footer-link">ARTIST CONTACT &amp; FAQ</a>
+        </div>
+        <ul class="footer-secondary-links">
+          <li><a href="https://trash.app/privacy">PRIVACY</a></li>
+          <li><a href="https://trash.app/terms">TERMS</a></li>
+          <li><a href="https://trash.app/dmca">DMCA</a></li>
+        </ul></div>
+        <p class="copyright">
+          @TRASH INC.
+        </p>
+      </div>
+    
+    <div class="modal fade">
+      <div class="modal-dialog">
+        <button class="close">×</button>
+        <div class="modal-content">
+          <div class="modal-header">
+            <img class="login-logo" src="./tfa_files/trash-for-artists@2x.png">
+          </div>
+          <div class="modal-body">
+            <div class="loader" style="display: none;"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+        </div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+    <script>
+      function handleAuthenticationRedirect() {
+        if (ui.isPendingRedirect()) {
+          showModal();
+          document.body.overflow = 'hidden';
+          document.querySelector('.sign-in-text').style.display = 'none';
+          document.querySelector('.loader').style.display = 'flex';
+        } else {
+          ui.start('#firebaseui-auth-container', uiConfig);
+        }
+      }
+      function showModal() {
+        document.querySelector('.modal').style.visibility = 'visible';
+      }
+      function closeModal() {
+        document.querySelector('.modal').style.visibility = 'hidden';
+      }
+      handleAuthenticationRedirect();
+      document.querySelector('.join-btn').addEventListener('click', showModal, false);
+      document.querySelector('.sign-in').addEventListener('click', showModal, false);
+      document.querySelector('.close').addEventListener('click', closeModal, false);
+    </script>
+  
+
+</body></html>
