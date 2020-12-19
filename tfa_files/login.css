@@ -34,7 +34,7 @@ h1 {
   padding: 55px 80px;
   display: flex;
   flex-direction: column;
-  background-image: url("./tfa_files/trash-bg.jpg");
+  background-image: url("./trash-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
