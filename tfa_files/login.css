@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+html, body { margin: 0; padding: 0; }
+html { min-height: 100%; }
+body {
+  min-height: 100vh;
+  background: #000;
+
+  background-clip: padding-box;
+  border-top: solid 3px transparent;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -1;
+  margin-top: -3px;
+  border-radius: inherit;
+  background: linear-gradient(to right, rgba(255,93,155,1) 0%, rgba(240,175,89,1) 16%, rgba(240,255,107,1) 33%, rgba(142,255,166,1) 50%, rgba(119,204,230,1) 66%, rgba(155,133,255,1) 83%, rgba(186,104,253,1) 100%);
+}
+
+h1 {
+  font-size: 2em;
+}
+
+.container {
+  padding: 55px 80px;
+  display: flex;
+  flex-direction: column;
+  background-image: url("./tfa_files/trash-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 223px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.for-artists {
+  width: 307px;
+  height: 46px;
+  object-fit: contain;
+}
+
+.content {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.hit-record {
+  font-family: 'Plaid-L';
+  font-size: 4rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+}
+
+.hit-record-subtext {
+  margin: 0 0 60px 0;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.join-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 224px;
+  height: 56px;
+  min-height: 40px;
+  border-radius: 28px;
+  background: rgba(244, 255, 130,1);
+  background: linear-gradient(90deg, rgba(247,196,62,1) 0%, rgba(236,255,71,1) 100%);
+  border: none;
+  cursor: pointer;
+  font-family: 'Plaid-L';
+  font-size: 1.4rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.28px;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.have-account {
+  font-family: 'Plaid-S';
+  font-size: 0.9rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: 0.22px;
+  text-align: center;
+  color: #fff;
+}
+
+.have-account > .sign-in {
+  font-family: 'Plaid-S';
+  text-decoration: none;
+  cursor: pointer;
+  color: rgb(236,255,71);
+}
+
+.footer {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.appstore {
+  width: 201px;
+  height: 68px;
+  object-fit: contain;
+}
+
+.footer-primary-links {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.footer-link {
+  height: 32px;
+  font-family: 'Plaid-XL';
+  font-size: 1.2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: 0.19px;
+  color: #fff;
+  text-decoration: none;
+  flex-grow: 0;
+}
+
+.footer-secondary-links {
+  margin-top: 32px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-secondary-links li {
+  display: inline;
+  font-family: 'Plaid-XS';
+  font-size: 1.1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: 0.19px;
+  color: #828282;
+}
+
+.footer-secondary-links li > a {
+  text-decoration: none;
+  color: #828282;
+}
+
+.footer-secondary-links li::before {
+  content: "|";
+  margin: 0 6px;
+}
+
+.footer-secondary-links li:first-child::before {
+  content: none;
+}
+
+.copyright {
+  font-family: 'Plaid-XS';
+  font-size: 1.1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: 0.19px;
+  color: #828282;
+  margin: 0;
+}
+
+@media(max-width:767px) {
+  .topbar {
+    justify-content: flex-start;
+  }
+
+  .bg-trash {
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .logo {
+    max-width: 120px;
+    margin-right: 10px;
+  }
+
+  .for-artists {
+    position: relative;
+    top: 7px;
+    max-width: 160px;
+  }
+
+  .footer-secondary-links {
+    margin-top: 20px;
+  }
+
+  .hit-record {
+    font-size: 2.1rem;
+  }
+
+  .hit-record span {
+    display: inline-block;
+  }
+
+  .hit-record-subtext {
+    margin-top: 16px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .container {
+    padding: 12px 16px;
+    height: 100vh;
+  }
+
+  .join-btn {
+    width: 160px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .appstore {
+    width: 120px;
+    height: 36px;
+    margin-bottom: 12px;
+  }
+}

@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Plaid-S';
+  src: url('/assets/fonts/Plaid-L.woff2') format('woff2'),
+      url('/assets/fonts/Plaid-L.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plaid-XL';
+  src: url('/assets/fonts/Plaid-XL.woff2') format('woff2'),
+      url('/assets/fonts/Plaid-XL.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plaid-M';
+  src: url('/assets/fonts/Plaid-M.woff2') format('woff2'),
+      url('/assets/fonts/Plaid-M.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plaid-S';
+  src: url('/assets/fonts/Plaid-S.woff2') format('woff2'),
+      url('/assets/fonts/Plaid-S.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plaid-L';
+  src: url('/assets/fonts/Plaid-L.woff2') format('woff2'),
+      url('/assets/fonts/Plaid-L.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plaid-XS';
+  src: url('/assets/fonts/Plaid-XS.woff2') format('woff2'),
+      url('/assets/fonts/Plaid-XS.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plaid-XS-Mono';
+  src: url('/assets/fonts/Plaid-XS-Mono.woff2') format('woff2'),
+      url('/assets/fonts/Plaid-XS-Mono.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+html, body {
+  font-family: 'Plaid-S';
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Override logo styles */
+[class^=sidebar-branding] img {
+  height: auto;
+  width: 100%;
+  margin-right: 0;
+}
+
+body .admin-bro_Logo {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+[class*="navigation__Navigation"] > section:last-child > label {
+  display: none;
+}
+
+
+
+.admin-bro_SidebarParent a span {
+  font-size: 20px;
+  line-height: 32px;
+  color: #888888;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+}
+
+.admin-bro_SidebarParent a:hover span {
+  color: #fff;
+}
+
+.admin-bro_SidebarParent a.active span {
+  color: #fff;
+}
+
+#app > section {
+  border-color: transparent;
+  border: 0;
+  border-top: 3px solid;
+  border-image: linear-gradient(to right, rgba(255,93,155,1) 0%, rgba(240,175,89,1) 16%, rgba(240,255,107,1) 33%, rgba(142,255,166,1) 50%, rgba(119,204,230,1) 66%, rgba(155,133,255,1) 83%, rgba(186,104,253,1) 100%);
+  border-image-slice: 1;
+  -webkit-border-image-slice: 1;
+}
+
+.admin-bro_Button {
+  border-radius: 9999px;
+}
+
+.admin-bro_Stepper {
+  border-bottom-color: #292929;
+}
+
+.admin-bro_Button:disabled {
+  background: #9B85FF;
+  color: #fff;
+  opacity: .5;
+}
+
+.admin-bro_InfoBox .admin-bro_Button,
+.admin-bro_ActionHeader > section:last-child > section:last-child span.admin-bro_Button,
+.color-full {
+  background: linear-gradient(to right, rgba(255,93,155,1) 0%, rgba(240,175,89,1) 16%, rgba(240,255,107,1) 33%, rgba(142,255,166,1) 50%, rgba(119,204,230,1) 66%, rgba(155,133,255,1) 83%, rgba(186,104,253,1) 100%);
+  border-radius: 9999px;
+  color: #000;
+  border-color: rgba(255,255,255,0.3);
+  transition: all 100ms;
+}
+
+.admin-bro_InfoBox .admin-bro_Button:hover,
+.color-full:hover,
+.admin-bro_ActionHeader > section:last-child > section:last-child a:hover span.admin-bro_Button {
+  background: linear-gradient(to right, rgba(255,93,155,1) 0%, rgba(240,175,89,1) 16%, rgba(240,255,107,1) 33%, rgba(142,255,166,1) 50%, rgba(119,204,230,1) 66%, rgba(155,133,255,1) 83%, rgba(186,104,253,1) 100%);
+  box-shadow: 0 0 10px rgba(255,93,155,1);
+  transition: all 100ms;
+}
+
+.color-full:disabled {
+  background: linear-gradient(to right, rgba(255,93,155,1) 0%, rgba(240,175,89,1) 16%, rgba(240,255,107,1) 33%, rgba(142,255,166,1) 50%, rgba(119,204,230,1) 66%, rgba(155,133,255,1) 83%, rgba(186,104,253,1) 100%);
+  opacity: 0.5;
+  color: #000;
+  box-shadow: none;
+}
+
+.admin-bro_Step > section > div {
+  margin: 1px;
+}
+
+.admin-bro_Input {
+  color: #fff;
+}
+
+[data-testid=property-edit-soundtrack_upload] {
+  cursor: pointer;
+}
+
+.react-datepicker__header {
+  background: #fff !important;
+}
